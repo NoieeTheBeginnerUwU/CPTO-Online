@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="script" href="script/script.js">
+        <link rel="shortcut icon" href="/images/logo.png">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+        <link rel="stylesheet" href="static/css/chat.css">
+        <link rel="stylesheet" href="static/css/home.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    
+        <title>CPTO Online</title>
+    </head>
+<body>
+<!--header start-->
+
+<header>
+    <img class="icon" src="images/logo.png" alt="cpto logo">
+    <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a>
+            <div class="dropdown-content">
+                <a href="places.html">Where to go</a>
+                <a href="activities.html">What to do</a>
+                <a href="foods.html">What to eat</a>
+                <a href="festivals.html">Festivals</a>
+                <a href="history.html">History</a>
+            </div>
+        </li>
+        <li><a href="#">Services</a>
+            <div class="dropdown-content">
+                <a href="reqinv.html">Request and Invitation</a>
+                <a href="accreditation.html">TRE Accreditation</a>
+                <a href="acceptance.html">Acceptance of Inbound Guests to Calaguas</a>
+            </div>
+        </li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="main">
+        <a href="login.html" class="user"><i class="ri-user-fill"></i>Sign In</a>
+        <a href="signup.html" class="user"> <i class="ri-client-fill"></i> Sign Up</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+</header>
+
+<!-- CHAT BAR BLOCK -->
+<div class="chat-bar-collapsible">
+    <button id="chat-button" type="button" class="collapsible">Click here for inquiries
+        <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+    </button>
+
+    <div class="content">
+        <div class="full-chat-block">
+            <!-- Message Container -->
+            <div class="outer-container">
+                <div class="chat-container">
+                    <!-- Messages -->
+                    <div id="chatbox">
+                        <h5 id="chat-timestamp"></h5>
+                        <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                    </div>
+
+                    <!-- User input box -->
+                    <div class="chat-bar-input-block">
+                        <div id="userInput">
+                            <input id="textInput" class="input-box" type="text" name="msg"
+                                placeholder="Tap 'Enter' to send a message">
+                            <p></p>
+                        </div>
+
+                        <div class="chat-bar-icons">
+                            <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-question"
+                                onclick="faqs()"></i>
+                            <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                onclick="sendButton()"></i>
+                        </div>
+                    </div>
+
+                    <div id="chat-bar-bottom">
+                        <p></p> 
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="responses.js"></script>
+<script src="chat.js"></script>
+
+
+
+<!--header end-->
+
+
+
+
+
+
+<!--Main content start-->
+<div class="holder"><br><br><br><br><br>
+    <div class="card-holder">
+        <div class="card"><br>
+            <div class="card-img">
+    
+            </div>
+            <div class="card-content">
+                <h2 class="name">Bantayog Festival</h2>
+                <h3 class="location">Daet, Camarines Norte</h3>
+                <p class="desciption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus placeat qui, dignissimos harum asperiores nulla nesciunt vitae ratione inventore dicta.</p>
+            </div>
+        </div>
+
+        <div class="card"><br>
+            <div class="card-img">
+    
+            </div>
+            <div class="card-content">
+                <h2 class="name">Boyuboy Festival</h2>
+                <h3 class="location">San Lorenzo Ruiz, Camarines Norte</h3>
+                <p class="desciption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ex ipsum nostrum eaque. Iure suscipit quaerat eos ipsum quo vero!</p>
+            </div>
+        </div>
+
+        <div class="card"><br>
+            <div class="card-img">
+    
+            </div>
+            <div class="card-content">
+                <h2 class="name">Busig-on Festival</h2>
+                <h3 class="location">Labo, Camarines Norte</h3>
+                <p class="desciption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptates optio porro tempora hic nisi earum inventore iste dolore culpa!</p>
+            </div>
+        </div>
+
+        <div class="card"><br>
+            <div class="card-img">
+    
+            </div>
+            <div class="card-content">
+                <h2 class="name">Kadagatan Festival</h2>
+                <h3 class="location">Mercedes, Camarines Norte</h3>
+                <p class="desciption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias accusamus reprehenderit aliquid id quisquam quaerat totam esse aut sequi repudiandae.</p>
+            </div>
+        </div>
+
+        <div class="card"><br>
+            <div class="card-img">
+    
+            </div>
+            <div class="card-content">
+                <h2 class="name">Mambulawan Festival</h2>
+                <h3 class="location">Jose Panganiban, Camarines Norte</h3>
+                <p class="desciption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quas ut molestiae sapiente assumenda ex quo dignissimos natus necessitatibus dolorum?</p>
+            </div>
+        </div>
+
+        <div class="card"><br>
+            <div class="card-img">
+    
+            </div>
+            <div class="card-content">
+                <h2 class="name">Mananap Festival</h2>
+                <h3 class="location">San Vicente, Camarines Norte</h3>
+                <p class="desciption">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit magnam modi, repellendus in repudiandae veniam dignissimos iure quod ipsum quas?</p>
+            </div>
+        </div>
+
+        <div class="card"><br>
+            <div class="card-img">
+    
+            </div>
+            <div class="card-content">
+                <h2 class="name">Pabirik Festival</h2>
+                <h3 class="location">Paracale, Camarines Norte</h3>
+                <p class="desciption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eius vero similique nihil quia, fugiat alias officiis minus atque dolorum.</p>
+            </div>
+        </div>
+
+        <div class="card"><br>
+            <div class="card-img">
+    
+            </div>
+            <div class="card-content">
+                <h2 class="name">Padayog Festival</h2>
+                <h3 class="location">Sta. Elena, Camarines Norte</h3>
+                <p class="desciption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id explicabo alias vitae magnam quibusdam vero odit aspernatur excepturi a architecto?</p>
+            </div>
+        </div>
+
+        <div class="card"><br>
+            <div class="card-img">
+    
+            </div>
+            <div class="card-content">
+                <h2 class="name">Palong Festival</h2>
+                <h3 class="location">Capalonga, Camarines Norte</h3>
+                <p class="desciption">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro mollitia deleniti explicabo. Optio, quaerat consequatur. Ab accusamus voluptate iusto consequuntur?</p>
+            </div>
+        </div>
+
+        <div class="card"><br>
+            <div class="card-img">
+    
+            </div>
+            <div class="card-content">
+                <h2 class="name">Paruyan Festival</h2>
+                <h3 class="location">Talisay, Camarines Norte</h3>
+                <p class="desciption"></p>
+            </div>
+        </div>
+
+        <div class="card"><br>
+            <div class="card-img">
+    
+            </div>
+            <div class="card-content">
+                <h2 class="name">Pinyasan Festival</h2>
+                <h3 class="location">Daet, Camarines Norte</h3>
+                <p class="desciption">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus doloribus exercitationem laudantium alias at iure ad dolorum dignissimos sint nisi!</p>
+            </div>
+        </div>
+
+        <div class="card"><br>
+            <div class="card-img">
+    
+            </div>
+            <div class="card-content">
+                <h2 class="name">Rahugan Festival</h2>
+                <h3 class="location">Basud, Camarines Norte</h3>
+                <p class="desciption">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem expedita cupiditate neque dolor ipsum repudiandae et laboriosam dolorem nihil laudantium.</p>
+            </div>
+        </div>
+
+        <div class="card"><br>
+            <div class="card-img">
+    
+            </div>
+            <div class="card-content">
+                <h2 class="name">Tacboan Festival</h2>
+                <h3 class="location">Vinzons, Camarines Norte</h3>
+                <p class="desciption">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem expedita cupiditate neque dolor ipsum repudiandae et laboriosam dolorem nihil laudantium.</p>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+<!--Main content end-->
+
+
+<!--footer start-->
+
+<!--footer end-->
+    
+</body>
+</html>
