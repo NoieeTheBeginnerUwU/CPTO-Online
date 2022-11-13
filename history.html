@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="script" href="script/script.js">
+        <link rel="shortcut icon" href="/images/logo.png">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+        <link rel="stylesheet" href="static/css/chat.css">
+        <link rel="stylesheet" href="static/css/home.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    
+        <title>CPTO Online</title>
+    </head>
+<body>
+<!--header start-->
+
+<header>
+    <img class="icon" src="images/logo.png" alt="cpto logo">
+    <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a>
+            <div class="dropdown-content">
+                <a href="places.html">Where to go</a>
+                <a href="activities.html">What to do</a>
+                <a href="foods.html">What to eat</a>
+                <a href="festivals.html">Festivals</a>
+                <a href="history.html">History</a>
+            </div>
+        </li>
+        <li><a href="#">Services</a>
+            <div class="dropdown-content">
+                <a href="reqinv.html">Request and Invitation</a>
+                <a href="accreditation.html">TRE Accreditation</a>
+                <a href="acceptance.html">Acceptance of Inbound Guests to Calaguas</a>
+            </div>
+        </li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="main">
+        <a href="login.html" class="user"><i class="ri-user-fill"></i>Sign In</a>
+        <a href="signup.html" class="user"> <i class="ri-client-fill"></i> Sign Up</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+</header>
+
+<!-- CHAT BAR BLOCK -->
+<div class="chat-bar-collapsible">
+    <button id="chat-button" type="button" class="collapsible">Click here for inquiries
+        <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+    </button>
+
+    <div class="content">
+        <div class="full-chat-block">
+            <!-- Message Container -->
+            <div class="outer-container">
+                <div class="chat-container">
+                    <!-- Messages -->
+                    <div id="chatbox">
+                        <h5 id="chat-timestamp"></h5>
+                        <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                    </div>
+
+                    <!-- User input box -->
+                    <div class="chat-bar-input-block">
+                        <div id="userInput">
+                            <input id="textInput" class="input-box" type="text" name="msg"
+                                placeholder="Tap 'Enter' to send a message">
+                            <p></p>
+                        </div>
+
+                        <div class="chat-bar-icons">
+                            <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-question"
+                                onclick="faqs()"></i>
+                            <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                onclick="sendButton()"></i>
+                        </div>
+                    </div>
+
+                    <div id="chat-bar-bottom">
+                        <p></p> 
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="responses.js"></script>
+<script src="chat.js"></script>
+
+
+
+<!--header end-->
+
+
+
+
+
+<!--Main content start-->
+<div class="holder">
+    <br><br><br><br>
+    <div class="history">
+        <h4>Spanish Period</h4>
+        <img src="images/Juan_de_Salcedo,_Spanish_conquistador.png" alt="Juan de Salcedo image">
+        <section>
+            when Spanish conquisitador Juan De Salcedo set foot in the northern portion of the Bicol Peninsula in 1583, he couldn't have chosen a more appropriate name when he christened it "Camarines".
+        </section>
+        <img src="images/R.png" alt="Camarines Norte map image">
+        <section>
+            He saw numerous barns in farms and along riverbanks, which led him to call the place Camarines for "storehouse". Camarines Nortewas created on April 15, 1920 through Orden Ejecutiva Numero 22, separating it from its twin province of Camarines Sur.
+        </section>
+        <h4>Daet Revolt</h4>
+        <img src="images/philippine-revolution-battles-involving-the-katipunan-u3.jfif" alt="katipunan image">
+        <section>
+            April 14–17, 1898 - Local members of the Katipunan led by Ildefonso Moreno and other patriots staged an uprising against the Spanish authorities here who have fortified themselves in the house of one Florencio Arana, a Spanish merchant and a long time resident of Daet. Sporadic encounters started on April 14 until April 16 when the rebels occupied Daet and surrounded the Spaniards in the house of Arana. But the Katipuneros failed to repulse the reinforcements which arrived in Barra (now Mercedes) from Nueva Caceres on April 17. Said reinforcements broke the siege of Daet. This resulted in the death and/or execution of many patriots, including Ildefonso Moreno, Tomas Zaldua and his two sons, Jose Abaño, Domingo Lozada and Aniceto Gregorio, among others. While the Daet revolt collapsed, it signaled the start of a series of rebellion throughout the Bicol region.
+            <br><br>
+            By virtue of Act 2809 of March 3, 1919, Governor General F. B. Harrison separated Camarines Norte from Camarines Sur with the installation of Don Miguel R. Lukban as its first governor. "In functional sense, April 15, 1920, was the date of the organization of Camarines Norte, as directed by Executive Order No. 22 dated March 20, 1920, in conformity with the provisions of Act No. 2809," according to Serafin D. Quiason, former chairman of the National Historical Institute (NHI).
+        </section>
+
+
+
+
+
+
+
+
+
+<!--        <img src="images/download.jfif" alt="manila to camarines norte map image">
+        <section>
+            Situated 300 kilometers south of Manila, this treasure trove of nature spots and historic sites in the northern coast of the Bicol Peninsula is one of tourism's best-kept secrets despite its relative proximity to Manila. It is bounded by such rich bodies of water as the Pacific Ocean and San Miguel Bay, as well as the fertile provinces of Quezon and Camarines Sur.
+        </section>-->
+
+
+
+    </div>
+</div>
+<!--Main content end-->
+
+
+
+
+
+<!--footer start-->
+
+<!--footer end-->
+    
+</body>
+</html>
