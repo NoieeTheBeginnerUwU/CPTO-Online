@@ -11,6 +11,8 @@
     --nav-color: rgb(2, 2, 72);
 }html{
     font-family: montserrat;
+    scroll-behavior: smooth;
+    text-align: justify;
 }body{
     width: 100%;
     height: 100vh;
@@ -610,4 +612,37 @@
     margin: 0 2% 2% 0;
     font-size: 2.4rem;
     color: var(--nav-color);
+}footer{
+    display: flex;
+    flex-direction: row;
+    position: absolute  ;
+    bottom: 100;
+    width: 100%;
+    height: 40vh;
+    background-color: var(--nav-color);
+}.footer-content1{
+    margin: 2%;
+    width: 33%;
+    color: rgb(175, 175, 175);
+}.footer-content2{
+    margin: 2%;
+    color: rgb(175, 175, 175);
+    width: 33%;
+    font-size: 1.1rem;
+}.footer-content3{
+    margin: 2%;
+    color: rgb(175, 175, 175);
+    width: 33%;
+    text-decoration: none;
+}.footer-content3 a{
+    color: rgb(175, 175, 175);
+}#loginbtn, #signupbtn{
+    font-size: 1.2rem;
+    color: whitesmoke;
+    border: none;
+    background-color: #00aa06;
+}#loginbtn:hover{
+    background-color: #29fd53;
+}#signupbtn:hover{
+    background-color: #29fd53;
 }
