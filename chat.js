@@ -89,6 +89,7 @@ function buttonSendText(sampleText) {
     // }, 1000)
 }
 
+
 function sendButton() {
     getResponse();
 }
