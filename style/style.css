@@ -46,6 +46,8 @@
     margin: 0 auto;
     height: 100vh;
 }.logo.logo-img{
+    position: relative;
+    z-index: 1000;
     margin: 0 auto;
     align-self: center;
 }header{
@@ -123,6 +125,7 @@
 }
 .breadcrumb{
     position: fixed;
+    z-index: 102;
     width: 100%;
     height: 10vh;
     background-color: rgb(2, 2, 72);
@@ -135,6 +138,39 @@
 .breadcrumb a span{
     font-size: 1rem;
     font-weight: 900;
+}
+@media(max-width: 900px){
+    .logo-img{
+        width: 35%;
+        margin-left: -21%;
+    }
+    .CPTOO{
+        font-size: 2rem;
+    }
+    footer h3{
+        font-size: .9rem;
+    }
+    footer{
+        display:flex;
+        flex-direction: column-reverse;
+    }
+    .footer-content1{
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .footer-content2{
+        display: none;
+    }
+    .footer-content3{
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .chat-bar-collapsible{
+        height: 10vh;
+        width: 10%;
+    }
 }
 
 @media (max-width: 1280px){
@@ -184,6 +220,7 @@
 	.navbar.open{
 		right: 2%;
 	}
+
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -412,10 +449,6 @@
     width: 50%;
     height: 80vh;
     background-color: red;
-}input{
-    width: 80%;
-    height: 6vh;
-    margin-top: 15%;
 }#cpto-logo{
     margin: 0 auto;
     float: left;
@@ -645,4 +678,23 @@
     background-color: #29fd53;
 }#signupbtn:hover{
     background-color: #29fd53;
+}.form-holder{
+    display: grid;
+    place-items: center;
+}.form-holder input{
+    width: 100%;
+    margin: 2%;
+    height: 7vh;
+}.form-holder a{
+    text-align: center;
+    float: right;
+    background-color: ghostwhite;
+    width: 30vh;
+    height: 4vh;
+}.vid{
+    background-color: #ffffff;
+    position: relative;
+    z-index: 10;
+    width: 100%;    
+    margin-top: 4.5%;
 }
