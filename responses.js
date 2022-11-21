@@ -64,7 +64,7 @@ function getBotResponse(input) {
     }else if(input == "how much is tinumok?"){
         return ""
     }     else {
-        return "Sorry i did not quite get that, if you have specific questions please refer to the CPTO facebook account https://www.facebook.com/GoCamNorte or CPTO gmail come2camnorte@gmail.com ";
+        return "Sorry i did not quite get that, if you have specific questions please refer to the CPTO facebook account https://www.facebook.com/<br>GoCamNorte or CPTO gmail come2camnorte@gmail.com ";
     }
 
 }
