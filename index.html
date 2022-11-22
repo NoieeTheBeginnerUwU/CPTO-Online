@@ -192,3 +192,27 @@
     
 </body>
 </html>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNZKRQGELD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WNZKRQGELD');
+</script>
+<script>
+
+    function cb(response) {
+        document.getElementById('visits').innerText = response.value;
+    }
+
+    updateCounter()
+
+    function updateCounter(){
+        fetch('https://api.countapi.xyz/update/cpto.com/cpto-online/?amount=1')
+        .then(function(res){res.json()})
+    }
+
+    </script>
+    <script async src="https://api.countapi.xyz/update/cpto.com/visits?callback=cb"></script>

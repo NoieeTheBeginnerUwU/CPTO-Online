@@ -301,7 +301,19 @@
                                         <i class="fa fa-eye"></i>
                                     </div>
                                     <div class="media-body pl-2">
-                                        <h3 class="mt-0 mb-0"><strong>0</strong></h3>
+                                        <h3 class="count" id="count">0</h3>
+                                        <script>
+                                            
+                                            updateCounter()
+                                            counterElement = document.getElementsByClassName('count')[0]
+                                            function updateCounter(){
+
+                                                fetch('https://api.countapi.xyz/get/cpto.com/cpto-online')
+                                                .then(res => res.json())
+                                                .then(res => {counterElement.innerHTML = res.value})
+                                            }
+
+                                        </script>
                                         <p><small class="text-muted bc-description">Site visits</small></p>
                                     </div>
                                 </div>
@@ -536,3 +548,5 @@
     </script>
   </body>
 </html>
+
+
