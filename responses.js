@@ -13,7 +13,7 @@ function getBotResponse(input) {
     // Simple responses
     if (input == "hello") {
         return "Hello there!";
-    } else if (input == "goodbye") {
+    } else if (input == "goodbye") {  
         return "Goodbye! ";
     }else if(input == "i love you"){
         return "i'm taken, sorry."
@@ -24,7 +24,7 @@ function getBotResponse(input) {
     }else if(input == "google"){
         return window.location.replace("https://www.google.com/")
     }else if(input == "where can i buy angko?"){
-        return ""
+        return " Labo Terminal or for more information<a href=''> click here</a>"
     }else if(input == "where can i buy sinantol?"){
         return ""
     }else if(input == "where can i buy ginumis?"){
