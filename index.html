@@ -75,15 +75,15 @@
                     <!-- User input box -->
                     <div class="chat-bar-input-block">
                         <div id="userInput">
-                            <input id="textInput" class="input-box" type="text" name="msg"
-                                placeholder="Tap 'Enter' to send a message">
+                            <input  class="input-box" type="text" id="textInput" name="textInput"
+                                placeholder="Tap 'Enter' to send a message" required>
                             <p></p>
                         </div>
 
                         <div class="chat-bar-icons">
                             <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-question"
                                 onclick="faqs()"></i>
-                            <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                            <i id="chat" name="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
                                 onclick="sendButton()"></i>
                         </div>
                     </div>
@@ -112,11 +112,13 @@
 
 
 
-<!--Main content start--><br><br>
-<div class="breadcrumb"><br><br>
-    <a href="index.html"><i class='fa fa-home'></i> Homepage <i class='fas fa-slash'></i></a>
-    <a href="">/</a>
-    <a href=""> featured </a>
+<!--Main content start-->
+<div class="breadcrumb">
+    <div class="a-holder">
+        <a href="index.html"><i class='fa fa-home'></i> Homepage <i class='fas fa-slash'></i></a>
+        <a href="">/</a>
+        <a href=""> featured </a>
+    </div>
 </div>
 <div class="holder">
     <img class="logo-img" src="images/logo.png" alt="logo" style="position:absolute;
@@ -130,7 +132,7 @@
     </video>
 
     <div class="holder2">
-        <br><br><br>
+        
         <div class="" style="margin-right: 2%;">
 
         </div>
@@ -153,19 +155,19 @@
  
     <footer>
         <div class="footer-content1">
-            <h3>ADDRESS & CONTACT</h3><br>
+            <h3>ADDRESS & CONTACT</h3>
             <i class="fa fa-home" style="font-size: 1.2rem; margin:2%;"></i> 4X73+7WG, Daet, Camarines Norte <br>
             <i class="fa fa-envelope" style="font-size: 1.2rem; margin:2%;"></i> come2camnorte@gmail.com <br>
-            <i class="fa fa-mobile" style="font-size: 1.8rem; margin:2%;"></i> (054)855 -1898 | 09272331018 | 09287169415 <br><br>
-            <hr> 
-            <br>
+            <i class="fa fa-mobile" style="font-size: 1.8rem; margin:2%;"></i> (054)855 -1898 | 09272331018 | 09287169415 <br>
+            <hr> <br>
+            
             All rights reserved 2022
         </div>
         <div class="footer-content2">
-            <h3>FOLLOW US ON</h3><br>
-            <i class="fa fa-facebook" style="font-size: 1.5rem; margin:2%;"></i>  https://www.facebook.com/GoCamNorte<br>
-            <i class="fa fa-instagram" style="font-size: 1.5rem; margin:2%;"></i>  https://www.instagram.com/GoCamNorte<br>
-            <i class="fa fa-twitter" style="font-size: 1.5rem; margin:2%;"></i>  https://www.twitter.com/GoCamNorte<br>
+            <h3>FOLLOW US ON</h3>
+            <i class="fa fa-facebook" style="font-size: 1.5rem; margin:2%;"></i>  https://www.facebook.com/GoCamNorte <br>
+            <i class="fa fa-instagram" style="font-size: 1.5rem; margin:2%;"></i>  https://www.instagram.com/GoCamNorte <br>
+            <i class="fa fa-twitter" style="font-size: 1.5rem; margin:2%;"></i>  https://www.twitter.com/GoCamNorte <br>
             <hr>
         </div>
         <div class="footer-content3">
@@ -174,7 +176,7 @@
             <p>Tourism Related Enterprises Accreditation</p>
             <p>Acceptance of Inbound Guest to Calaguas Island</p>
             <p>Accomodation</p>
-            <hr><br>
+            <hr>
             <a href="">Privacy Policy |</a>
             <a href="">User Agreement |</a>
             <a href="">Terms and Condition</a>
@@ -192,3 +194,70 @@
     
 </body>
 </html>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNZKRQGELD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WNZKRQGELD');
+</script>
+<script>
+
+    function cb(response) {
+        document.getElementById('visits').innerText = response.value;
+    }
+
+    updateCounter()
+
+    function updateCounter(){
+        fetch('https://api.countapi.xyz/update/cpto.com/cpto-online/?amount=1')
+        .then(function(res){res.json()})
+    }
+
+    </script>
+    <script async src="https://api.countapi.xyz/update/cpto.com/visits?callback=cb"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+        import {
+            getAuth,
+            createUserWithEmailAndPassword,
+            signInWithEmailAndPassword,
+            signOut
+        } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+        import {getDatabase, set, ref, update} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+    
+    
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    
+    const firebaseConfig = {
+      apiKey: "AIzaSyDA1XjvPrrZiMLhYRRV1Ar23p4SF2lJq9I",
+      authDomain: "cpto-d7b0b.firebaseapp.com",
+      projectId: "cpto-d7b0b",
+      storageBucket: "cpto-d7b0b.appspot.com",
+      messagingSenderId: "633926478402",
+      appId: "1:633926478402:web:3e659a8d5f50793d299bdb",
+      measurementId: "G-WNZKRQGELD"
+    };
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const database = getDatabase(app);
+
+        var btn = document.getElementById('chat');
+        var msg1 = document.getElementById('textInput').value;
+
+        btn.addEventListener('click', (e) => {
+            
+            alert(msg1)
+            set(ref(database, 'inquiries/' + user.uid), {
+                    message: 'sadadasdsa',
+                    message: 'asdasdasdasd'
+                })
+        })
+    
+    </script>
