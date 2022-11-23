@@ -75,16 +75,16 @@
                     <!-- User input box -->
                     <div class="chat-bar-input-block">
                         <div id="userInput">
-                            <input id="textInput" class="input-box" type="text" name="msg"
-                                placeholder="Tap 'Enter' to send a message">
+                            <input  class="input-box" type="text" id="textInput" name="textInput"
+                                placeholder="Tap 'Enter' to send a message" required>
                             <p></p>
                         </div>
 
                         <div class="chat-bar-icons">
                             <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-question"
                                 onclick="faqs()"></i>
-                            <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
-                                onclick="sendButton(),sendData()"></i>
+                            <i id="chat" name="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                onclick="sendButton()"></i>
                         </div>
                     </div>
 
@@ -247,65 +247,17 @@
         const app = initializeApp(firebaseConfig);
         const auth = getAuth();
         const database = getDatabase(app);
-    
-        var message = document.getElementById('textInput')
-        var btn = document.getElementById('chat-icon')
-        var lgDate = new Date();
-        
-        function sendData(){
-            set(ref(database, 'inquiry/' + user.uid), {
-                        message: message,
-                        last_login: lgDate,
-                    })
-        }
 
-        btn.addEventListener('click', (e) =>{
-            set(ref(database, 'inquiry/' + user.uid), {
-                        message: message,
-                        last_login: lgDate,
-                    })
-        })
+        var btn = document.getElementById('chat');
+        var msg1 = document.getElementById('textInput').value;
 
-        submitData.addEventListener('click', (e) => {
-    
-            var message = document.getElementById('email').value;
-            var password = document.getElementById('psw').value;
-    
-            // log in user
-            signInWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    // Signed in
-                    const user = userCredential.user;
-                    // ...
-    
-                    // save log in details into real time database
-                    var lgDate = new Date();
-                    update(ref(database, 'users/' + user.uid), {
-                        email: email,
-                        password: psw,
-                        last_login: lgDate,
-                    })
-                        .then(() => {
-                            // Data saved successfully!
-
-                        })
-                        .catch((error) => {
-                            // The write failed...
-                            alert(error);
-                        });
+        btn.addEventListener('click', (e) => {
+            
+            alert(msg1)
+            set(ref(database, 'inquiries/' + user.uid), {
+                    message: 'sadadasdsa',
+                    message: 'asdasdasdasd'
                 })
-                .catch((error) => {
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                    alert(errorMessage);
-                });
-    
-    
-            signOut(auth).then(() => {
-                   // Sign-out successful.
-            }).catch((error) => {
-                // An error happened.
-            });
-        });
+        })
     
     </script>
