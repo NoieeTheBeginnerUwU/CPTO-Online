@@ -29,56 +29,56 @@ $(document).ready(function() {
       eventLimit: true, // allow "more" link when too many events
       events: [
         {
-          title: 'All Day Event',
-          start: '2018-03-01'
+          title: '-',
+          start: '-'
         },
         {
-          title: 'Long Event',
+          title: '-',
           start: '2018-03-07',
           end: '2018-03-10'
         },
         {
           id: 999,
-          title: 'Repeating Event',
+          title: '-',
           start: '2018-03-09T16:00:00'
         },
         {
           id: 999,
-          title: 'Repeating Event',
+          title: '-',
           start: '2018-03-16T16:00:00'
         },
         {
-          title: 'Conference',
+          title: '-',
           start: '2018-03-11',
           end: '2018-03-13'
         },
         {
-          title: 'Meeting',
+          title: '-',
           start: '2018-03-12T10:30:00',
           end: '2018-03-12T12:30:00'
         },
         {
-          title: 'Lunch',
+          title: '-',
           start: '2018-03-12T12:00:00'
         },
         {
-          title: 'Meeting',
+          title: '-',
           start: '2018-03-12T14:30:00'
         },
         {
-          title: 'Happy Hour',
+          title: '-',
           start: '2018-03-12T17:30:00'
         },
         {
-          title: 'Dinner',
+          title: '-',
           start: '2018-03-12T20:00:00'
         },
         {
-          title: 'Birthday Party',
+          title: '-',
           start: '2018-03-13T07:00:00'
         },
         {
-          title: 'Click for Google',
+          title: '-',
           url: 'http://google.com/',
           start: '2018-03-28'
         }
