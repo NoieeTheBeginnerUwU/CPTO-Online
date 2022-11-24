@@ -7,29 +7,24 @@
     <meta name="author" content="">
     <meta name="keywords" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    <link rel="shortcut icon" href="/images/logo.png">
     <!--Meta Responsive tag-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="/images/logo.png">
-    <!--Favicon Icon-->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!--Custom style.css-->
-    <link rel="stylesheet" href="assets/css/quicksand.css">
-    <link rel="stylesheet" href="assets/css/style.css">
     <!--Font Awesome-->
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <!--Animate CSS-->
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <!--Chartist CSS-->
-    <link rel="stylesheet" href="assets/css/chartist.min.css">
-    <!--Map-->
-    <link rel="stylesheet" href="assets/css/jquery-jvectormap-2.0.2.css">
+    <!--Custom style.css-->
+    <link rel="stylesheet" href="assets/css/quicksand.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--Fullcalendar CSS-->
+    <link rel="stylesheet" href="assets/css/fullcalendar-3.9.0/fullcalendar.min.css">
+    <link rel="stylesheet" href="assets/css/fullcalendar-3.9.0/fullcalendar.print.min.css"  media='print'>
     <!--Bootstrap Calendar-->
     <link rel="stylesheet" href="assets/js/calendar/bootstrap_calendar.css">
-    <!--Nice select -->
+    <!--Nice select-->
     <link rel="stylesheet" href="assets/css/nice-select.css">
 
     <!--[if lt IE 9]>
@@ -40,13 +35,6 @@
     <title>CNPTO ADMIN DASHBOARD</title>
   </head>
   <body>
-    <!--Page loader-->
-    <div class="loader-wrapper">
-        <div class="loader-circle">
-            <div class="loader-wave"></div>
-        </div>
-    </div>
-    <!--Page loader-->
     
     <!--Page Wrapper-->
 
@@ -57,10 +45,10 @@
             
             <!--Logo-->
             <div class="col-sm-3 pl-0 text-center header-logo">
-               <div class="bg-theme mr-3 pt-3 pb-2 mb-0">
-                    <h3 class="logo"><a href="#" class="text-secondary logo"><i class="fa fa-compass"></i> CNPTO<span class="small">ADMIN</span></a></h3>
-               </div>
-            </div>
+                <div class="bg-theme mr-3 pt-3 pb-2 mb-0">
+                     <h3 class="logo"><a href="#" class="text-secondary logo"><i class="fa fa-compass"></i> CNPTO<span class="small">ADMIN</span></a></h3>
+                </div>
+             </div>
             <!--Logo-->
 
             <!--Header Menu-->
@@ -76,28 +64,14 @@
                         <!--Toggle sidebar-->
                         <!--Notification icon-->
                         <!--Notication icon-->
-
-                        <!--Inbox icon-->
-                        <!--Inbox icon-->
-
+                        <!--Inbox icon-->   
                     </div>
                     <!--Menu Icons-->
 
                     <!--Search box and avatar-->
                     <div class="col-sm-8 col-4 text-right flex-header-menu justify-content-end">
                         <div class="search-rounded mr-3">
-                            <input type="text" class="form-control search-box" placeholder="Search here..." />
-                        </div>
-                        <div class="mr-4">
-                            <div class="dropdown-menu dropdown-menu-right mt-13" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="#"><i class="fa fa-user pr-2"></i> Profile</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#"><i class="fa fa-th-list pr-2"></i> Tasks</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#"><i class="fa fa-book pr-2"></i> Projects</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#"><i class="fa fa-power-off pr-2"></i> Logout</a>
-                            </div>
+                            <input type="text" class="form-control search-box" placeholder="Enter keywords.." />
                         </div>
                     </div>
                     <!--Search box and avatar-->
@@ -134,6 +108,7 @@
                                 </ul>
                             </li>
                             </li>
+                            
                             <li class="parent">
                                 <a href="#" onclick="toggle_menu('tables'); return false" class=""><i class="fa fa-pencil-square mr-3"></i>
                                     <span class="none">Tables <i class="fa fa-angle-down pull-right align-bottom"></i></span>
@@ -158,6 +133,7 @@
                                     <li class="child"><a href="sparkline.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Sparkline JS</a></li>
                                 </ul>
                             </li>
+
                             <li class="parent">
                                 <a href="#" onclick="toggle_menu('maps'); return false" class=""><i class="fa fa-map mr-3"></i>
                                     <span class="none">Maps <i class="fa fa-angle-down pull-right align-bottom"></i></span>
@@ -216,205 +192,28 @@
 
             <!--Content right-->
             <div class="col-sm-9 col-xs-12 content pt-3 pl-0">
-                <h5 class="mb-3" ><strong>Dashboard</strong></h5>
+                <h5 class="mb-0" ><strong>Fullcalendar</strong></h5>
+                <span class="text-secondary">Pages <i class="fa fa-angle-right"></i> fullcalendar</span>
                 
-                <!--Dashboard widget-->
-                <div class="mt-1 mb-3 button-container">
-                    <div class="row pl-0">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
-                            <div class="bg-white border shadow">
-                                <div class="media p-4">
-                                    <div class="align-self-center mr-3 rounded-circle notify-icon bg-theme">
-                                        <i class="fa fa-eye"></i>
-                                    </div>
-                                    <div class="media-body pl-2">
-                                        <h3 class="count" id="count">0</h3>
-                                        <script>
-                                            updateCounter()
-                                            counterElement = document.getElementsByClassName('count')[0]
-                                            function updateCounter(){
-                                                fetch('https://api.countapi.xyz/get/cpto.com/cpto-online')
-                                                .then(res => res.json())
-                                                .then(res => {counterElement.innerHTML = res.value})
-                                            }
-
-                                        </script>
-                                        <p><small class="text-muted bc-description">Site visits</small></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
-                            <div class="bg-white border shadow">
-                                <div class="media p-4">
-                                    <div class="align-self-center mr-3 rounded-circle notify-icon bg-danger">
-                                        <i class="fas fa-envelope-open"></i>
-                                    </div>
-                                    <div class="media-body pl-2">
-                                        <h3 class="mt-0 mb-0"><strong>0</strong></h3>
-                                        <p><small class="text-muted bc-description">Accreditation Requests</small></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
-                            <div class="bg-theme border shadow">
-                                <div class="media p-4">
-                                    <div class="align-self-center mr-3 rounded-circle notify-icon bg-white">
-                                        <i class="fa fa-tags text-theme"></i>
-                                    </div>
-                                    <div class="media-body pl-2">
-                                        <h3 class="mt-0 mb-0"><strong>0</strong></h3>
-                                        <p><small class="bc-description text-white">Total Accreditations</small></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--/Dashboard widget-->
-
                 <div class="row mt-3">
-                    <div class="col-sm-6">
-                        <!--Jvector world map-->
-                        <div class="mt-1 mb-3 p-3 button-container bg-white shadow-sm border">
-                            <h6 class="mb-3">World Market</h6><hr>
-                            
-                            <div id="worldMarket" style="width: 100%; height: 350px"></div>
-                            
-                        </div>
-                        <!--/Jvector world map-->
+                    <div class="col-md-12 col-sm-12">
+                        <!--Full Calendar-->
+                        <div class="mt-1 mb-3 p-3 button-container bg-white border shadow-sm lh-sm">
+                            <div class="email-msg">
+                                
+                                <div class="table-responsive" id="calendarFull"></div>
 
-                    </div>
-                    
-                    
-                    <div class="col-sm-6">
-                        <!--Revenue Graph-->
-                        <div class="mt-1 mb-3 button-container bg-white border shadow-sm p-3">
-                            <h6 class="mb-3">Revenue vs Cost Graph</h6><hr>
-
-                            <div class="ct-chart" id="costRevenue"  style="height: 350px;"></div>
-
-                        </div>
-                        <!--/Revenue Graph-->
-                    </div>
-                </div>
-
-                <!--Chart Section-->
-                <div class="mt-1 mb-3 p-3 button-container bg-white shadow-sm border">
-                    <h6>Analytics overview</h6><hr>
-                    <div class="row mb-3">
-                        <div class="col-sm-4 ol-12">
-                            <h1 class="text-success">1</h1>
-                            <h5>Clients</h5>
-                        </div>
-                        <div class="col-sm-4 ol-12 text-center">
-                            <h1 class="text-theme">1</h1>
-                            <h5>Accreditation Requests</h5>
-                        </div>
-                        <div class="col-sm-4 ol-12 text-right">
-                            <h1 class="text-danger">P 0</h1>
-                            <h5>Revenue</h5>
-                        </div>
-                    </div>
-
-                    <canvas id="orderRevenue" class="orderRevenue pt-1" height="100px"></canvas>
-                </div>
-                <!--Chart Section-->
-
-                <div class="mt-4 mb-4 p-3 bg-white border shadow-sm lh-sm">
-                    <!--Order Listing-->
-                    <div class="product-list">
-                        
-                        <div class="row border-bottom mb-4">
-                            <div class="col-sm-8 pt-2"><h6 class="mb-4 bc-header">Pending Requests for accreditation</h6></div>
-                            <div class="col-sm-4 text-right pb-3">
-                                <button type="button" class="btn btn-danger icon-round shadow pull-right">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-
-                                <div class="pull-right mr-3 btn-order-bulk">
-                                    <select class="shadow bg-secondary bulk-actions">
-                                        <option data-display="<span class='text-white'><b>Bulk status</b></span>">Status options</option>
-                                        <option value="1">Pending</option>
-                                        <option value="2">Cancelled</option>
-                                        <option value="4">Delivered</option>
-                                    </select>
-                                </div>
-
-                                <div class="clearfix"></div>
                             </div>
                         </div>
-                        
-                        <div class="table-responsive product-list">
-                            
-                            <table class="table table-bordered table-striped mt-0" id="productList">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 10px;" class="p-0 pr-4 align-middle">
-                                            <div class="form-check-box cta">
-                                                <span class="color1">
-                                                    <input type="checkbox" id="orderAll">
-                                                    <label for="orderAll"></label>
-                                                </span>
-                                            </div>
-                                        </th>
-                                        <th>Accreditation ID</th>
-                                        <th>Client</th>
-                                        <th>Status</th>
-                                        <th>Total</th>
-                                        <th>Request date</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td style="width: 10px;" class="p-0 pr-1 align-middle">
-                                            <div class="form-check-box cta">
-                                                <span class="color1">
-                                                    <input type="checkbox" id="order1">
-                                                    <label for="order1"></label>
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td>Ord#1</td>
-                                        <td class="align-middle">
-                                            Evia's Eatery
-                                        </td>
-                                        <td class="align-middle"><span class="badge badge-warning">Pending</span></td>
-                                        <td class="align-middle">P 1500</td>
-                                        <td>15/09/2018</td>
-                                        <td class="align-middle text-center">
-                                            <button class="btn btn-theme" data-toggle="modal" data-target="#orderInfo">
-                                                <i class="fa fa-eye"></i>
-                                            </button>
-                                            <button class="btn btn-success" data-toggle="modal" data-target="#orderUpdate"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                        </td>
-                                    </tr>
-                            </table>
+                        <!--/Email messages-->
 
-                            <div class="text-right">
-                                <button class="btn btn-outline-theme"><i class="fa fa-eye"></i> View full orders</button>
-                            </div>
-                        </div>
                     </div>
-                    <!--/Order Listing-->
-
-                    <!--Order Info Modal-->
-                  
-                    <!--Order Info Modal-->
-
-
-                    <!--Order Update Modal-->
                 </div>
 
                 <!--Footer-->
                 <div class="row mt-5 mb-4 footer">
                     <div class="col-sm-8">
-                        <span>&copy; All rights reserved 2022<a class="text-theme" href="#"></a></span>
+                        <span>&copy; All rights reserved 2019 designed by <a class="text-info" href="#">A-Fusion</a></span>
                     </div>
                     <div class="col-sm-4 text-right">
                         <a href="#" class="ml-2">Contact Us</a>
@@ -443,35 +242,13 @@
     <script src="assets/js/sweetalert.js"></script>
     <!--Progressbar JS-->
     <script src="assets/js/progressbar.min.js"></script>
-    <!--Flot.JS-->
-    <script src="assets/js/charts/jquery.flot.min.js"></script>
-    <script src="assets/js/charts/jquery.flot.pie.min.js"></script>
-    <script src="assets/js/charts/jquery.flot.categories.min.js"></script>
-    <script src="assets/js/charts/jquery.flot.stack.min.js"></script>
-    <!--Chart JS-->
-    <script src="assets/js/charts/chart.min.js"></script>
-    <!--Chartist JS-->
-    <script src="assets/js/charts/chartist.min.js"></script>
-    <script src="assets/js/charts/chartist-data.js"></script>
-    <script src="assets/js/charts/demo.js"></script>
-    <!--Maps-->
-    <script src="assets/js/maps/jquery-jvectormap-2.0.2.min.js"></script>
-    <script src="assets/js/maps/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="assets/js/maps/jvector-maps.js"></script>
-    <!--Bootstrap Calendar JS-->
-    <script src="assets/js/calendar/bootstrap_calendar.js"></script>
-    <script src="assets/js/calendar/demo.js"></script>
+    <!--Full calendar-->
+    <script src="assets/css/fullcalendar-3.9.0/lib/moment.min.js"></script>
+    <script src="assets/css/fullcalendar-3.9.0/fullcalendar.min.js"></script>
+    <script src="assets/js/full-calendar.js"></script>
     <!--Nice select-->
     <script src="assets/js/jquery.nice-select.min.js"></script>
-
     <!--Custom Js Script-->
     <script src="assets/js/custom.js"></script>
-    <!--Custom Js Script-->
-    <script>
-        //Nice select
-        $('.bulk-actions').niceSelect();
-    </script>
   </body>
 </html>
-
-
