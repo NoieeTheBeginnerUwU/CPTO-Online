@@ -274,27 +274,6 @@ header {
         display: flex;
         flex-direction: column-reverse;
     }
-
-    .footer-content1 {
-        justify-content: center;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .footer-content2 {
-        display: none;
-    }
-
-    .footer-content3 {
-        justify-content: center;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .chat-bar-collapsible {
-        height: 10vh;
-        width: 10%;
-    }
 }
 
 @media (max-width: 1280px) {
