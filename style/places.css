@@ -614,57 +614,6 @@
         transition: ease .5s;
     }
 }
-
-/* Discover, Where to Go */
-
-.card-holder{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	flex-direction: row;
-	border: rgb(0, 0, 0) 4px;
-	width: 100%;
-	height: 500vh;
-	margin: 0 auto;
-	background-color: rgb(252, 252, 252);
-}a .card-places-holder{
-    display: inline-block;
-	border: rgb(0, 0, 0) 4px;
-	width: 100%;
-	height: 100vh;
-	margin: 0 auto;
-	background-color: rgb(252, 252, 252);
-}.card-places-holder a div{
-    display:block;
-    block-size: 0%;
-    margin: 2.4%;
-}
-.card{
-	box-shadow: 5px 5px rgb(228, 228, 228);
-	width: 29%;
-	height: 70vh;
-	background-color: rgb(239, 239, 239);
-	margin: 2%;
-}
-.card-places{
-    color: rgb(79, 79, 79);
-    float: left;
-	box-shadow: 5px 5px rgb(228, 228, 228);
-	width: 20%;
-	height: 0vh;
-	background-color: rgb(239, 239, 239);
-}
-.card-places:hover{
-    color: white;
-    background-color: rgb(0, 67, 125);
-    transition: ease-in-out .3s;
-}
-
-
-
-
-
-/* End Where to go */
 .pic{
     width: 100%;
     height: 40vh;
@@ -722,7 +671,7 @@
 .card-img{
 	margin: 0 auto;
 	width: 90%;
-	min-height: 40vh;
+	height: 40vh;
 	background-color: rgb(0, 0, 0);
 }.name,.location,.desciption{
 	margin: 4%;
@@ -824,10 +773,116 @@ footer{
     background-color: ghostwhite;
     width: 30vh;
     height: 4vh;
-}.vid{
-    background-color: #ffffff;
-    position: relative;
-    z-index: 10;
-    width: 100%;    
-    margin-top: 4.5%;
 }
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #eee;
+    font-family: "Open sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+.grid{
+ padding: 10rem 5rem;
+    display: grid;
+    width: 100%;
+    grid-gap: 2rem; 
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); 
+    
+}
+
+.grid-item{
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6 rem rgba(0, 0, 0, .5);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.grid-item:hover{
+    transform: translateY(-0.5%);
+    box-shadow:  0 4rem 8rem rgba(0,0,0,0.2);
+
+}
+.card{
+    width: 100%;
+}
+
+.card-img{
+    display: block;
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.card-content{
+    padding: 0.5rem;
+}
+
+.card-header{
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    max-height: 40px;
+    color: #0d0d0d;
+    padding: 5px 10px;
+}
+
+.card-btn{
+    display: block;
+    width: 100%;
+    padding:15px 5px;
+   font-size: 10px;
+   text-align: center;
+   color: #3363ff;
+   background-color: #d8e0fd;
+   border: none;
+   border-radius: 0.4rem;
+   transition: 0.2s;
+   cursor: pointer;
+   letter-spacing: 0.09rem;
+}
+
+.card-btn span{
+    margin-left: 0.5rem;
+    transition: 0.2s;
+}
+
+.card-btn:hover, .card-bt:active{
+    background-color: #c2cffc;
+}
+
+.card-btn:hover span, .card-btn:active span{
+    margin-left :1.5rem;
+
+}
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+    .grid{
+        
+        grid-gap: 2em;
+        grid-template-columns: repeat(auto-fill, minmax(1, 1fr)); 
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    body {
+        padding: 0;
+    }
+    .grid{
+        
+        grid-gap: 2em;
+        grid-template-columns: repeat(auto-fill, minmax(2, 1fr)); 
+    }
+  }
