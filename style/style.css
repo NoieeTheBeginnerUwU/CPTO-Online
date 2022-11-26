@@ -146,7 +146,7 @@ header {
 
 .navbar a {
     color: rgb(255, 255, 255);
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 500;
     padding: 10%;
     margin: 0px 30px;
@@ -378,6 +378,7 @@ header {
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #ddd;
+    margin: 0;
 }
 
 /* Show the dropdown menu on hover */
