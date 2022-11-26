@@ -95,7 +95,7 @@ function sendButton() {
 }
 
 function faqs() {
-    buttonSendText("<h4>FAQS</h4><br>Mahal mo parin ba ako?<br>")
+    buttonSendText("<h4>FAQS</h4><br><a href='index.html'>How?</a><br>")
 }
 
 // Press enter to send a message
