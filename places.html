@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/places.css">
         <link rel="script" href="script/script.js">
         <link rel="shortcut icon" href="/images/logo.png">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -19,183 +19,449 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
         <style>
-            .card-places:hover{
-                background-color: none;
-                background-image: url('images/279059577_371407848360802_2341810156509563620_n.jpg');
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
+
         </style>
         <title>CPTO Online</title>
     </head>
-<body>
-<!--header start-->
-
-<header>
-  <h1 style="color: white; font-size: 1.3rem;">CNPTO <span style="color: rgb(69, 255, 1);">Online</span></h1>
-  <ul class="navbar">
-      <li><a href="index.html">Home</a></li> 
-      <li><a class="active" href="discover.html">Discover</a>
-          <div class="dropdown-content">
-              <a href="places.html">Where to go</a>
-              <a href="activities.html">What to do</a>
-              <a href="foods.html">What to eat</a>
-              <a href="festivals.html">Festivals</a>
-              <a href="history.html">History</a>
+    <body>
+      <!--header start-->
+      
+      <header>
+          <img class="icon" src="images/logo.png" alt="cpto logo">
+          <ul class="navbar">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="discover.html">Discover</a>
+                  <div class="dropdown-content">
+                      <a href="places.html">Where to go</a>
+                      <a href="activities.html">What to do</a>
+                      <a href="foods.html">What to eat</a>
+                      <a href="festivals.html">Festivals</a>
+                      <a href="history.html">History</a>
+                  </div>
+              </li>
+              <li><a href="services.html">Services</a>
+                  <div class="dropdown-content">
+                      <a href="reqinv.html">Request and Invitation</a>
+                      <a href="accreditation.html">TRE Accreditation</a>
+                      <a href="acceptance.html">Acceptance of Inbound Guests to Calaguas</a>
+                  </div>
+              </li>
+              <li><a href="blogs.html">Blogs</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="main">
+              <a href="login.html" class="user"><i class="ri-user-fill" style="color:var(--nav-color);"></i>Sign In</a>
+              <a href="signup.html" class="user"> <i class="fa fa-user-plus" style="color: var(--nav-color);"></i> Sign Up</a>
+              <div class="bx bx-menu" id="menu-icon"></div>
           </div>
-      </li>
-      <li><a href="services.html">Services</a>
-          <div class="dropdown-content">
-              <a href="reqinv.html">Request and Invitation</a>
-              <a href="accreditation.html">TRE Accreditation</a>
-              <a href="acceptance.html">Acceptance of Inbound Guests to Calaguas</a>
+      </header>
+      <div class="holder">
+          
+      <div class="breadcrumb">
+          <div class="a-holder">
+              <a href="index.html"><i class='fa fa-search'></i> Discover <i class='fas fa-slash'></i></a>
+              <a href="">/</a>
+              <a href=""> Where to go </a>
           </div>
-      </li>
-      <li><a href="blogs.html">Blogs</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <div class="main">
-      <a href="http://" target="_blank" rel="noopener noreferrer" style="text-align: center;"><i class="fa fa-user"> account</i></a>
-      <div class="bx bx-menu" id="menu-icon" style="color: white;"></div>
-  </div>
-</header>
-<div class="holder">
-
-
-<!-- CHAT BAR BLOCK -->
-<div class="chat-bar-collapsible">
-    <button id="chat-button" type="button" class="collapsible">Click here for inquiries
-        <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
-    </button>
-
-    <div class="content">
-        <div class="full-chat-block">
-            <!-- Message Container -->
-            <div class="outer-container">
-                <div class="chat-container">
-                    <!-- Messages -->
-                    <div id="chatbox">
-                        <h5 id="chat-timestamp"></h5>
-                        <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
-                    </div>
-
-                    <!-- User input box -->
-                    <div class="chat-bar-input-block">
-                        <div id="userInput">
-                            <input id="textInput" class="input-box" type="text" name="msg"
-                                placeholder="Tap 'Enter' to send a message">
-                            <p></p>
-                        </div>
-
-                        <div class="chat-bar-icons">
-                            <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-question"
-                                onclick="faqs()"></i>
-                            <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
-                                onclick="sendButton()"></i>
-                        </div>
-                    </div>
-
-                    <div id="chat-bar-bottom">
-                        <p></p> 
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="responses.js"></script>
-<script src="chat.js"></script>
-
-</div>
-
-<!--header end-->
-
-<!-- Container for the image gallery -->
-<div class="container">
-
-    <!-- Full-width images with number text -->
-    <div class="mySlides">
-      <div class="numbertext">1 / 6</div>
-        <img src="images/1.webp" style="width:100%">
-    </div>
-  
-    <div class="mySlides">
-      <div class="numbertext">2 / 6</div>
-        <img src="images/2.webp" style="width:100%">
-    </div>
-  
-    <div class="mySlides">
-      <div class="numbertext">3 / 6</div>
-        <img src="images/3.webp" style="width:100%">
-    </div>
-  
-    <div class="mySlides">
-      <div class="numbertext">4 / 6</div>
-        <img src="images/4.webp" style="width:100%">
-    </div>
-  
-    <div class="mySlides">
-      <div class="numbertext">5 / 6</div>
-        <img src="images/5.webp" style="width:100%">
-    </div>
-  
-    <div class="mySlides">
-      <div class="numbertext">6 / 6</div>
-        <img src="images/6.webp" style="width:100%">
-    </div>
-  
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  
-    <!-- Image text -->
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
-  
-    <!-- Thumbnail images -->
-    <div class="row">
-      <div class="column">
-        <img class="demo cursor" src="images/1.webp" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
       </div>
-      <div class="column">
-        <img class="demo cursor" src="images/2.webp" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+      
+      <!-- Where to go  -->
+      
+          <div class="grid">
+              <div class="grid-item">
+                  <div class="card">
+                      <img class="card-img" src="/images/Daet-Card.jpg">
+                      <div class="card-content">
+                          <h1 class="card-header">Daet</h1>
+                          <a href="daet.html"> <button class="card-btn">
+                              Visit<span>&rarr;</span>
+                          </button>
+                      </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="grid-item">
+                  <div class="card">
+                      <img class="card-img" src="/images/Vinzons-card.jpg">
+                      <div class="card-content">
+                          <h1 class="card-header">Vinzons</h1>
+                          <a href="vinzons.html"> <button class="card-btn">
+                              Visit<span>&rarr;</span>
+                          </button>
+                      </a>
+                      </div>
+                  </div>
+              </div>  
+              <div class="grid-item">
+                  <div class="card">
+                      <img class="card-img" src="/images/Labo-Card.jpg">
+                      <div class="card-content">
+                          <h1 class="card-header">Labo</h1>
+                          <a href="labo.html"> <button class="card-btn">
+                              Visit<span>&rarr;</span>
+                          </button>
+                      </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="grid-item">
+                  <div class="card">
+                      <img class="card-img" src="/images/Mercedes-Card.jpg">
+                      <div class="card-content">
+                          <h1 class="card-header">Mercedes</h1>
+                          <a href="mercedes.html"> <button class="card-btn">
+                              Visit<span>&rarr;</span>
+                          </button>
+                      </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="grid-item">
+                  <div class="card">  
+                      <img class="card-img" src="/images/Jpang-Card.jpg">
+                      <div class="card-content">
+                          <h1 class="card-header">Jose Panganiban</h1>
+                          <a href="jpang.html"> <button class="card-btn">
+                              Visit<span>&rarr;</span>
+                          </button>
+                      </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="grid-item">
+                  <div class="card">
+                      <img class="card-img" src="/images/SanVicente-Card.jpg">
+                      <div class="card-content">
+                          <h1 class="card-header">San Vicente</h1>
+                          <a href="sanvicente.html"> <button class="card-btn">
+                              Visit<span>&rarr;</span>
+                          </button>
+                      </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="grid-item">
+                  <div class="card">
+                      <img class="card-img" src="/images/Paracale-card.jpg">
+                      <div class="card-content">
+                          <h1 class="card-header">Paracale</h1>
+                          <a href="paracale.html"> <button class="card-btn">
+                              Visit<span>&rarr;</span>
+                          </button>
+                      </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="grid-item">
+                  <div class="card">
+                      <img class="card-img" src="/images/Sta.Elena-Card.jpg">
+                      <div class="card-content">
+                          <h1 class="card-header">Sta. Elena</h1>
+                          <a href="staelena.html"> <button class="card-btn">
+                              Visit<span>&rarr;</span>
+                          </button>
+                      </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="grid-item">
+                  <div class="card">
+                      <img class="card-img" src="/images/Capalonga-Card.jpg">
+                      <div class="card-content">
+                          <h1 class="card-header">Capalonga</h1>
+                          <a href="capalonga.html"> <button class="card-btn">
+                              Visit<span>&rarr;</span>
+                          </button>
+                      </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="grid-item">
+                  <div class="card">
+                      <img class="card-img" src="/images/Talisay-Card.jpg">
+                      <div class="card-content">
+                          <h1 class="card-header">Talisay</h1>
+                          <a href="talisay.html"> <button class="card-btn">
+                              Visit<span>&rarr;</span>
+                          </button>
+                      </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="grid-item">
+                  <div class="card">
+                      <img class="card-img" src="/images/Basud-Card.jpg">
+                      <div class="card-content">
+                          <h1 class="card-header">Basud</h1>
+                          <a href="basud.html"> <button class="card-btn">
+                              Visit<span>&rarr;</span>
+                          </button>
+                      </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="grid-item">
+                  <div class="card">
+                      <img class="card-img" src="/images/SanLorenzo-Card.jpg">
+                      <div class="card-content">
+                          <h1 class="card-header">San Lorenzo</h1>
+                          <a href="sanlorenzo.html"> <button class="card-btn">
+                              Visit<span>&rarr;</span>
+                          </button>
+                      </a>
+                      </div>
+                  </div>
+              </div>
+              
+      
+      
+      
+       <!-- <div class="card-places-holder">
+      
+          <a href="daet.html">
+              <div class="card-places">
+                  <div class="card-places-img">
+          
+                  </div>
+                  <div class="card-places-content">
+                      <h2 class="name">Daet</h2>
+                      <h3 class="location">See more</h3>
+                  </div>
+              </div>
+          </a>
+      
+          <a href="vinzons.html">
+              <div class="card-places">
+                  <div class="card-places-img">
+          
+                  </div>
+                  <div class="card-places-content">
+                      <h2 class="name">Vinzons</h2>
+                      <h3 class="location">See more</h3>
+                  </div>
+              </div>
+          </a>
+      
+          <a href="labo.html">
+              <div class="card-places">
+                  <div class="card-places-img">
+          
+                  </div>
+                  <div class="card-places-content">
+                      <h2 class="name">Labo</h2>
+                      <h3 class="location">See more</h3>
+                  </div>
+              </div>
+          </a>
+      
+          <a href="mercedes.html">
+              <div class="card-places">
+                  <div class="card-places-img">
+          
+                  </div>
+                  <div class="card-places-content">
+                      <h2 class="name">Mercedes</h2>
+                      <h3 class="location">See more</h3>
+                  </div>
+              </div>
+          </a>
+      
+          <a href="jpang.html">
+              <div class="card-places">
+                  <div class="card-places-img">
+          
+                  </div>
+                  <div class="card-places-content">
+                      <h2 class="name">Jose Panganiban</h2>
+                      <h3 class="location">See more</h3>
+                  </div>
+              </div>
+          </a>
+      
+          <a href="sanvicente.html">
+              <div class="card-places">
+                  <div class="card-places-img">
+          
+                  </div>
+                  <div class="card-places-content">
+                      <h2 class="name">San Vicente</h2>
+                      <h3 class="location">See more</h3>
+                  </div>
+              </div>
+          </a>
+      
+          <a href="paracale.html">
+              <div class="card-places">
+                  <div class="card-places-img">
+          
+                  </div>
+                  <div class="card-places-content">
+                      <h2 class="name">Paracale</h2>
+                      <h3 class="location">See more</h3>
+                  </div>
+              </div>
+          </a>
+      
+          <a href="staelena.html">
+              <div class="card-places">
+                  <div class="card-places-img">
+          
+                  </div>
+                  <div class="card-places-content">
+                      <h2 class="name">Sta. Elena</h2>
+                      <h3 class="location">See more</h3>
+                  </div>
+              </div>
+          </a>
+      
+          <a href="capalonga.html">
+              <div class="card-places">
+                  <div class="card-places-img">
+          
+                  </div>
+                  <div class="card-places-content">
+                      <h2 class="name">Capalonga</h2>
+                      <h3 class="location">See more</h3>
+                  </div>
+              </div>
+          </a>
+      
+          <a href="talisay.html">
+              <div class="card-places">
+                  <div class="card-places-img">
+          
+                  </div>
+                  <div class="card-places-content">
+                      <h2 class="name">Talisay</h2>
+                      <h3 class="location">See more</h3>
+                  </div>
+              </div>
+          </a>
+      
+          <a href="basud.html">
+              <div class="card-places">
+                  <div class="card-places-img">
+          
+                  </div>
+                  <div class="card-places-content">
+                      <h2 class="name">Basud</h2>
+                      <h3 class="location">See more</h3>
+                  </div>
+              </div>
+          </a>
+      
+          <a href="sanlorenzo.html">
+              <div class="card-places">
+                  <div class="card-places-img">
+          
+                  </div>
+                  <div class="card-places-content">
+                      <h2 class="name">San Lorenzo</h2>
+                      <h3 class="location">See more</h3>
+                  </div>
+              </div>
+          </a>  -->
+      
+      <!-- CHAT BAR BLOCK -->
+      <div class="chat-bar-collapsible">
+          <button id="chat-button" type="button" class="collapsible">Click here for inquiries
+              <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+          </button>
+      
+          <div class="content">
+              <div class="full-chat-block">
+                  <!-- Message Container -->
+                  <div class="outer-container">
+                      <div class="chat-container">
+                          <!-- Messages -->
+                          <div id="chatbox">
+                              <h5 id="chat-timestamp"></h5>
+                              <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                          </div>
+      
+                          <!-- User input box -->
+                          <div class="chat-bar-input-block">
+                              <div id="userInput">
+                                  <input id="textInput" class="input-box" type="text" name="msg"
+                                      placeholder="Tap 'Enter' to send a message">
+                                  <p></p>
+                              </div>
+      
+                              <div class="chat-bar-icons">
+                                  <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-question"
+                                      onclick="faqs()"></i>
+                                  <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                      onclick="sendButton()"></i>
+                              </div>
+                          </div>
+      
+                          <div id="chat-bar-bottom">
+                              <p></p> 
+                          </div>
+      
+                      </div>
+                  </div>
+      
+              </div>
+          </div>
+      
       </div>
-      <div class="column">
-        <img class="demo cursor" src="images/3.webp" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="responses.js"></script>
+      <script src="chat.js"></script>
+      
       </div>
-      <div class="column">
-        <img class="demo cursor" src="images/4.webp" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+      <div class="footer-holder">
+      <footer class="absolute">
+          <div class="footer-content1">
+              <h3>ADDRESS & CONTACT</h3>
+              <i class="fa fa-home" style="font-size: 1.2rem; margin:2%;"></i> 4X73+7WG, Daet, Camarines Norte <br>
+              <i class="fa fa-envelope" style="font-size: 1.2rem; margin:2%;"></i> come2camnorte@gmail.com <br>
+              <i class="fa fa-mobile" style="font-size: 1.8rem; margin:2%;"></i> (054)855 -1898 | 09272331018 | 09287169415 <br>
+              <hr> <br>
+              
+              All rights reserved 2022
+          </div>
+          <div class="footer-content2">
+              <h3>FOLLOW US ON</h3>
+              <i class="fa fa-facebook" style="font-size: 1.5rem; margin:2%;"></i>  https://www.facebook.com/GoCamNorte <br>
+              <i class="fa fa-instagram" style="font-size: 1.5rem; margin:2%;"></i>  https://www.instagram.com/GoCamNorte <br>
+              <i class="fa fa-twitter" style="font-size: 1.5rem; margin:2%;"></i>  https://www.twitter.com/GoCamNorte <br>
+              <hr>
+          </div>
+          <div class="footer-content3">
+              <h3>OUR SERVICES</h3>
+              <p>Request and Invitation</p>
+              <p>Tourism Related Enterprises Accreditation</p>
+              <p>Acceptance of Inbound Guest to Calaguas Island</p>
+              <p>Accomodation</p>
+              <hr>
+              <a href="">Privacy Policy |</a>
+              <a href="">User Agreement |</a>
+              <a href="">Terms and Condition</a>
+          </div> 
+      </footer>
       </div>
-      <div class="column">
-        <img class="demo cursor" src="images/5.webp" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/6.webp" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-      </div>
-    </div>
-  </div>
-
-
-<!--Main content start-->
-
-
-<!--Main content end-->
-
-
-
-<!--footer start-->
-
-<!--footer end-->
-    
-</body>
-</html>
-
+      <!--header end-->
+      
+      
+      
+      
+      
+      <!--Main content start-->
+      
+      
+      <!--Main content end-->
+      
+      
+      
+      <!--footer start-->
+      
+      <!--footer end-->
+          
+      </body>
+      </html>
 <script>
     let slideIndex = 1;
 showSlides(slideIndex);
