@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="script" href="script/script.js">
+        <link rel="shortcut icon" href="/images/logo.png">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+        <link rel="stylesheet" href="static/css/chat.css">
+        <link rel="stylesheet" href="static/css/home.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+      <link rel="stylesheet" 
+      href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+        <title>CPTO Online</title>
+        <style>
+            .image1{
+                margin: 1%;
+            }
+            .image1 section{
+                height: 24vh;
+                background-color: rgb(238, 238, 238);
+            }.card1{
+                font-size: 1.7rem;
+                color: rgb(255, 255, 255);
+                background-image: url('images/pexels-spencer-davis-4353813.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }.card2{
+                font-size: 1.7rem;
+                color: rgb(255, 255, 255);
+                background-image: url('images/pexels-ditrich-oleg-10674304.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }.card3{
+                font-size: 1.7rem;
+                color: rgb(255, 255, 255);
+                background-image: url('images/pexels-gerald-yambao-2413238.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }.card1 h3, .card2 h3, .card3 h3{
+                background-color: rgba(0, 0, 0, 0.532);
+            }.image1{
+                width:80%;
+    }
+        </style>
+    </head>
+    
+<body>
+<!--header start-->
+
+<header>
+    <h1 style="color: white; font-size: 1.3rem;"> CNPTO <span style="color: rgb(69, 255, 1);">Online</span></h1>
+    <ul class="navbar">
+        <li><a class="active" href="index.html">Home</a></li> 
+        <li><a href="discover.html">Discover</a>
+            <div class="dropdown-content">
+                <a href="places.html">Where to go</a>
+                <a href="activities.html">What to do</a>
+                <a href="foods.html">What to eat</a>
+                <a href="festivals.html">Festivals</a>
+                <a href="history.html">History</a>
+            </div>
+        </li>
+        <li><a href="services.html">Services</a>
+            <div class="dropdown-content">
+                <a href="reqinv.html">Request and Invitation</a>
+                <a href="accreditation.html">TRE Accreditation</a>
+                <a href="acceptance.html">Acceptance of Inbound Guests to Calaguas</a>
+            </div>
+        </li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="main">
+        <a href="signup.html" target="_blank" rel="noopener noreferrer" style="text-align: center;"><i class="fa fa-user"> account</i></a>
+        <div class="bx bx-menu" id="menu-icon" style="color: white;"></div>
+    </div>
+</header>
+
+<!-- CHAT BAR BLOCK -->
+<div class="chat-bar-collapsible">
+    <button id="chat-button" type="button" class="collapsible">Click here for inquiries
+        <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+    </button>
+
+    <div class="content">
+        <div class="full-chat-block">
+            <!-- Message Container -->
+            <div class="outer-container">
+                <div class="chat-container">
+                    <!-- Messages -->
+                    <div id="chatbox">
+                        <h5 id="chat-timestamp"></h5>
+                        <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                    </div>
+
+                    <!-- User input box -->
+                    <div class="chat-bar-input-block">
+                        <div id="userInput">
+                            <input  class="input-box" type="text" id="textInput" name="textInput"
+                                placeholder="Tap 'Enter' to send a message" required>
+                            <p></p>
+                        </div>
+
+                        <div class="chat-bar-icons">
+                            <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-question"
+                                onclick="faqs()"></i>
+                            <i id="chat" name="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                onclick="sendButton()"></i>
+                        </div>
+                    </div>
+
+                    <div id="chat-bar-bottom">
+                        <p></p> 
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="responses.js"></script>
+<script src="chat.js"></script>
+
+
+
+<!--header end-->
+
+<!--Main content start-->
+<div class="holder">
+    <img class="logo-img" src="images/logo.png" alt="logo" style="position:absolute;
+    z-index:101;
+    text-align:center;
+    margin: 10% auto;
+    margin-left: 35.5%;">
+
+    <video autoplay loop muted plays-inline  class="vid" src="images/Calaguas_1080p.mp4">
+
+    </video>
+<div class="holder">
+    <p class="bnv"> <i class="fa fa-home"></i> Homepage > featured</p>
+    <h1 style="background-image: url('images/7.webp');background-clip:text;    --webkit-background-clip: text;">CAMARINES NORTE</h1>
+    <section>
+        Camarines Norte is the northernmost Province in Bicol Region, It is the gateway to Bicolandia. Home of the First Rizal Monument, century old churches, cascading waterfalls and paradise like islands/beaches.
+
+Come and explore CamNorte. Visit Calaguas Island in Vinzons which showcase the powdery white sand and crystal clear water, truly a world class destination. Another must see is the Parola island in Jose Panganiban that showcase its unique pink sand or go island hopping at the 7 islands of Mercedes. We also offer different kinds of falls like 16 cascading falls of Mananap, 70 ft. Colasi falls and 53 ft. Nacali falls. If you are into culture and history, we offer First Rizal Monument or also known as First Bantayog Monument. Another interesting place to visit is the town of Vinzons that showcases a heritage church and multiple century old houses. If you are into arts and crafts, visit the town of Jose Panganiban and Paracale that showcase gold handicraft.
+    </section>
+</div>
+
+<div class="holder2">
+    <div class="holder3" style="background-image: url('images/bg.jpeg'); background-size: cover;background-repeat: no-repeat;display:grid;">
+        <h2> <i class="fa fa-map"></i> Featured</h2>
+        <div class="holder4" style="display: flex; flex-direction:row;">
+            <div style="display:flex;">
+                <img src="images/pexels-ben-mack-5326926.jpg" alt="" style="width: 500px; height: 60vh;margin-left: 4%;">
+                <section style="color:rgba(255, 255, 255, 0.79);background-color: rgba(0, 0, 0, 0.664);">
+                    <h3>Calaguas Island</h3>
+                    <br>
+                    Calaguas, also known as Calaguas Islands, is a group of islands located in the Philippine province of Camarines Norte. It includes the major islands of Tinaga Island and Guintinua Island, the minor Maculabo Island, as well as several other minor. The group of islands is around 200 km away from the capital city of Manila and can be accessed through the ports at Paracale and Daet, Camarines Norte.
+                    <br><br>    
+                    Most of the islands are under the administrative jurisdiction of Vinzons, while the minor island of Maculabo is under the jurisdiction of the municipality of Paracale. Recently, the island of Tinaga, where the well-known long beach called Mahabang Buhangin is located, is experiencing an influx of tourists despite the absence of accommodation. Campers and backpackers visit Mahabang Buhangin to experience its powdery white sands.                
+                </section>  
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="holder" style="display: grid;">
+    <h2><i class="fa-solid fa-location-dot" style="color: red;"></i> Popular Places</h2>
+    <div class="holder-images1" style="        margin: 4px, 4px;
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+    background-color: #e2e2e2;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    "
+
+    >
+        <div class="image1" style="width: 100%;">
+            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 500px;">
+            <section>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            </section>
+        </div>
+        <div class="image1" style="width: 100%;">
+            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 500px;">
+            <section>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            </section>
+        </div>
+        <div class="image1" style="width: 100%;">
+            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 500px;">
+            <section>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            </section>
+        </div>
+        <div class="image1" style="width: 100%;">
+            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 500px;">
+            <section>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            </section>
+        </div> 
+        <div class="image1" style="width: 100%;">
+            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 500px;">
+            <section>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            </section>
+        </div>
+        <div class="image1" style="width: 100%;">
+            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 500px;">
+            <section>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            </section>
+        </div>
+        <div class="image1" style="width: 100%;">
+            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 500px;">
+            <section>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            </section>
+        </div>
+        <div class="image1" style="width: 100%;">
+            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 500px;">
+            <section>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            </section>
+        </div>
+    </div>
+
+</div>
+
+<div class="holder2">
+    <div class="services-h2">
+        <h2> <i class="fa-solid fa-stars"></i> Services we offer</h2>
+    </div>
+    <div class="holder3">
+        <a href="reqinv.html">
+            <div class="card1">
+                <h3>Tourism Related Requests and Invitations</h3>
+            </div>
+        </a>
+        <a href="accreditation.html">
+            <div class="card2">
+                <h3>TRE Accreditations</h3>
+            </div>
+        </a>
+        <a href="acceptance.html">
+            <div class="card3">
+                <h3>Acceptance of Inbound Guests to Calaguas</h3>
+            </div>  
+        </a>
+    </div>
+</div>
+<style>
+    .card1{
+        background-color: white;
+        
+    }
+    .card2{
+        background-color: white;
+    }
+    .card3{
+        background-color: white;
+    }
+</style>
+<div class="holder" style="width: 150vh;">
+    <h2> <i class="fa fa-newspaper"></i> News and Updates</h2>
+</div>
+
+<div class="holder2" style="background-image: url('images/pexels-matthias-oben-12246340.jpg'); background-size:cover; background-repeat:no-repeat;">
+    <div class="holder3">
+        <h2>Total Foreign Tourists</h2>
+        <div class="holder4">
+
+        </div>
+    </div>
+</div>
+
+<div class="holder">
+    <h2>Accreditations</h2>
+    <style>
+        table{
+            width: 100%;
+            text-align: left;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }tr:nth-child(even) {
+            background-color: #093636;
+            color: white;
+        }
+    </style>
+    <div class="table-container" style="width: 98%; height: 160vh;">
+        <h3>Hotels</h3>
+        <table>
+            <tr>
+              <th>Establishment Name</th>
+              <th>Location</th>
+              <th>Contact</th>
+            </tr>
+            <tr>
+              <td>Asia Novo Boutique Hotel, Inc.</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Athena Nature Park Resort</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+                <td>Benlitz R Inn</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Calaguas Gateway Hotel & Catering</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Calaguas Highlands Resort Hotel</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Calaguas Paradise Resort</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Calaguas Whitesand Resort</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Candelaria Beach Resort</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Casa Mambulao Tourist Inn, Restaurante & Catering Services</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Casa Marie Kite Boarding Hotel</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Casanayon Resort</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Cecilia Events and Function Hall Rental</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Club Noah Eco Resort</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>D'House Hotel</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Dolor Hotel</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Greenland Resort</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Hotel Apolonia</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Hotel Formosa</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>I Love Calaguas Island Resort</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Jocelle's Garden and Tourist Inn</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Kagedama Beach Resort</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>L.V. Juria Transient Hotel</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Mambulao Pacific Resort and Hotel, Inc.</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Maria Fatima Farm Resort</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Maximar Apartelle & Bella's Cuisine</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Nathaniel Hotel</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Naturaverde Farm and Resort Private Resort</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>New Bel-air Resort</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>New Prince Hours Lodge & Swimming Pool</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>One Platinum Hotel</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Paliza Del Rio Tourist Inn</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Palms Farm Resort Corporation</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Paradiso Verde Organic Farm Resort</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Pineapple Island Leisure Inc.</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Prime Suite Hotel</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Pince Ezam's Hotel(Daet)</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Renrebs Tourist Inn</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Pince Ezam's Hotel(Daet)</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            
+            
+          </table>  
+
+          <footer>
+            <div class="footer-content1">
+                <h3>ADDRESS & CONTACT</h3>
+                <i class="fa fa-home" style="font-size: 1.2rem; margin:2%;"></i> 4X73+7WG, Daet, Camarines Norte <br>
+                <i class="fa fa-envelope" style="font-size: 1.2rem; margin:2%;"></i> come2camnorte@gmail.com <br>
+                <i class="fa fa-mobile" style="font-size: 1.8rem; margin:2%;"></i> (054)855 -1898 | 09272331018 | 09287169415 <br>
+                <hr> <br>
+                
+                All rights reserved 2022
+            </div>
+            <div class="footer-content2">
+                <h3>FOLLOW US ON</h3>
+                <i class="fa-brands fa-facebook" style="font-size: 1.5rem; margin:2%;"></i>  <a href="https://www.facebook.com/GoCamNorte" target="_blank">https://www.facebook.com/GoCamNorte</a> <br>
+                <i class="fa-brands fa-instagram" style="font-size: 1.5rem; margin:2%;"></i>  <a href="https://www.instagram.com/GoCamNorte" target="_blank">https://www.instagram.com/GoCamNorte</a> <br>
+                <i class="fa-brands fa-twitter" style="font-size: 1.5rem; margin:2%;"></i>  <a href="https://www.twitter.com/GoCamNorte" target="_blank">https://www.twitter.com/GoCamNorte</a> <br>
+            </div>
+            <div class="footer-content3">
+                <h3>OUR SERVICES</h3>
+                <p><a href="">Request and Invitation</a></p>
+                <p><a href="">Tourism Related Enterprises Accreditation</a></p>
+                <p><a href="">Acceptance of Inbound Guest to Calaguas Island</a></p>
+                <p><a href="">Accomodation</a></p>
+                <hr>
+                <a href="">Privacy Policy |</a>
+                <a href="">User Agreement |</a>
+                <a href="">Terms and Condition</a>
+            </div> 
+        </footer>
+    </div>
+      
+</div>
+
+
+
+
+</div>
+<!--Main content end-->
+
+
+
+
+
+<!--footer start-->
+
+<!--footer end-->
+<div class="holder2">
+
+</div>
+
+</body>
+</html>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNZKRQGELD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WNZKRQGELD');
+</script>
+<script>
+
+    function cb(response) {
+        document.getElementById('visits').innerText = response.value;
+    }
+
+    updateCounter()
+
+    function updateCounter(){
+        fetch('https://api.countapi.xyz/update/cpto.com/cpto-online/?amount=1')
+        .then(function(res){res.json()})
+    }
+
+    </script>
+    <script async src="https://api.countapi.xyz/update/cpto.com/visits?callback=cb"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+        import {
+            getAuth,
+            createUserWithEmailAndPassword,
+            signInWithEmailAndPassword,
+            signOut
+        } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+        import {getDatabase, set, ref, update} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+    
+    
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    
+    const firebaseConfig = {
+      apiKey: "AIzaSyDA1XjvPrrZiMLhYRRV1Ar23p4SF2lJq9I",
+      authDomain: "cpto-d7b0b.firebaseapp.com",
+      projectId: "cpto-d7b0b",
+      storageBucket: "cpto-d7b0b.appspot.com",
+      messagingSenderId: "633926478402",
+      appId: "1:633926478402:web:3e659a8d5f50793d299bdb",
+      measurementId: "G-WNZKRQGELD"
+    };
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const database = getDatabase(app);
+
+        var btn = document.getElementById('chat');
+        var msg1 = document.getElementById('textInput').value;
+
+        btn.addEventListener('click', (e) => {
+            
+            alert(msg1)
+            set(ref(database, 'inquiries/' + user.uid), {
+                    message: 'sadadasdsa',
+                    message: 'asdasdasdasd'
+                })
+        })
+    
+    </script>
