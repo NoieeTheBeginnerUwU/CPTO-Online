@@ -387,6 +387,7 @@ li:hover .dropbtn {
     bottom: 0;
     right: 50px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
 }
 
 .collapsible {
@@ -914,6 +915,7 @@ section {
         text-align: center;
         background-color: rgb(255, 255, 255);
         margin-top: 60px;
+        z-index: 0;
     }
 
     .top-10 div {
@@ -1334,20 +1336,6 @@ section {
         margin: 2%;
     }
 
-    .contact {
-        width: 50%;
-        margin-top: 5%;
-        background-color: rgba(3, 3, 3, 0.938);
-        padding: 10%;
-        color: white;
-    }
-
-    .contact p,
-    a {
-        width: 100%;
-        color: white;
-    }
-
     .top-10 h3 {
         margin-top: 10%;
         position: relative;
@@ -1358,6 +1346,7 @@ section {
         font-family: 'Lato', Times, serif;
         font-size: 50px;
         text-transform: uppercase;
+        z-index: 0;
     }
 
     .top-10 p {
@@ -1368,6 +1357,7 @@ section {
         left: 15px;
         font-family: 'Lato', Times, serif;
         font-size: 20px;
+        z-index: 0;
     }
 
     .button-1 {
