@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
     <title>CPTO Online</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,8 +38,9 @@
             font-size: .6rem;
         }
         .container {
-            width: 30%;
+            width: 80%;
             margin: 0 auto;
+            margin-top: 4%;
             height: 80vh;
             background-color: rgb(184, 184, 184);
             text-align: center;
@@ -61,7 +63,7 @@
             margin: 5px 0 22px 0;
             display: list-block;
             border: none;
-            background: #f1f1f1;
+            background: #ffffff;
         }
 
         input[type=text]:focus,
@@ -73,7 +75,7 @@
         /* Overwrite default styles of hr */
 
         hr {
-            border: 1px solid #f1f1f1;
+            border: 1px solid #ffffff;
             margin-bottom: 25px;
         }
 
@@ -110,40 +112,11 @@
 </head>
 
 <body>
-    <header>
-        <h1 style="color: white; font-size: 1.3rem;">CNPTO <span style="color: rgb(69, 255, 1);">Online</span></h1>
-        <ul class="navbar">
-            <li><a href="index.html">Home</a></li> 
-            <li><a href="discover.html">Discover</a>
-                <div class="dropdown-content">
-                    <a href="places.html">Where to go</a>
-                    <a href="activities.html">What to do</a>
-                    <a href="foods.html">What to eat</a>
-                    <a href="festivals.html">Festivals</a>
-                    <a href="history.html">History</a>
-                </div>
-            </li>
-            <li><a href="services.html">Services</a>
-                <div class="dropdown-content">
-                    <a href="reqinv.html">Request and Invitation</a>
-                    <a href="accreditation.html">TRE Accreditation</a>
-                    <a href="acceptance.html">Acceptance of Inbound Guests to Calaguas</a>
-                </div>
-            </li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="main">
-            <a class="active" href="accounts.html" target="_blank" rel="noopener noreferrer" style="text-align: center;"><i class="fa fa-user"> account</i></a>
-            <div class="bx bx-menu" id="menu-icon" style="color: white;"></div>
-        </div>
-    </header>
 
 <div class="container">
 
     <form>
-        <h1>CNPTO Admin Sign In</h1>
+        <h1> <i class="fa fa-compass"></i> CNPTO Admin Sign In</h1>
         <p>Please fill in this form to login to your account.</p>
 
         <input type="text" placeholder="Enter Email" name="email" id="email" required>
@@ -151,7 +124,6 @@
         <input type="password" placeholder="Password" name="psw" id="psw" required>
 
         <button type="button" id="submitData" name="submitData" class="registerbtn">Sign in</button>
-        <p>Don't have an account yet? <a href="#">Sign up</a>.</p>
     </form>
 
 </div>
@@ -174,13 +146,13 @@
     // https://firebase.google.com/docs/web/setup#available-libraries
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDA1XjvPrrZiMLhYRRV1Ar23p4SF2lJq9I",
-  authDomain: "cpto-d7b0b.firebaseapp.com",
-  projectId: "cpto-d7b0b",
-  storageBucket: "cpto-d7b0b.appspot.com",
-  messagingSenderId: "633926478402",
-  appId: "1:633926478402:web:3e659a8d5f50793d299bdb",
-  measurementId: "G-WNZKRQGELD"
+  apiKey: "AIzaSyDqZlQJ6oK2R9e9RfLXkIXhVhIwflJdWf0",
+  authDomain: "cnpto-admin.firebaseapp.com",
+  projectId: "cnpto-admin",
+  storageBucket: "cnpto-admin.appspot.com",
+  messagingSenderId: "181394975297",
+  appId: "1:181394975297:web:1b2b4c5a96b913a31ab4c0",
+  measurementId: "G-MB52N53WJV"
 };
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
