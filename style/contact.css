@@ -1,0 +1,74 @@
+.body {
+    background-image: url('./denim.webp');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.contact p, a {
+    width: 90%;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.logo .contact {
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.contact:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25), 
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+.main-holder {
+    position: relative;
+    display: flex;
+    float: left;
+    padding: auto;
+    margin-top: 15vh;
+    margin-left: 1px;
+}
+
+.main-holder .contact {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    width: 80%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.938);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 5px solid;
+    
+}
+
+.container-contact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+h4 {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.contact-intro {
+    position: relative;
+    display: flex;
+    font-size: 150px;
+    margin-right: 18%;
+    padding-left: 30px;
+    margin-top: 35px;
+    font-family: 'Montserrat', sans-serif;
+}
