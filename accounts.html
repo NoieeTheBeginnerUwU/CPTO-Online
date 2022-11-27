@@ -14,11 +14,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    
+      <link rel="stylesheet" 
+      href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-    
+
         <title>CPTO Online</title>
     </head>
 <body>
@@ -28,7 +29,7 @@
     <h1 style="color: white; font-size: 1.3rem;">CNPTO <span style="color: rgb(69, 255, 1);">Online</span></h1>
     <ul class="navbar">
         <li><a href="index.html">Home</a></li> 
-        <li><a href="discover.html">Discover</a>
+        <li><a class="active" href="discover.html">Discover</a>
             <div class="dropdown-content">
                 <a href="places.html">Where to go</a>
                 <a href="activities.html">What to do</a>
@@ -37,7 +38,7 @@
                 <a href="history.html">History</a>
             </div>
         </li>
-        <li><a class="active" href="services.html">Services</a>
+        <li><a href="services.html">Services</a>
             <div class="dropdown-content">
                 <a href="reqinv.html">Request and Invitation</a>
                 <a href="accreditation.html">TRE Accreditation</a>
@@ -114,46 +115,88 @@
 <!--Main content start-->
 <style>
     .holder{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
         background-image: url('images/pexels-cedrick-samonte-12643683.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 140vh;
-    }
-    .signup{
+        height: 100vh;
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
         justify-content: center;
-        margin-top: 6%;
-        background-color: rgba(1, 4, 97, 0.812);
-        width: 40%;
-        height: 80vh;
+        align-items: center;
+    }.signup{
+        width: 30%;
+        height: 75vh;
+        background-color: rgba(0, 0, 0, 0.632);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }.signin{
+        width: 30%;
+        height: 75vh;
+        background-color: rgba(0, 0, 0, 0.632);    
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        margin-top: 6%;
-        background-color: rgba(5, 223, 52, 0.812);
-        width: 40%;
-        height: 80vh;
+        flex-direction: column;
+        align-items: center;
+    }.signinbtn{
+        font-size: 1.3rem;
+        margin: 0 auto;
+        width: 90%;
+        height: 60vh;
+        background-color: rgb(255, 255, 255);
+        background-image: url('images/pexels-matthias-oben-12246340.jpg');
+        background-size: cover;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }.signupbtn{
+        font-size: 1.3rem;
+        margin: 0 auto;
+        width: 90%;
+        height: 60vh;
+        background-color: #fff;
+        background-image: url('images/pexels-matthias-oben-12246340.jpg');
+        background-size: cover;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }.signin a, .signup a{
+        margin: 10% auto;
+        
+    }.signinbtn p, .signupbtn p{
+        text-align: center;
+    }.signinbtn:hover{
+        transition: ease-in-out .4s;
+        width: 85%;
+        height: 62vh;
+    }.signupbtn:hover{
+        transition: ease-in-out .4s;
+        width: 85%;
+        height: 62vh;
     }
 </style>
+
 <div class="holder">
+    
+        <div class="signin">
+            <a href="login.html">
+                <div class="signinbtn">
+                    <p>Click here to Sign In</p>
+                    <i class="fa fa-user"style="color: rgb(89, 253, 89); font-size:9rem;"></i>
+                </div>
+            </a>
+        </div>
 
-    <div class="signup">
-        
-    </div>
-
-    <div class="signin">
-
-    </div>
-
+        <div class="signup">
+            <a href="signup.html">
+                <div class="signupbtn">
+                    <p>Click here to Sign Up</p>
+                    <i class="fa fa-user-plus" style="color: rgb(89, 253, 89); font-size:9rem;"></i>
+                </div>
+            </a>
+        </div>
 
 </div>
 <!--Main content end-->

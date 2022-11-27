@@ -16,6 +16,7 @@
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
       <link rel="stylesheet" 
       href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
@@ -286,17 +287,67 @@ Come and explore CamNorte. Visit Calaguas Island in Vinzons which showcase the p
         margin: 0 auto;
         width: 90%;
         height: 80vh;
-        display: flex;
-        flex-direction: column;
+        display: grid;
         background-color: rgb(237, 237, 237);
         overflow-y: scroll;
         overflow-x: hidden;
+        white-space: nowrap;
+        border: 4px black;
+    }.news-item{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        width: 80%;
+        height: 50vh;
+        background: rgb(255, 255, 255);
+        box-shadow: black 5px;
+        margin: 0 auto;
+        margin-top: 2%;
     }
 </style>
 <div class="holder" style="width: 100%;">
     <h2> <i class="fa fa-newspaper"></i> News and Updates</h2>
     <div class="news">
+        <div class="news-item">
+            
+        </div>
+        <div class="news-item">
 
+        </div>
+        <div class="news-item">
+
+        </div>
+        <div class="news-item">
+
+        </div>
+        <div class="news-item">
+
+        </div>
+        <div class="news-item">
+
+        </div>
+        <div class="news-item">
+
+        </div>
+        <div class="news-item">
+
+        </div>
+        <div class="news-item">
+
+        </div>
+        <div class="news-item">
+
+        </div>
+        <div class="news-item">
+
+        </div>
+        <div class="news-item">
+
+        </div>
+        <div class="news-item">
+
+        </div>
+        
     </div>
 
 </div>
@@ -662,45 +713,11 @@ Come and explore CamNorte. Visit Calaguas Island in Vinzons which showcase the p
     </script>
     <script async src="https://api.countapi.xyz/update/cpto.com/visits?callback=cb"></script>
 
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-        import {
-            getAuth,
-            createUserWithEmailAndPassword,
-            signInWithEmailAndPassword,
-            signOut
-        } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
-        import {getDatabase, set, ref, update} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
-    
-    
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-    
-    const firebaseConfig = {
-      apiKey: "AIzaSyDA1XjvPrrZiMLhYRRV1Ar23p4SF2lJq9I",
-      authDomain: "cpto-d7b0b.firebaseapp.com",
-      projectId: "cpto-d7b0b",
-      storageBucket: "cpto-d7b0b.appspot.com",
-      messagingSenderId: "633926478402",
-      appId: "1:633926478402:web:3e659a8d5f50793d299bdb",
-      measurementId: "G-WNZKRQGELD"
-    };
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth();
-        const database = getDatabase(app);
+    <script>
 
-        var btn = document.getElementById('chat');
-        var msg1 = document.getElementById('textInput').value;
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-        btn.addEventListener('click', (e) => {
-            
-            alert(msg1)
-            set(ref(database, 'inquiries/' + user.uid), {
-                    message: 'sadadasdsa',
-                    message: 'asdasdasdasd'
-                })
-        })
-    
-    </script>
+
+
+</script>

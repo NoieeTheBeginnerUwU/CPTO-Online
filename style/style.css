@@ -84,7 +84,7 @@ body {
 }
 
 .holder3 h2 {
-    font-size: 2rem;
+    font-size: 2em;
     color: white;
     margin: 2%;
 }
@@ -146,7 +146,7 @@ header {
 
 .navbar a {
     color: rgb(255, 255, 255);
-    font-size: .8rem;
+    font-size: .8em;
     font-weight: 500;
     padding: 10%;
     margin: 0px 30px;
@@ -183,7 +183,7 @@ header {
     margin-right: 25px;
     margin-left: 10px;
     color: rgb(255, 255, 255);
-    font-size: 1.1rem;
+    font-size: 1.1em;
     font-weight: 500;
     transition: all .50s ease;
 }
@@ -194,7 +194,7 @@ header {
 
 .CPTOO {
     color: transparent;
-    font-size: 14rem;
+    font-size: 14em;
     font-weight: 900;
     margin-top: 2%;
     text-align: center;
@@ -252,7 +252,7 @@ header {
 }
 
 .breadcrumb a span {
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 900;
 }
 
@@ -263,11 +263,11 @@ header {
     }
 
     .CPTOO {
-        font-size: 2rem;
+        font-size: 2em;
     }
 
     footer h3 {
-        font-size: .9rem;
+        font-size: .9em;
     }
 
     footer {
@@ -819,7 +819,7 @@ a .card-places-holder {
 
 .pic2 h5 {
     margin: 5%;
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 #m {
@@ -838,7 +838,7 @@ a .card-places-holder {
     }
 
     .card-places {
-        font-size: .7rem;
+        font-size: .7em;
     }
 }
 
@@ -870,7 +870,7 @@ a .card-places-holder {
 
     .card-places {
         width: 40%;
-        font-size: .7rem;
+        font-size: .7em;
     }
 }
 
@@ -951,7 +951,7 @@ section {
 
     .history h4 {
         margin: 0 2% 2% 0;
-        font-size: 2.4rem;
+        font-size: 2.4em;
         color: var(--nav-color);
     }
 
@@ -1013,7 +1013,7 @@ section {
 
     #loginbtn,
     #signupbtn {
-        font-size: 1.2rem;
+        font-size: 1.2em;
         color: whitesmoke;
         border: none;
         background-color: #00aa06;
@@ -1330,7 +1330,7 @@ section {
     }
 
     .holder h2 {
-        font-size: 2rem;
+        font-size: 2em;
         margin: 2%;
     }
 
