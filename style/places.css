@@ -802,6 +802,7 @@ body{
 .grid-item{
     background-color: #ffffff;
     width: 100%;
+    border: .5px solid gray;
     border-radius: 0.4rem;
     overflow: hidden;
     box-shadow: 0 3rem 6 rem rgba(0, 0, 0, .5);
