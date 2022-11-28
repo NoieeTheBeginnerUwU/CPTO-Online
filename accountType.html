@@ -71,9 +71,23 @@
     margin-top: 20px;
   }
   @media screen and (max-width:600px) {
-    .account-holder1{
-      display: block;
-    }
+    .account-holder img{
+    margin-top: 5px;
+    width: 100px;
+    height: 20;
+  }
+  .account-holder1{
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+
+  }
+  .btn{
+    display: block;
+    margin: 30px;
+  }
   }
 </style>
 <body>
@@ -82,14 +96,14 @@
     <div class="account-holder">
       <h3>Choose Account Type</h3>
       <div class="account-holder1" style="float: right;">
-        <a href="#">
+        <a href="tourist.html">
             <img src="/images/tourist (1).png"  class="rounded-circle">
-      <button type="button" class="btn btn-warning"><h4>Tourist</h4></button>
+      <button type="button" class="btn btn-warning" href="tourist.html"><h4>Tourist</h4></button>
     </a>
 
     </div>
     <div class="account-holder1" style="float: left;">
-      <a href="#">
+      <a href="business.html">
 
       <img src="/images/my-business.png"  class="rounded-circle">
       <button type="button" class="btn btn-warning"><h4>Business</h4></button>
