@@ -266,14 +266,6 @@ header {
         font-size: 2em;
     }
 
-    footer h3 {
-        font-size: .9em;
-    }
-
-    footer {
-        display: flex;
-        flex-direction: column-reverse;
-    }
 }
 
 @media (max-width: 1280px) {
@@ -957,61 +949,7 @@ section {
         color: var(--nav-color);
     }
 
-    footer {
-        display: grid;
-        grid-auto-flow: column;
-        position: absolute;
-        bottom: 100;
-        width: 100%;
-        height: 40vh;
-        background-color: rgb(4, 0, 21);
-    }
-
-    footer h3 {
-        margin: 3%;
-    }
-
-    .footer-content1 i,
-    .footer-content2 i,
-    .footer-content3 i {
-        padding: 1%;
-        color: white;
-    }
-
-    .footer-content2 a {
-        color: rgb(174, 174, 174);
-    }
-
-    .footer-content2 a:hover {
-        color: white;
-    }
-
-    .footer-content3 p a:hover {
-        color: white;
-    }
-
-    .footer-content a {
-        text-align: center;
-    }
-
-    .footer-content1 {
-        width: 99%;
-        color: rgb(175, 175, 175);
-    }
-
-    .footer-content2 {
-        width: 99%;
-        color: rgb(175, 175, 175);
-    }
-
-    .footer-content3 {
-        width: 99%;
-        color: rgb(175, 175, 175);
-    }
-
-    .footer-content3 a {
-        color: rgb(175, 175, 175);
-    }
+  
 
     #loginbtn,
     #signupbtn {
@@ -1700,3 +1638,47 @@ section {
             font-size: 25px;
         }
     }
+    
+
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.container .row .col a{
+    transition: all 0.3s ease ;
+}
+.container .row .col a::before{
+    background-color: whitesmoke;
+}
+.container .row .col a:hover{
+    background-color: #ffc107;
+}
+
+@media only screen and (max-width:1500px) {
+
+    .container .row h5{
+        text-align: center;
+    }
+
+    .container .row  p{
+
+        font-size: 13px;
+        text-align: left;
+    
+    }    
+}
+
+@media only screen and (max-width:900px) {
+
+    .container .row h5{
+        text-align: center;
+    }
+
+    .container .row  p{
+
+        font-size: 11px;
+        text-align: center;
+    
+    }    
+}
