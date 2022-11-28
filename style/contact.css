@@ -1,61 +1,17 @@
-.body {
-    background-image: url('./denim.webp');
-    background-size: cover;
-    background-position: bottom;
-}
-
 .contact p, a {
-    width: 90%;
+    width: auto;
     color: rgb(0, 0, 0);
     text-align: justify;
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
-
-.logo .contact {
-    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.5);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.contact:hover {
-    transform: scale(1.1, 1.1);
-    box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25), 
-    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
-}
-
-.main-holder {
-    position: relative;
-    display: flex;
-    float: left;
-    padding: auto;
-    margin-top: 15vh;
-    margin-left: 1px;
-}
-
-.main-holder .contact {
-    position: relative;
-    margin: 0 auto;
-    margin-top: 60px;
-    margin-bottom: 20px;
-    width: 80%;
-    height: 80%;
-    background-color: rgba(255, 255, 255, 0.938);
-    color: rgb(0, 0, 0);
-    border-radius: 10px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    border: 5px solid;
+    font-size: 15px;
     
 }
 
-.container-contact {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+
+.contact:hover {
+    transform: translateY(-0.5%);
+    box-shadow:  0 4px 8px 0 rgba(0, 255, 179, 0.9), 0 6px 20px 0 rgba(32, 255, 2, 0.3);
 }
 
 h4 {
@@ -64,11 +20,139 @@ h4 {
 }
 
 .contact-intro {
+    position: absolute;
+    font-size: 125px;
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
+    left: 10vh;
+    top: 10vh;
+    width: 40%;
+    line-height: 1.1;
+    background: linear-gradient(-45deg, rgb(0, 255, 42), rgb(0, 45, 247));
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: move 5s ease-in-out infinite;
+}
+
+@keyframes move {
+    0% {background-position: 0 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0 50%;}
+}
+    
+.contact {
+    cursor: pointer;
+    transition: 0.2s;
+    box-sizing: border-box;
+    border: 5px solid;
+    border-radius: 15px;
+}
+
+.main-holder1 {
     position: relative;
-    display: flex;
-    font-size: 150px;
-    margin-right: 18%;
-    padding-left: 30px;
-    margin-top: 35px;
-    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    width: 20%;
+    height: 17em;
+    top: 6em;
+    left: 40em;
+}
+
+.main-holder2 {
+    position: relative;
+    display: grid;
+    width: 30%;
+    height: 13em;
+    top: -9em;
+    left: 58em;
+}
+
+.main-holder3 {
+    position: relative;
+    display: grid;
+    width: 32%;
+    height: 14.5em;
+    top: -5em;
+    left: 6em;
+}
+
+.main-holder4 {
+    position: relative;
+    display: grid;
+    width: 20%;
+    height: 12em;
+    top: -19.5em;
+    left: 34.4em;
+}
+
+.main-holder5 {
+    position: relative;
+    display: grid;
+    width: 35%;
+    height: 12em;
+    top: -31.5em;
+    left: 52.4em;
+}
+
+.main-holder6 {
+    position: relative;
+    display: grid;
+    width: 32%;
+    height: 12em;
+    top: -13.7em;
+    left: 6em;
+}
+
+.main-holder7 {
+    position: relative;
+    display: grid;
+    width: 32%;
+    height: 12em;
+    top: -39.4em;
+    left: 6em;
+}
+
+.main-holder8 {
+    position: relative;
+    display: grid;
+    width: 57%;
+    height: 17em;
+    top: -54.3em;
+    left: 34em;
+}
+
+.main-holder9 {
+    position: relative;
+    display: grid;
+    width: 26.4%;
+    height: 13.2em;
+    top: -51.7em;
+    left: 34em;
+}
+
+.main-holder10 {
+    position: relative;
+    display: grid;
+    width: 30%;
+    height: 13.3em;
+    top: -64.9em;
+    left: 56.8em;
+}
+
+.main-holder11 {
+    position: relative;
+    display: grid;
+    width: 80%;
+    height: 5em;
+    top: 1em;
+    left: 5em;
+}
+
+.main-holder12 {
+    position: relative;
+    display: grid;
+    width: 80%;
+    height: 5em;
+    top: 1em;
+    left: 5em;
 }
