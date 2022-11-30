@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tourist Registration</title>
-    <Style>
- /* ===== Google Font Import - Poppins #4070f4===== */
+    <title>Tour-Guide</title>
+</head>
+
+
+
+<style>
+
+/* ===== Google Font Import - Poppins #4070f4===== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 *{
     margin: 0;
@@ -131,47 +136,66 @@ form .fields .input-field{
 .input-field input[type="date"]:valid{
     color: #333;
 }
-.form-container form button, .backBtn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 45px;
-    max-width: 200px;
-    width: 100%;
+
+.btn {
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 6em;
+    -webkit-transition: all .2s;
+    transition: all .2s;
     border: none;
-    outline: none;
-    color: #fff;
-    border-radius: 5px;
+    font-family: inherit;
+    font-weight: 500;
+    color: white;
     margin: 25px 0;
     background-color: #4070f4;
-    transition: all 0.3s linear;
-    cursor: pointer;
-}
-.form-container form .btnText{
-    font-size: 14px;
-    font-weight: 400;
-}
-form button:hover{
+    
+   }
+   
+   .btn:hover {
+    -webkit-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+            transform: translateY(-3px);
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btn:active {
+    -webkit-transform: translateY(-1px);
+        -ms-transform: translateY(-1px);
+            transform: translateY(-1px);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btn::after {
+    content: "";
+    display: inline-block;
     height: 100%;
     width: 100%;
-    outline: none;
-    border: none;
-    background-color: #265df2;
-}
-form button i,
-form .backBtn i{
-    margin: 0 6px;
-}
-form .backBtn i{
-    transform: rotate(180deg);
-}
-form .buttons{
-    display: flex;
-    align-items: center;
-}
-form .buttons button , .backBtn{
-    margin-right: 14px;
-}
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+   }
+   
+   .btn::after {
+    background-color: #fff;
+   }
+   
+   .btn:hover::after {
+    -webkit-transform: scaleX(1.4) scaleY(1.6);
+        -ms-transform: scaleX(1.4) scaleY(1.6);
+            transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+   }
 .Sub{
     font-size: small;
 }
@@ -193,10 +217,15 @@ form .buttons button , .backBtn{
         width: 100%;
     }
 }
-    </Style>
-</head>
+
+
+
+
+
+
+
+</style>
 <body>
-    
     
     <div class="form-container">
         <header>Account Information For Tour Guide</header>
@@ -214,7 +243,7 @@ form .buttons button , .backBtn{
                     
                         <div class="input-field">
                             <label>Officail Email Address</label>
-                            <input type="text" placeholder="Enter your email" required>
+                            <input type="email" id="email16" name="email16" placeholder="Enter your email" required>
                         </div>
                     </div>
 
@@ -227,52 +256,52 @@ form .buttons button , .backBtn{
                     <div class="fields">
                         <div class="input-field">
                             <label> Name Prefix</label>
-                            <input type="text"  id= "text" placeholder="Enter Transport Name" required>
+                            <input type="text"  id= "prefix17" name="prefix17" placeholder="Enter Name Prefix" required>
                         </div>
                         <div class="input-field">
                             <label> Name Suffix</label>
-                            <input type="text"  id= "text" placeholder="Enter Transport Name" required>
+                            <input type="text"  id= "suffix17" name="suffix17" placeholder="Enter Name Suffix" required>
                         </div>
                         <div class="input-field">
                             <label> First Name</label>
-                            <input type="text"  id= "text" placeholder="Enter Transport Name" required>
+                            <input type="text"  id= "first17" name="first17" placeholder="Enter First Name" required>
                         </div>
                        
                         <div class="input-field">
                             <label>Middle Name</label>
-                            <input type="text" id="text" placeholder="Permanent or Temporary" required>
+                            <input type="text" id="middle17" name="middle17" placeholder="Middle Name" required>
                         </div>
                         <div class="input-field">
                             <label>Last Name</label>
-                            <input type="text" id="text" placeholder="Optional">
+                            <input type="text" id="last17" name="17" placeholder="Optional">
                         </div>
                         <div class="input-field">
                             <label>Full Maden Name</label>
-                            <input type="number" id="number" placeholder="Enter Contact number" required>
+                            <input type="text" id="maden17" name="maden17" placeholder="Enter Full Maden Name" required>
                         </div>
                         <div class="input-field">
                             <label>Phone Number</label>
-                            <input type="text" id= "text" placeholder="Enter Email Address" required>
+                            <input type="tel" id= "phone17" name="phone17" placeholder="Enter Phone Number" required>
                         </div>
 
                         <div class="input-field">
                             <label>Mobile Number</label>
-                            <input type="date" id="date" placeholder="Enter date" required>
+                            <input type="tel" id="mobile17" name="mobile17" placeholder="Enter Mobile Number" required>
                         </div>
                         <div class="input-field">
                             <label>Nationality</label>
-                            <input type="date" id="date" placeholder="Enter date" required>
+                            <input type="teaxt" id="nationality17" name="nationality17" placeholder="Enter Nationality" required>
                         </div>
                         <div class="input-field">
                             <label>Date of Birth</label>
-                            <input type="date" id="date" placeholder="Enter date" required>
+                            <input type="date" id="dob17" name="dob17" placeholder="Enter date" required>
                         </div>
                         <div class="input-field">
                             <label>Gender</label>
                             <select required>
                                 <option disabled selected>Select Gender</option>
-                                <option>Male</option>
-                                <option>Female</option>
+                                <option id="male17" name="male17" >Male</option>
+                                <option id="female17" name="female17" >Female</option>
                         
                             </select>
                         </div>
@@ -281,8 +310,8 @@ form .buttons button , .backBtn{
                             <label>Civil Status</label>
                             <select required>
                                 <option disabled selected>Select Civil Status</option>
-                                <option>Single</option>
-                                <option>Married</option>
+                                <option id="single17" name="single17" >Single</option>
+                                <option id="married17" name="married17" >Married</option>
                                 <option>Others</option>
                             </select>
                         </div>
@@ -290,12 +319,12 @@ form .buttons button , .backBtn{
                             <label>Tour Guide Type</label>
                             <select required>
                                 <option disabled selected>Select Specialization</option>
-                                <option>Community Guide</option>
-                                <option>Regional Guide</option>
-                                <option>Cave Guide</option>
-                                <option>Firefly Guide</option>
-                                <option>Eco-Guide</option>
-                                <option>Monutain Guide</option>
+                                <option id="community17" name="community17" >Community Guide</option>
+                                <option id="regional17" name="regional17" >Regional Guide</option>
+                                <option id="cave17" name="cave17">Cave Guide</option>
+                                <option id="firefly17" name="firefly17">Firefly Guide</option>
+                                <option id="eco17" name="eco17">Eco-Guide</option>
+                                <option id="mountain17" name="mountain17">Mountain Guide</option>
                             </select>
                         </div>
                       
@@ -305,23 +334,23 @@ form .buttons button , .backBtn{
                             <div class="fields">
                                 <div class="input-field">
                                     <label>No. (Include Building Name)</label>
-                                    <input type="text"  id= "text" placeholder="Enter Corporation Name" required>
+                                    <input type="text"  id= "no17" name="17" placeholder="Enter No. (Include Building Name)" required>
                                 </div>
                                 <div class="input-field">
                                     <label>Street/Subdivision</label>
-                                    <input type="text"  id= "text" placeholder="Enter Address" required>
+                                    <input type="text"  id= "street17" name="17" placeholder="Enter Street/Subdivision" required>
                                 </div>
                                 <div class="input-field">
                                     <label>Region</label>
-                                    <input type="text"  id= "text" placeholder="Enter Address" required>
+                                    <input type="text"  id= "region17" name="region17" placeholder="Enter Region" required>
                                 </div>
                                 <div class="input-field">
                                     <label> City/Province</label>
-                                    <input type="text"  id= "text" placeholder="Enter Address" required>
+                                    <input type="text"  id= "city17" name="city17" placeholder="Enter City/Province" required>
                                 </div>
                                 <div class="input-field">
                                     <label>Municipality/District</label>
-                                    <input type="text"  id= "text" placeholder="Enter Address" required>
+                                    <input type="text"  id= "municipality17" name="municipality17" placeholder="Enter Municipality/District" required>
                                 </div>
                                 <div class="homestay details">
                                     <span class="title"> PERMIT </span>
@@ -329,38 +358,19 @@ form .buttons button , .backBtn{
                                     <div class="fields">
                                         <div class="input-field">
                                             <label>Mayor's Permit No.</label>
-                                            <input type="text"  id= "text" placeholder="Enter Company Name" required>
+                                            <input type="text"  id= "permit17" name="permit17" placeholder="Enter Mayor's Permit No." required>
                                         </div>
                                         <div class="input-field">
                                             <label>Place of Issue</label>
-                                            <input type="text"  id= "text" placeholder="Enter Address" required>
+                                            <input type="text"  id= "place17" name="place17" placeholder="Enter Place of Issue" required>
                                         </div>
                                         <div class="input-field">
                                             <label>Valid Until</label>
-                                            <input type="date" id="date" placeholder="Enter date" >
+                                            <input type="date" id="valid17" name="valid17" placeholder="Enter Valid Until" >
                                         </div>
 
                       
-                        <div class="homestay details">
-                            <span class="title">AUTHORIZED REPRESENTATIVE (to transact business with DOT)</span>
-        
-                            <div class="fields">
-                                <div class="input-field">
-                                    <label>Representative's Full Name</label>
-                                    <input type="text"  id= "text" placeholder="Enter Full Name" required>
-                                </div>
-                                <div class="input-field">
-                                    <label>Designation</label>
-                                    <input type="text"  id= "text" placeholder="Enter Designation" required>
-                                </div>
-                                <div class="input-field">
-                                    <label>Contact Number</label>
-                                    <input type="text" id="text" placeholder="Enter Contact Number" required>
-                                </div>
-                                <div class="input-field">
-                                    <label>Email Address</label>
-                                    <input type="text" id="text" placeholder="Enter Email Address">
-                                </div>
+                        
                                 
                     </div> 
                     <br>
@@ -372,13 +382,12 @@ form .buttons button , .backBtn{
                     </div>              
                 </div>
 
-                <button class="nextBtn">
-                    <span class="btnText">Submit</span>
-                    <i class="uil uil-navigator"></i>
-                </button> 
+                
             </div>
 
-           
+           <button class="btn"> Submit
+                    <i class="uil uil-navigator"></i>
+                </button>
                    
                    
                      
@@ -387,7 +396,7 @@ form .buttons button , .backBtn{
 
                
             </div>
+
             
-    
 </body>
 </html>
