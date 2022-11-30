@@ -30,98 +30,10 @@ href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
     <title>CPTO Online</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-       body {
-            background-color: rgb(241, 241, 241);
-            color: white;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        /* Add padding to containers */
-        header li a{
-            font-size: .6rem;
-        }
-        .container {
-            width: 50%;
-            margin: 0 auto;
-            height: 140vh;
-            background-color: rgb(0, 0, 0);
-            text-align: center;
-            border: black 40px thin;
-            background-image: url('images/4.webp');
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        @media(max-width: 500px){
-            .container{
-                width: 80%;
-            }
-        }
-
-        /* Full-width input fields */
-
-        input[type=text],
-        input[type=password] {
-            width: 70%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
-            display: list-block;
-            border: none;
-            background: #f1f1f1;
-        }
-
-        input[type=text]:focus,
-        input[type=password]:focus {
-            background-color: #ddd;
-            outline: none;
-        }
-
-        /* Overwrite default styles of hr */
-
-        hr {
-            border: 1px solid #f1f1f1;
-            margin-bottom: 25px;
-        }
-
-        /* Set a style for the submit button */
-
-        .registerbtn {
-            background-color: #04AA6D;
-            color: white;
-            padding: 16px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 70%;
-            opacity: 0.9;
-        }
-
-        .registerbtn:hover {
-            opacity: 1;
-        }
-
-        /* Add a blue text color to links */
-
-        a {
-            color: dodgerblue;
-        }
-
-        /* Set a grey background color and center the text of the "sign in" section */
-
-        .signin {
-            background-color: #f1f1f1;
-            text-align: center;
-        }
-     
-
-
-        /* Css for Account type */
-  body{
+        body{
     padding: o;
     margin: 0;
+    background-color: antiquewhite;
   }
   
 
@@ -131,7 +43,7 @@ href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
   margin-top: 150px;
   width: 50%;
   height: 50vh;
-  background-color: antiquewhite;
+  background-color: #fff;
   border: 3px solid #73AD21;
   padding: 10px;
   border-radius: 25px;
@@ -140,11 +52,19 @@ href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
  
 
   }
-  .account-holder img{
+  .account-holder1 img{
     margin-top: 10px;
-    width: 150px;
+    width: 130px;
     height: 40;
+    border: 2px solid #73AD21;
   }
+  img:hover{
+  transform: scale(1.3s);
+  box-shadow: 0 0 10px 5px #73AD21 ;
+  z-index: 2;
+
+
+}
   .account-holder1{
     width: 50%;
     box-sizing: border-box;
@@ -153,13 +73,19 @@ href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
    justify-content: center;
 
   }
+
   h3{
     padding:20px;
     font-weight: 900;
     text-align: center;
+    font-size: x-large;
+  
    
   }
-  a{
+  h4{
+    color: black;
+  } 
+   a{
     text-decoration: none;
     text-align: center;
   }
@@ -171,11 +97,40 @@ href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
     text-decoration: none;
     margin-top: 20px;
   }
+  @media screen and (max-width:900px){
+    .account-holder img{
+      border: 2px solid #73AD21;
+    margin-top: 5px;
+    width: 100px;
+    height: 25;
+  }
+  .account-holder{
+    width: 70%;
+    height: 40vh;
+  }
+  .account-holder1{
+    width:50%;
+    box-sizing: border-box;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+
+  }
+  h4{
+    text-decoration: none;
+    font-size: large;
+    color: black;
+  }
+  }
   @media screen and (max-width:600px) {
     .account-holder img{
     margin-top: 5px;
-    width: 100px;
+    width: 90px;
     height: 20;
+  }
+  .account-holder{
+    width: 90%;
+    height: 30vh;
   }
   .account-holder1{
     width: 50%;
@@ -185,17 +140,12 @@ href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
    justify-content: center;
 
   }
-  .btn{
-    display: block;
-    margin: 30px;
+  h4{
+    text-decoration: none;
+    font-size: large;
+    color: black;
   }
-  }
-
-
-
-
-
-
+}
 
     </style>
 </head>
@@ -232,52 +182,23 @@ href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
     </header>
 
 
-
     <div class="account-holder">
         <h3>Choose Account Type</h3>
         <div class="account-holder1" style="float: right;">
-          <a href="tourist.html">
-              <img src="/images/tourist (1).png"  class="rounded-circle">
-        <button type="button" class="btn btn-warning" href="tourist.html"><h4>Tourist</h4></button>
+          <a href="Reg-Business.html" target="_blank">
+              <img src="/images/my-business.png"  class="rounded-circle">
+  <h4>Business</h4>
       </a>
   
       </div>
       <div class="account-holder1" style="float: left;">
-        <a href="business.html">
+        <a href="Reg-Tourguide.html" target="_blank">
   
-        <img src="/images/my-business.png"  class="rounded-circle">
-        <button type="button" class="btn btn-warning"><h4>Business</h4></button>
+        <img src="/images/tourguide icon.png"  class="rounded-circle">
+        <h4>Tour-guide</h4>
     </a>      
       </div>
       </div>
-
-
-
-
-
-
-
-
-<div class="container">
-
-    <form>
-        <h1>Register</h1>
-        <p>Please fill in this form to create an account.</p>
-
-        <input type="text" placeholder="Enter Email" name="email" id="email" required>
-        <input type="text" placeholder="Enter First Name" name="fname" id="fname" required>
-        <input type="text" placeholder="Enter Middle Initial" name="mi" id="mi">
-        <input type="text" placeholder="Enter Last Name" name="lname" id="lname" required>
-        <input type="text" placeholder="+63 9-- ----" name="num" id="num" required>
-        <input type="password" placeholder="Password" name="psw" id="psw" required>
-
-        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-
-        <button type="button" id="submitData" name="submitData" class="registerbtn">Register</button>
-        <p>Already have an account? <a href="accountType.html">Sign in</a>.</p>
-    </form>
-
-</div>
   
 
 </body>
