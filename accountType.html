@@ -26,6 +26,7 @@
   body{
     padding: o;
     margin: 0;
+    background-color: antiquewhite;
   }
   
 
@@ -35,19 +36,28 @@
   margin-top: 150px;
   width: 50%;
   height: 50vh;
-  background-color: antiquewhite;
+  background-color: #fff;
   border: 3px solid #73AD21;
   padding: 10px;
+  border-radius: 25px;
   align-items: center;
   justify-content: center;
  
 
   }
-  .account-holder img{
+  .account-holder1 img{
     margin-top: 10px;
-    width: 150px;
+    width: 130px;
     height: 40;
+    border: 2px solid #73AD21;
   }
+  img:hover{
+  transform: scale(1.3s);
+  box-shadow: 0 0 10px 5px #73AD21 ;
+  z-index: 2;
+
+
+}
   .account-holder1{
     width: 50%;
     box-sizing: border-box;
@@ -56,13 +66,19 @@
    justify-content: center;
 
   }
+
   h3{
     padding:20px;
     font-weight: 900;
     text-align: center;
+    font-size: x-large;
+  
    
   }
-  a{
+  h4{
+    color: black;
+  } 
+   a{
     text-decoration: none;
     text-align: center;
   }
@@ -74,11 +90,40 @@
     text-decoration: none;
     margin-top: 20px;
   }
+  @media screen and (max-width:900px){
+    .account-holder img{
+      border: 2px solid #73AD21;
+    margin-top: 5px;
+    width: 100px;
+    height: 25;
+  }
+  .account-holder{
+    width: 70%;
+    height: 40vh;
+  }
+  .account-holder1{
+    width:50%;
+    box-sizing: border-box;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+
+  }
+  h4{
+    text-decoration: none;
+    font-size: large;
+    color: black;
+  }
+  }
   @media screen and (max-width:600px) {
     .account-holder img{
     margin-top: 5px;
-    width: 100px;
+    width: 90px;
     height: 20;
+  }
+  .account-holder{
+    width: 90%;
+    height: 30vh;
   }
   .account-holder1{
     width: 50%;
@@ -88,10 +133,12 @@
    justify-content: center;
 
   }
-  .btn{
-    display: block;
-    margin: 30px;
+  h4{
+    text-decoration: none;
+    font-size: large;
+    color: black;
   }
+  
   }
 </style>
 <body>
@@ -100,17 +147,17 @@
     <div class="account-holder">
       <h3>Choose Account Type</h3>
       <div class="account-holder1" style="float: right;">
-        <a href="tourist.html">
-            <img src="/images/tourist (1).png"  class="rounded-circle">
-      <button type="button" class="btn btn-warning" href="tourist.html"><h4>Tourist</h4></button>
+        <a href="Reg-Business.html" target="_blank">
+            <img src="/images/my-business.png"  class="rounded-circle">
+<h4>Business</h4>
     </a>
 
     </div>
     <div class="account-holder1" style="float: left;">
-      <a href="business.html">
+      <a href="Reg-Tourguide.html" target="_blank">
 
-      <img src="/images/my-business.png"  class="rounded-circle">
-      <button type="button" class="btn btn-warning"><h4>Business</h4></button>
+      <img src="/images/tourguide icon.png"  class="rounded-circle">
+      <h4>Tour-guide</h4>
   </a>      
     </div>
     </div>

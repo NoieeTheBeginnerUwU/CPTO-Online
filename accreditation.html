@@ -12,17 +12,184 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
         <link rel="stylesheet" href="static/css/chat.css">
         <link rel="stylesheet" href="static/css/home.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" >
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-      <link rel="stylesheet" 
-      href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
+    
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
     
         <title>CPTO Online</title>
     </head>
+    <style>
+        body{
+          background-color: antiquewhite;
+        }
+        
+        .account-holder{
+      
+      margin: auto;
+      margin-top: 100px;
+      width: 60%;
+      height: 55vh;
+      background-color: #fff;
+      border: 3px solid #73AD21;
+      border-radius: 25px;
+      padding: 10px;
+      align-items: center;
+      justify-content: center;
+      
+      
+      }
+      .account-holder1{
+        width: 20%;
+        box-sizing: border-box;
+        display: flex;
+       align-items: center;
+       justify-content: center;
+       transition: 1s;
+       border: none;
+      
+      }
+      .account-holder img{
+        margin-top: 5px;
+        margin: 5;
+        width: 90px;
+        height: 10;
+        border: none;
+      }
+      img:hover{
+        transform: scale(1.3s);
+        box-shadow: 0 0 10px 5px #73AD21 ;
+        z-index: 2;
+      
+      
+      }
+      
+      h3{
+        padding:5px;
+        font-size: large;
+        font-weight: 900;
+        text-align: center;
+       
+      }
+      h4{
+        font-size: medium;
+        color: black;
+      }
+      a{
+        text-decoration: none;
+        text-align: center;
+        margin: 5px;
+        margin-top: 2px;
+      }
+      .btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        margin-top: 20px;
+      }
+      .container{
+        margin-top:50px;
+      }
+      .container ol li{
+        font-size: 14px;
+      }
+      @media screen and (max-width:1400px){
+      
+        .account-holder{
+          width: 70%;
+          height: 80vh;
+          margin: 30px;
+          margin-top: 20px;
+        }
+      
+      
+      }
+      @media screen and (max-width:900px) {
+        .account-holder{
+          width: 80%;
+          height: 70vh;
+          margin: auto;
+          margin-top: 10px;
+        }
+        .account-holder img{
+        margin-top: 2px;
+        width: 100px;
+        height: 20;
+      }
+      img:hover{
+        transform: scale(1.3s);
+        box-shadow: 0 0 10px 5px #73AD21 ;
+        z-index: 2;
+      
+      
+      }
+      h4{
+        font-size: medium;
+        color: black;
+      }
+      .account-holder1{
+        width: 33.3%;
+        box-sizing: border-box;
+        display: flex;
+       align-items: center;
+       justify-content: center;
+      
+      }
+      .container ol li{
+        font-size: 12px;
+      }
+      .btn{
+        display: block;
+        margin: 20px;
+      }
+      
+      }
+      @media screen and (max-width:678px) {
+        .account-holder{
+          width: 80%;
+          height: 70vh;
+        }
+        .account-holder img{
+        margin-top: 0;
+        width: 70px;
+        height: 10;
+      }
+      img:hover{
+        transform: scale(1.3s);
+        box-shadow: 0 0 10px 5px #73AD21 ;
+        z-index: 2;
+      
+      
+      }
+      .account-holder1{
+        width: 50%;
+        box-sizing: border-box;
+        display: flex;
+       align-items: center;
+       justify-content: center;
+       transition: 1s;
+      
+      }
+      
+      h4{
+        font-size: small;
+        color: black;
+      }
+      .container ol li{
+        font-size: 10px;
+      }
+      .btn{
+        display: block;
+        margin: 20px;
+      }
+      }
+      </style>
+    
 <body>
 <!--header start-->
 
@@ -64,7 +231,332 @@
 
 
 <!--Main content start-->
+<br><br><br>
+<div class="form-container">
+    <header>Application Form for Accommodation</header>
 
+    <form action="#">
+        <div class="form first">
+            <div class="details act">
+                <span class="title">Account Identifier Details</span>
+
+                <div class="fields">
+                
+                    <div class="input-field">
+                        <label>Officail Email Address</label>
+                        <input type="text" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>TIN number</label>
+                        <input type="number" placeholder="Enter TIN number" required>
+                    </div>
+                </div>
+                <div class="Sub">
+                    <i>NOTE: Make sure that the email address you provided is ACTIVE and VALID. For ESTABLISHMENTS, ensure that this is a corporate email  address or an email address that will 
+                        be permanently associated to your company. Please refrain from using your personal email address as  
+                    notifications and official communications will be forwarded to your registered email.</i>
+                </div>                    
+            </div>
+
+            <div class="details ID">
+                <span class="title">Establishment Details</span>
+
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Establishment Name</label>
+                        <input type="text" placeholder="Enter Establishment Name" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Business Address</label>
+                        <input type="text" placeholder="Permanent or Temporary" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Business Website</label>
+                        <input type="text" placeholder="Optional">
+                    </div>
+                    <div class="input-field">
+                        <label>Contact Number</label>
+                        <input type="number" placeholder="Enter Contact number" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Email Address</label>
+                        <input type="text" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Date Established</label>
+                        <input type="date" placeholder="Enter date" required>
+                    </div>
+                </div>                
+            </div>
+            
+            <div class="details addrs">
+                <span class="title">Management Details</span>
+
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Owner's Name</label>
+                        <input type="text" placeholder="Enter Owner's Name" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Address</label>
+                        <input type="text" placeholder="Enter Address" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Nationality</label>
+                        <input type="text" placeholder="Enter Nationality (If applicable)" >
+                    </div>
+                </div>
+            </div>
+
+            <div class="details innfo">
+                <span class="title">Managing Company Information (If applicable)</span>
+
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Company Name</label>
+                        <input type="text" placeholder="Enter Company name" >
+                    </div>
+
+                    <div class="input-field">
+                        <label>Address</label>
+                        <input type="text" placeholder="Enter Address name" >
+                    </div>          
+                    <div class="input-field">
+                        <label>Type of Organization</label>
+                        <select required>
+                            <option disabled selected>Select Type of Organization</option>
+                            <option>Single Proprietorship</option>
+                            <option>Partnership</option>
+                            <option>Corporation</option>
+                            <option>Cooperative</option>
+                        </select>
+                    </div> 
+                    <div class="input-field">
+                        <label>Type of Permit</label>
+                        <select required>
+                            <option disabled selected>Select Type of Permit</option>
+                            <option>Mayor's/Business Permit</option>
+                            <option>DTI permit</option>
+                            <option>SEC/CDA Registration</option>
+                        </select>
+                    </div>
+                     <div class="input-field">
+                        <label>Permit No.</label>
+                        <input type="number" placeholder="Enter Permit number" required>
+                    </div>
+                   
+                    <div class="input-field">
+                        <label>Valid Until</label>
+                        <input type="date" placeholder="Enter date" >
+                    </div>                      
+                    </div> 
+            </div>
+
+            <div class="details Manager">
+                <span class="title">General Manager</span>
+
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Genaral Manager Name</label>
+                        <input type="text" placeholder="Enter General Manager Name" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Contact No.</label>
+                        <input type="number" placeholder="Enter Contact number" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Email Address</label>
+                        <input type="text" placeholder="Enter Email Address" required>
+                    </div>    
+                    
+                    <div class="input-field">
+                        <label>Nationality</label>
+                        <input type="text" placeholder="Enter Nationality " required>
+                    </div>
+                </div>                  
+        </div>
+            
+            <button class="nextBtn">
+                <span class="btnText">Next</span>
+                <i class="uil uil-navigator"></i>
+            </button>
+
+
+
+        </div>
+
+        <div class="form second">
+        <div class="details Stock">
+            <span class="title">Stockholder's</span>
+
+            <div class="fields">
+                <div class="input-field">
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter  name" required>
+                    <input type="text" placeholder="Enter  name" required>
+                    <input type="text" placeholder="Enter  name" required>
+                    <input type="text" placeholder="Enter  name" >
+                    <input type="text" placeholder="Enter  name" >
+                    <input type="text" placeholder="Enter  name" >
+                    <input type="text" placeholder="Enter  name" >
+                    <input type="text" placeholder="Enter  name" >
+                    <input type="text" placeholder="Enter  name" >
+                    <input type="text" placeholder="Enter  name" >
+                </div>
+
+                <div class="input-field">
+                    <label>Position</label>
+                    <input type="text" placeholder="Enter Position" required>
+                    <input type="text" placeholder="Enter Position" required>
+                    <input type="text" placeholder="Enter Position" required>
+                    <input type="text" placeholder="Enter Position" >
+                    <input type="text" placeholder="Enter Position" >
+                    <input type="text" placeholder="Enter Position" >
+                    <input type="text" placeholder="Enter Position" >
+                    <input type="text" placeholder="Enter Position" >
+                    <input type="text" placeholder="Enter Position" >
+                    <input type="text" placeholder="Enter Position" >
+                </div>          
+                 <div class="input-field">
+                    <label>Amount Paid Up</label>
+                    <input type="number" placeholder="Enter the Amount" required>
+                    <input type="number" placeholder="Enter the Amount" required>
+                    <input type="number" placeholder="Enter the Amount" required>
+                    <input type="number" placeholder="Enter the Amount" >
+                    <input type="number" placeholder="Enter the Amount" >
+                    <input type="number" placeholder="Enter the Amount" >
+                    <input type="number" placeholder="Enter the Amount" >
+                    <input type="number" placeholder="Enter the Amount" >
+                    <input type="number" placeholder="Enter the Amount" >
+                    <input type="number" placeholder="Enter the Amount" >
+                </div>
+
+                
+                </div> 
+        </div>
+
+        <div class="details det">
+            <span class="title">Total Number of Room (specific details)</span>
+
+            <div class="fields">
+                <div class="input-field">
+                    <label>Type of Room</label>
+                    <input type="text" placeholder="Enter room type" required>
+                    <input type="text" placeholder="Enter room type" >
+                    <input type="text" placeholder="Enter room type" >
+                    <input type="text" placeholder="Enter room type" >
+                    <input type="text" placeholder="Enter room type" >
+                </div>
+
+                <div class="input-field">
+                    <label>Number of Room</label>
+                    <input type="number" placeholder="Enter the number of room" required>
+                    <input type="number" placeholder="Enter the number of room" >
+                    <input type="number" placeholder="Enter the number of room" >
+                    <input type="number" placeholder="Enter the number of room" >
+                    <input type="number" placeholder="Enter the number of room" >
+
+    
+                </div>          
+                 <div class="input-field">
+                    <label></label>
+                </div>
+
+                <div class="input-field">
+                    <label>Name of function room</label>
+                    <input type="text" placeholder="Enter name" required>
+                    <input type="text" placeholder="Enter name" >
+                    <input type="text" placeholder="Enter name" >
+                    <input type="text" placeholder="Enter name" >
+                    <input type="text" placeholder="Enter name" >
+                </div>
+
+                <div class="input-field">
+                    <label>Copacity</label>
+                    <input type="number" placeholder="Enter the number of room capacity" required>
+                    <input type="number" placeholder="Enter the number of room capacity" >
+                    <input type="number" placeholder="Enter the number of room capacity" >
+                    <input type="number" placeholder="Enter the number of room capacity" >
+                    <input type="number" placeholder="Enter the number of room capacity" >
+                </div> 
+                <div class="input-field">
+                    <label></label>
+                </div>
+            </div> 
+        </div>
+
+        <div class="details Ap">
+            <span class="title">AUTHORIZED REPRESENTATIVE (to transact business with DOT))</span>
+
+            <div class="fields">
+                <div class="input-field">
+                    <label>Representative full name</label>
+                    <input type="text" placeholder="Enter Name" required>
+                </div>
+                <div class="input-field">
+                    <label>Designation</label>
+                    <input type="number" placeholder="Enter Designation" required>
+                </div>          
+                <div class="input-field">
+                    <label>Contact Number</label>
+                    <input type="number" placeholder="Enter Contact Number" required>
+                </div> 
+                
+                <div class="input-field">
+                    <label>Email Address</label>
+                    <input type="text" placeholder="Enter your email" required>
+                </div>
+                <div class="Sub">
+                    <i>As the General Manager/Chief Executive Officer/Owner of the above-named establishment, I certify that I have  not been convicted of any criminal ofference involving moral turpitude and that all the official and employees of  the establishment listed in the attached sheet are of good moral character and without criminal record.  
+                    </i><i>I certify further that all the foregoing data and douments supporting this application are true and correct. 
+                        </i>
+                </div>
+            
+        </div>
+
+        <div class="details Doc">
+            <span class="title">DOCUMENTARY REQUIREMENTS (Submitted Documents Evaluator's Remarks)</span>
+
+            <div class="fields">
+                
+                <div class="Sub">
+                    <li>Valid Mayor's Permit/Business License</li>
+                    <li>Comprehensive General Liability Insurance Policy (for Regular  
+                        Accreditation, minimum coverage of P200,000.00 and Premium  
+                        Accreditation, minimum of coverage of P300,000.00) 
+                        </li>
+                    <li>Certification for Key Employees (e.g. Housekeeping, Front Office,  
+                        Food & Beverage, etc.) 
+                        </li>
+                    <li>Quality Recognition and/or Awards from Reputable Institutions </li>
+                    <li>Other documents</li>
+                    <li>Other Remarks </li>
+                </div>
+
+            </div> 
+                <div class="buttons">
+                    <div class="backBtn">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </div>
+                    
+                    <button class="sumbit">
+                        <span class="btnText">Submit</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div>
+        </div>       
+    </form>
+</div>
+
+
+</div>
 <!--Main content end-->
 
 
