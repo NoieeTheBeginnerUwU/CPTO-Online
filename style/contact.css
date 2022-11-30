@@ -1,70 +1,47 @@
-html, body {
+.container-contact {
     margin: 0;
-    padding: 0;
-    height: 70vh;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px;
     width: 100%;
+    margin-top: -4vh;
     
 }
 
-.container-contact {
-    margin: 0;
-    padding: 0;
-    height: 240vh;
-    width: 100%;
-    display: grid;
-    overflow: hidden;
-    
-}
-.contact p, a {
-    width: auto;
-    color: rgb(0, 0, 0);
+.contact p,
+a, i{
+    color: rgb(255, 255, 255) !important;
     text-align: justify;
     text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-style: normal;
 }
 
 
 .contact:hover {
     transform: translateY(-0.5%);
-    box-shadow:  0 4px 8px 0 rgba(0, 255, 179, 0.9), 0 6px 20px 0 rgba(32, 255, 2, 0.3);
+    box-shadow: 0 4px 8px 0 rgba(3, 26, 19, 0.9), 0 6px 20px 0 rgba(25, 25, 26, 0.3);
 }
 
 h4 {
+    font-size: 18px !important;
     text-align: left;
     padding-left: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+
 }
-
-.contact-bottom {
-    position: relative;
-}
-
-.contact-bottom span {
-    color: rgb(0, 0, 0);
-    font-family: 'Oswald', sans-serif;
-    font-size: 2.1em;
-    position: absolute;
-    text-align: left;
-    transform: translate(-50%, -50%);
-    left: 9.3em;
-    width: 13em;
-    top: -28.9em;
-    
-}
-
-
 
 .contact-intro {
-    position: absolute;
-    font-size: 125px;
+    width: 100%;
+    font-size: 100px;
     font-family: 'Oswald', sans-serif;
-    text-align: left;
-    left: 10vh;
-    top: 10vh;
-    width: 40%;
+    text-align: center;
+    margin-top: .7em;
     line-height: 1.1;
-    background: linear-gradient(-45deg, rgb(0, 255, 42), rgb(0, 45, 247));
+    background: linear-gradient(-45deg, rgb(0, 65, 11), rgb(0, 45, 247));
     background-size: 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -72,135 +49,43 @@ h4 {
 }
 
 @keyframes move {
-    0% {background-position: 0 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0 50%;}
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
 }
-    
+
 .contact {
     cursor: pointer;
     transition: 0.2s;
-    box-sizing: border-box;
-    border: 5px solid;
     border-radius: 15px;
+    background: rgba(0, 31, 71, 0.8);
+    backdrop-filter: saturate(180%) blur(2px);
 }
 
-.main-holder1 {
-    position: relative;
-    display: block;
-    width: 20%;
-    height: 17em;
-    top: 6em;
-    left: 40em;
-    
+.contact-bottom {
+    width: 61%;
+    line-height: 1.1;
+    font-size: 72px;
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
+    margin-top: -48vh;
+    float: right;
+    margin-right: 1vh;
 }
 
-.main-holder2 {
-    position: relative;
-    display: block;
-    width: 28%;
-    height: 13em;
-    top: -9em;
-    left: 58em;
-    
-}
-
-.main-holder3 {
-    position: relative;
-    display: block;
-    width: 32%;
-    height: 14.5em;
-    top: -5em;
-    left: 6em;
-    
-}
-
-.main-holder4 {
-    position: relative;
-    display: block;
-    width: 20%;
-    height: 12em;
-    top: -19.5em;
-    left: 34.4em;
-    
-}
-
-.main-holder5 {
-    position: relative;
-    display: block;
-    width: 35%;
-    height: 12em;
-    top: -31.5em;
-    left: 52.4em;
-    
-}
-
-.main-holder6 {
-    position: relative;
-    display: block;
-    width: 32%;
-    height: 12em;
-    top: -13.7em;
-    left: 6em;
-    
-}
-
-.main-holder7 {
-    position: relative;
-    display: block;
-    width: 32%;
-    height: 12em;
-    top: -39.4em;
-    left: 6em;
-    
-}
-
-.main-holder8 {
-    position: relative;
-    display: block;
-    width: 57%;
-    height: 17em;
-    top: -54.3em;
-    left: 34em;
-    
-}
-
-.main-holder9 {
-    position: relative;
-    display: block;
-    width: 26.4%;
-    height: 13.2em;
-    top: -51.9em;
-    left: 34em;
-    
-}
-
-.main-holder10 {
-    position: relative;
-    display: block;
-    width: 30%;
-    height: 13.3em;
-    top: -65.1em;
-    left: 56.8em;
-    
-}
-
-.main-holder11 {
-    position: relative;
-    display: block;
-    width: 32%;
-    height: 8em;
-    top: -66.8em;
-    left: 6em;
-    
-}
-
-.main-holder12 {
-    position: relative;
-    display: block;
-    width: 57.6%;
-    height: 5em;
-    top: -72.5em;
-    left: 33.7em;
-    
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .contact-intro {
+        font-size:70px;
+        margin-top: 10vh;
+        margin-bottom: 35px;
+    }
 }
