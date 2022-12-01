@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+ 
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+
+
+<style>
+
+    /* ===== Google Font Import - Poppins #4070f4===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+.form-container{
+    position: relative;
+    max-width: 1400px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.form-container header{
+    position: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    background-color: rgb(77, 173, 215);
+    
+}
+.form-container p{
+    font-size: small;
+    text-align: center;
+}
+.form-container span{
+    background-color: rgb(109, 177, 206);
+    text-align: center;
+}
+.form-container header::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 385px;
+    border-radius: 8px;
+    background-color: none;
+}
+.form-container form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 3370px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.form-container form .form{
+    position: absolute;
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+.form-container form .form.second{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+form.secActive .form.second{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+form.secActive .form.first{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
+.form-container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+.form-container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input-field input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field input :focus,
+.input-field select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field select,
+.input-field input[type="date"]{
+    color: #707070;
+}
+.input-field input[type="date"]:valid{
+    color: #333;
+}
+.btn {
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 6em;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: white;
+    margin: 25px 0;
+    background-color: #4070f4;
+    
+   }
+   
+   .btn:hover {
+    -webkit-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+            transform: translateY(-3px);
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btn:active {
+    -webkit-transform: translateY(-1px);
+        -ms-transform: translateY(-1px);
+            transform: translateY(-1px);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+   }
+   
+   .btn::after {
+    background-color: #fff;
+   }
+   
+   .btn:hover::after {
+    -webkit-transform: scaleX(1.4) scaleY(1.6);
+        -ms-transform: scaleX(1.4) scaleY(1.6);
+            transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+   }
+form .fields .input-field-capitalization{
+    display: flex;
+    width: calc(100% / 5 - 30px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field-capitalization label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input-field-capitalization input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field-capitalization input :focus,
+.input-field-capitalization select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field-capitalization select,
+.input-field-capitalization input[type="date"]{
+    color: #707070;
+}
+.input-field-capitalization input[type="date"]:valid{
+    color: #333;
+}
+form .fields .input-field-vessel{
+    display: flex;
+    width: calc(100% / 6 - 30px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field-vessel label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input-field-vessel input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field-vessel input :focus,
+.input-field-ship select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field-vessel  select,
+.input-field-ship input[type="date"]{
+    color: #707070;
+}
+.input-field-vessel input[type="date"]:valid{
+    color: #333;
+}
+form .fields .input-field-ship{
+    display: flex;
+    width: calc(100% / 4 - 30px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field-ship label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input-field-ship input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field-ship input :focus,
+.input-field-ship select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field-ship select,
+.input-field-ship input[type="date"]{
+    color: #707070;
+}
+.input-field-ship input[type="date"]:valid{
+    color: #333;
+}
+.Sub{
+    font-size: small;
+    text-align: justify;
+}
+
+@media (max-width: 750px) {
+    .container form{
+        overflow-y: scroll;
+    }
+    .container form::-webkit-scrollbar{
+       display: none;
+    }
+    form .fields .input-field{
+        width: calc(100% / 2 - 15px);
+    }
+}
+
+@media (max-width: 550px) {
+    form .fields .input-field{
+        width: 100%;
+    }
+}
+</style>
+<body>
+  
+    <div class="form-container">
+        <header>Accrreditation Form For Tourist Air Transport Operator</header>
+        <br>
+
+        <p><i>Please print legibly all information required. Do not abbreviate the information supplied.
+             Place"/" marks in approproiate boxes "N/A" if not applicable </i></p>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details act">
+                    <span class="title">ACCOUNT IDENTIFIER DETAILS</span>
+
+                    <div class="fields">
+                    
+                        <div class="input-field">
+                            <label>Officail Email Address</label>
+                            <input type="text" id="email12" name="email12" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-field">
+                            <label>TIN</label>
+                            <input type="text" id="tin12" name="tin12" placeholder="Tin Number" required>
+                        </div>
+                    </div>
+
+                                   
+                </div>
+                
+                <div class="homestay details">
+                    <span class="title">ESTABLISHMENT DETAILS</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Name of Tourist Transport Operator</label>
+                            <input type="text"  id="operator12" name="operator12" placeholder="Enter Name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Business Address</label>
+                            <input type="text"  id="address12" name="address12" placeholder="Enter Address" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Business Website</label>
+                            <input type="text" id="website12" name="webiste12" placeholder="Optional" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Contact Number</label>
+                            <input type="text" id="contact12" name="contact12" placeholder="Enter Contact Number">
+                        </div>
+                        <div class="input-field">
+                            <label>Email Address</label>
+                            <input type="number" id="emailadd12" name="emailadd12" placeholder="Enter Email Address" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Date Established</label>
+                            <input type="date" id="date12" name="date12" placeholder="Enter date" required>
+                        </div>
+                        <div class="homestay details">
+                            <span class="title">OWNERSHIP DETAILS</span>
+        
+                            <div class="fields">
+                                <div class="input-field">
+                                    <label>Owner's/Corporation Name</label>
+                                    <input type="text"  id="corporation12" name="corporation12" placeholder="Enter Name" required>
+                                </div>
+                                <div class="input-field">
+                                    <label>Address</label>
+                                    <input type="text"  id="address12" name="address12" placeholder="Enter Address" required>
+                                </div>
+                                <div class="input-field">
+                                    <label>Nationality (if applicable)</label>
+                                    <input type="text" id="nationality12" name="nationality12" placeholder="Enter Nationality">
+                                </div>
+                                <div class="homestay details">
+                                    <span class="title">MANAGING COMPANY INFORMATION</span>
+                
+                                    <div class="fields">
+                                        <div class="input-field">
+                                            <label>Company Name</label>
+                                            <input type="text"  id="company12" name="company12" placeholder="Enter Name" required>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>Address</label>
+                                            <input type="text"  id="address12" name="address12" placeholder="Enter Address" required>
+                                        </div>
+                                         <div class="input-field">
+                            <label>Type of Organization</label>
+                            <select required>
+                                <option disabled selected>Select Type of Organization</option>
+                                <option id="single12" name="single12">Single Proprietorship</option>
+                                <option id="partnership12" name="partnership12">Partnership</option>
+                                <option id="corp12" name="corp12">Corporation</option>
+                                <option id="coop12" name="coop12">Cooperative</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>Permit</label>
+                            <select required>
+                                <option disabled selected>Select Permit</option>
+                                <option id="mayor12" name="mayor12">Mayor's/Business Permit</option>
+                                <option id="dti12" name="dti12">DTI Permit</option>
+                                <option id="sec12" name="sec12">SEC/CDA Registration</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>Permit Number</label>
+                            <input type="text" id="permit12" name="permit12" placeholder="Permit Number" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Valid Until</label>
+                            <input type="date" id="date12" name="date12" placeholder="Enter date" >
+                        </div>
+
+                        <div class="homestay details">
+                            <span class="title">GENERAL MANAGER</span>
+        
+                            <div class="fields">
+                                <div class="input-field">
+                                    <label>General Manager's Name</label>
+                                    <input type="text" id="manager12" name="manager12" placeholder="Enter Full Name" required>
+                                </div>
+                                <div class="input-field">
+                                    <label>Contact Number</label>
+                                    <input type="text"  id="contact12" name="contact12" placeholder="Enter Contact Number" required>
+                                </div>
+                                
+                                <div class="input-field">
+                                    <label>Email Address</label>
+                                    <input type="text" id="emailadd12" name="emailadd12" placeholder="Enter Email Address">
+                                </div>
+                                <div class="input-field">
+                                    <label>Nationality</label>
+                                    <input type="text" id="nationality12" name="nationality12" placeholder="Nationality">
+                                </div>
+
+                                <div class="homestay details">
+                                    <span class="title">CAPITALIZATION</span>
+                
+                                    <div class="fields">
+                                        <div class="input-field-capitalization">
+                                            <label>Stockholder's Name</label>
+                                            <input type="text"  id= "manager" name="manager" placeholder="Enter Full Name" required>
+                                            <input type="text"  id= "manager1" name="manager1" placeholder="Enter Full Name" required>
+                                            <input type="text"  id= "manager2" name="manager2" placeholder="Enter Full Name" required>
+                                            <input type="text"  id= "manager3" name="manager3" placeholder="Enter Full Name" required>
+                                            <input type="text"  id= "manager4" name="manager4" placeholder="Enter Full Name" required>
+                                            <input type="text"  id= "manager5" name="manager5" placeholder="Enter Full Name" required>
+                                            <input type="text"  id= "manager6" name="manager6" placeholder="Enter Full Name" required>
+                                        </div>
+                                        <div class="input-field-capitalization">
+                                            <label>Position</label>
+                                            <input type="text"  id= "position" name="position" placeholder="Enter Position" required>
+                                            <input type="text"  id= "position1" name="position1" placeholder="Enter Position" required>
+                                            <input type="text"  id= "position2" name="position2" placeholder="Enter Position" required>
+                                            <input type="text"  id= "position3" name="position3" placeholder="Enter Position" required>
+                                            <input type="text"  id= "position4" name="position4" placeholder="Enter Position" required>
+                                            <input type="text"  id= "position5" name="position5" placeholder="Enter Position" required>
+                                            <input type="text"  id= "position6" name="position7" placeholder="Enter Position" required>
+                                        </div>
+                                        <div class="input-field-capitalization">
+                                            <label>Nationality</label>
+                                            <input type="text"  id= "nationality" name="nationality" placeholder="Enter nationality" required>
+                                            <input type="text"  id= "nationality1" name="nationality1" placeholder="Enter nationality" required>
+                                            <input type="text"  id= "nationality2" name="nationality2" placeholder="Enter nationality" required>
+                                            <input type="text"  id= "nationality3" name="nationality3" placeholder="Enter nationality" required>
+                                            <input type="text"  id= "nationality4" name="nationality4" placeholder="Enter nationality" required>
+                                            <input type="text"  id= "nationality5" name="nationality5" placeholder="Enter nationality" required>
+                                            <input type="text"  id= "nationality6" name="nationality6" placeholder="Enter nationality" required>
+                                        </div>
+                                        <div class="input-field-capitalization">
+                                            <label>Amount Subscribed</label>
+                                            <input type="text"  id= "subscribed" name="subscribed" placeholder="Enter Amount" required>
+                                            <input type="text"  id= "subscribed1" name="subscribed1" placeholder="Enter Amount" required>
+                                            <input type="text"  id= "subscribed2" name="subscribed2" placeholder="Enter Amount" required>
+                                            <input type="text"  id= "subscribed3" name="subscribed3" placeholder="Enter Amount" required>
+                                            <input type="text"  id= "subscribed4" name="subscribed4" placeholder="Enter Amount" required>
+                                            <input type="text"  id= "subscribed5" name="subscribed5" placeholder="Enter Amount" required>
+                                            <input type="text"  id= "subscribed6" name="subscribed6" placeholder="Enter Amount" required>
+                                        </div>
+                                        <div class="input-field-capitalization">
+                                            <label>Amount Paid Up</label>
+                                            <input type="text"  id= "paid" name="paid" placeholder="Enter Amount" required>
+                                            <input type="text"  id= "paid1" name="paid1" placeholder="Enter Amount" required>
+                                            <input type="text"  id= "paid2" name="paid2" placeholder="Enter Amount" required>
+                                            <input type="text"  id= "paid3" name="paid3" placeholder="Enter Amount" required>
+                                            <input type="text"  id= "paid4" name="paid4" placeholder="Enter Amount" required>
+                                            <input type="text"  id= "paid5" name="paid5" placeholder="Enter Amount" required>
+                                            <input type="text"  id= "paid6" name="paid6" placeholder="Enter Amount" required>
+                                        </div>
+                                        
+                                        <div class="input-field">
+                                            <label></label>
+                                        </div>   
+                                        <div class="homestay details">
+                                            <span class="title">LIST OF AIRCRAFTS</span>
+                                            <div class="fields">
+                                                <div class="input-field-vessel">
+                                                    <label>Name of Aircraft</label>
+                                                    <input type="text"  id= "aircraft" name="aircraft" placeholder="Enter Aircraft's Name" required>
+                                                    <input type="text"  id= "aircraft1" name="aircraft1" placeholder="Enter Aircraft's Name" required>
+                                                    <input type="text"  id= "aircraft2" name="aircraft2" placeholder="Enter Aircraft's Name" required>
+                                                    <input type="text"  id= "aircraft3" name="aircraft3" placeholder="Enter Aircraft's Name" required>
+                                                    <input type="text"  id= "aircraft4" name="aircraft4" placeholder="Enter Aircraft's Name" required>
+                                                    <input type="text"  id= "aircraft5" name="aircraft5" placeholder="Enter Aircraft's Name" required>
+                                                    <input type="text"  id= "aircraft" name="aircraft6" placeholder="Enter Aircraft's Name" required>
+                                                    <input type="text"  id= "aircraft7" name="aircraft7" placeholder="Enter Aircraft's Name" required>
+                                                    <input type="text"  id= "aircraft8" name="aircraft8" placeholder="Enter Aircraft's Name" required>
+                                                    <input type="text"  id= "aircraft9" name="aircraft9" placeholder="Enter Aircraft's Name" required>
+                                
+                                                </div>
+                                                <div class="input-field-vessel">
+                                                    <label>Aircraft Serial Number</label>
+                                                    <input type="text"  id= "serial" name="serial" placeholder="Enter Aircraft's Serial Number" required>
+                                                    <input type="text"  id= "serial1" name="serial1" placeholder="Enter Aircraft's Serial Number" required>
+                                                    <input type="text"  id= "serial2" name="serial2" placeholder="Enter Aircraft's Serial Number" required>
+                                                    <input type="text"  id= "serial3" name="serial3" placeholder="Enter Aircraft's Serial Number" required>
+                                                    <input type="text"  id= "serial4" name="serial4" placeholder="Enter Aircraft's Serial Number" required>
+                                                    <input type="text"  id= "serial5" name="serial5" placeholder="Enter Aircraft's Serial Number" required>
+                                                    <input type="text"  id= "serial6" name="serial6" placeholder="Enter Aircraft's Serial Number" required>
+                                                    <input type="text"  id= "serial7" name="serial7" placeholder="Enter Aircraft's Serial Number" required>
+                                                    <input type="text"  id= "serial8" name="serial8" placeholder="Enter Aircraft's Serial Number" required>
+                                                    <input type="text"  id= "serial9" name="serial9" placeholder="Enter Aircraft's Serial Number" required>
+                                                </div>
+                                                <div class="input-field-vessel">
+                                                    <label>Year Model</label>
+                                                    <input type="text"  id= "year" name="year" placeholder="Enter Model" required>
+                                                    <input type="text"  id= "year1" name="year1" placeholder="Enter Model" required>
+                                                    <input type="text"  id= "year2" name="year2" placeholder="Enter Model" required>
+                                                    <input type="text"  id= "year3" name="year3" placeholder="Enter Model" required>
+                                                    <input type="text"  id= "year4" name="year4" placeholder="Enter Model" required>
+                                                    <input type="text"  id= "year5" name="year5" placeholder="Enter Model" required>
+                                                    <input type="text"  id= "year6" name="year6" placeholder="Enter Model" required>
+                                                    <input type="text"  id= "year7" name="year7" placeholder="Enter Model" required>
+                                                    <input type="text"  id= "year8" name="year8" placeholder="Enter Model" required>
+                                                    <input type="text"  id= "year9" name="year9" placeholder="Enter Model" required>
+                                                </div>
+                                                <div class="input-field-vessel">
+                                                    <label>Registry Number</label>
+                                                    <input type="text"  id= "registry" name="registry" placeholder="Enter registry number" required>
+                                                    <input type="text"  id= "registry1" name="registry1" placeholder="Enter registry number" required>
+                                                    <input type="text"  id= "registry2" name="registry2" placeholder="Enter registry number" required>
+                                                    <input type="text"  id= "registry3" name="registry3" placeholder="Enter registry number" required>
+                                                    <input type="text"  id= "registry4" name="registry4" placeholder="Enter registry number" required>
+                                                    <input type="text"  id= "registry5" name="registry5" placeholder="Enter registry number" required>
+                                                    <input type="text"  id= "registry6" name="registry6" placeholder="Enter registry number" required>
+                                                    <input type="text"  id= "registry7" name="registry7" placeholder="Enter registry number" required>
+                                                    <input type="text"  id= "registry8" name="registry8" placeholder="Enter registry number" required>
+                                                    <input type="text"  id= "registry9" name="registry9" placeholder="Enter registry number" required>
+                                                </div>
+                                                <div class="input-field-vessel">
+                                                    <label>Aircraft's Brand</label>
+                                                    <input type="text"  id= "brand" name="brand" placeholder="Enter brand name" required>
+                                                    <input type="text"  id= "brand1" name="brand1" placeholder="Enter brand name" required>
+                                                    <input type="text"  id= "brand2" name="brand2" placeholder="Enter brand name" required>
+                                                    <input type="text"  id= "brand3" name="brand3" placeholder="Enter brand name" required>
+                                                    <input type="text"  id= "brand4" name="brand4" placeholder="Enter brand name" required>
+                                                    <input type="text"  id= "brand5" name="brand5" placeholder="Enter brand name" required>
+                                                    <input type="text"  id= "brand6" name="brand6" placeholder="Enter brand name" required>
+                                                    <input type="text"  id= "brand7" name="brand7" placeholder="Enter brand name" required>
+                                                    <input type="text"  id= "brand8" name="brand8" placeholder="Enter brand name" required>
+                                                    <input type="text"  id= "brand9" name="brand9" placeholder="Enter brand name" required>
+                                                </div>
+                                                <div class="input-field-vessel">
+                                                    <label>Engine Seriel Number</label>
+                                                    <input type="text"  id= "engine" name="engine" placeholder="Enter Engine Serial Number" required>
+                                                    <input type="text"  id= "engine" name="engine1" placeholder="Enter Engine Serial Number" required>
+                                                    <input type="text"  id= "engine2" name="engine2" placeholder="Enter Engine Serial Number" required>
+                                                    <input type="text"  id= "engine3" name="engine3" placeholder="Enter Engine Serial Number" required>
+                                                    <input type="text"  id= "engine4" name="engine4" placeholder="Enter Engine Serial Number" required>
+                                                    <input type="text"  id= "engine5" name="engine5" placeholder="Enter Engine Serial Number" required>
+                                                    <input type="text"  id= "engine6" name="engine6" placeholder="Enter Engine Serial Number" required>
+                                                    <input type="text"  id= "engine7" name="engine7" placeholder="Enter Engine Serial Number" required>
+                                                    <input type="text"  id= "engine8" name="engine8" placeholder="Engine Engine Serial Number" required>
+                                                    <input type="text"  id= "engine9" name="engine9" placeholder="Engine Engine Serial Number" required>
+                                                </div>
+                                               
+                                                <div class="homestay details">
+                                                    <span class="title">PILOT/CREW</span>
+                                                    <div class="fields">
+                                                        <div class="input-field-ship">
+                                                            <label>Last Name</label>
+                                                            <input type="text"  id= "last" name="last" placeholder="Enter Last Name" required>
+                                                            <input type="text"  id= "last1" name="last1" placeholder="Enter Last Name" required>
+                                                            <input type="text"  id= "last2" name="last2" placeholder="Enter Last Name" required>
+                                                            <input type="text"  id= "last3" name="last3" placeholder="Enter Last Name" required>
+                                                            <input type="text"  id= "last4" name="last4" placeholder="Enter Last Name" required>
+                                                            <input type="text"  id= "last5" name="last5" placeholder="Enter Last Name" required>
+                                                            <input type="text"  id= "last6" name="last6" placeholder="Enter Last Name" required>
+                                                            <input type="text"  id= "last7" name="last7" placeholder="Enter Last Name" required>
+                                                            <input type="text"  id= "last8" name="last8" placeholder="Enter Last Name" required>
+                                                            <input type="text"  id= "last9" name="last9" placeholder="Enter Last Name" required>
+                                                            
+        
+                                                        </div>   
+                                                        <div class="input-field-ship">
+                                                            <label>First Name</label>
+                                                            <input type="text"  id= "First" name="First" placeholder="Enter First Name" required>
+                                                            <input type="text"  id= "First" name="First1" placeholder="Enter First Name" required>
+                                                            <input type="text"  id= "First2" name="First2" placeholder="Enter First Name" required>
+                                                            <input type="text"  id= "First3" name="First3" placeholder="Enter First Name" required>
+                                                            <input type="text"  id= "First4" name="First4" placeholder="Enter First Name" required>
+                                                            <input type="text"  id= "First5" name="First5" placeholder="Enter First Name" required>
+                                                            <input type="text"  id= "First6" name="First6" placeholder="Enter First Name" required>
+                                                            <input type="text"  id= "First7" name="First7" placeholder="Enter First Name" required>
+                                                            <input type="text"  id= "First8" name="First8" placeholder="Enter First Name" required>
+                                                            <input type="text"  id= "First9" name="First9" placeholder="Enter First Name" required>
+                                                            
+                                                            
+        
+                                                        </div>  
+                                                        <div class="input-field-ship">
+                                                            <label>Middle Initial</label>
+                                                            <input type="text"  id= "initial" name="initial" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "initial" name="initial1" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "initial2" name="initial2" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "initial3" name="initial3" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "initial4" name="initial4" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "initial5" name="initial5" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "initial6" name="initial6" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "initial7" name="initial7" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "initial8" name="initial8" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "initial9" name="initial9" placeholder="Enter Middle Initial" required>
+                                                            
+        
+                                                        </div>  
+                                                        <div class="input-field-ship">
+                                                            <label>License/Permit to Operate Aircraft</label>
+                                                            <input type="text"  id= "License" name="License" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "License" name="License" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "License2" name="License2" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "License3" name="License3" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "License4" name="License4" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "License5" name="License5" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "License6" name="License6" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "License7" name="License7" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "License8" name="License8" placeholder="Enter Middle Initial" required>
+                                                            <input type="text"  id= "License9" name="License9" placeholder="Enter Middle Initial" required>
+                                                            
+        
+                                                        </div>  
+                                     
+
+                                <div class="homestay details">
+                                    <span class="title">AUTHORIZED REPRESENTATIVE (to transact business with DOT)</span>
+                
+                                    <div class="fields">
+                                        <div class="input-field">
+                                            <label>Representative's Full Name</label>
+                                            <input type="text"  id="representative12" name="representative12" placeholder="Enter Full Name" required>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>Designation</label>
+                                            <input type="text"  id="designation12" name="designation12" placeholder="Enter Designation" required>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>Contact Number</label>
+                                            <input type="text"  id="contact12" name="contact12" placeholder="Enter Contact Number" required>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>Email Address</label>
+                                            <input type="text"  id="emailadd12" name="emailadd12" placeholder="Enter Email Address" required>
+                                        </div>
+                                
+                    </div> 
+                    <br>
+                    
+                    <div class="Sub">
+                        <i>NOTE: Make sure that the email address you provided is ACTIVE and VALID. For ESTABLISHMENTS, ensure that this is a corporate email  address or an email address that will 
+                            be permanently associated to your company. Please refrain from using your personal email address as  
+                        notifications and official communications will be forwarded to your registered email.</i>
+                    </div>              
+                </div>
+                <br>
+                <br>
+                <div class="Sub">
+                    <i>As the General Manager/Chief Executive Officer/Owner of the above-named establishment, I certify that I have
+                        not been convicted of any criminal ofference involving moral turpitude and that all the official and employees of
+                        the establishment listed in the attached sheet are of good moral character and without criminal record.
+                        I certify further that all the foregoing data and douments supporting this application are true and correct.</i>
+                </div> 
+                <br>
+                <div class="details">
+                    <span class="title">DOCUMENT REQUIREMENTS</span>
+        
+                   
+                <div class="Sub">
+                    <li>Valid Mayor's Permit/Business License</li>
+                    <li>Comprehensive General Liability Insurance Policy (for Regular  
+                        Accreditation, minimum coverage of P200,000.00 and Premium  
+                        Accreditation, minimum of coverage of P300,000.00) 
+                        </li>
+                    <li>Certification for Key Employees (e.g. Housekeeping, Front Office,  
+                        Food & Beverage, etc.) 
+                        </li>
+                    <li>Quality Recognition and/or Awards from Reputable Institutions </li>
+                    <li>Other documents</li>
+                    <li>Other Remarks </li>
+                </div>
+
+
+                <button class="btn"> Submit
+                    <i class="uil uil-navigator"></i>
+                </button>
+                
+            </div>
+
+                
+
+           
+                   
+                   
+                     
+                    </div>                
+                </div>
+
+               
+            </div>
+
+            

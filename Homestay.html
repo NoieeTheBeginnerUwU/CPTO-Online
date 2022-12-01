@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+ 
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+<style>
+    /* ===== Google Font Import - Poppins #4070f4===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+.form-container{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.form-container header{
+    position: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    background-color: rgb(77, 173, 215);
+    
+}
+.form-container p{
+    font-size: small;
+}
+.form-container span{
+    background-color: rgb(109, 177, 206);
+    text-align: center;
+}
+.form-container header::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 385px;
+    border-radius: 8px;
+    background-color: #4070f4;
+}
+.form-container form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 2200px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.form-container form .form{
+    position: absolute;
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+.form-container form .form.second{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+form.secActive .form.second{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+form.secActive .form.first{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
+.form-container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+.form-container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input-field input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field input :focus,
+.input-field select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field select,
+.input-field input[type="date"]{
+    color: #707070;
+}
+.input-field input[type="date"]:valid{
+    color: #333;
+}
+
+.btn {
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 6em;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: white;
+    margin: 25px 0;
+    background-color: #4070f4;
+    
+   }
+   
+   .btn:hover {
+    -webkit-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+            transform: translateY(-3px);
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btn:active {
+    -webkit-transform: translateY(-1px);
+        -ms-transform: translateY(-1px);
+            transform: translateY(-1px);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+   }
+   
+   .btn::after {
+    background-color: #fff;
+   }
+   
+   .btn:hover::after {
+    -webkit-transform: scaleX(1.4) scaleY(1.6);
+        -ms-transform: scaleX(1.4) scaleY(1.6);
+            transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+   }
+
+/* 2nd button*/
+
+form .fields .input-field-capitalization{
+    display: flex;
+    width: calc(100% / 4 - 30px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field-capitalization label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input-field-capitalization input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field-capitalization input :focus,
+.input-field-capitalization select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field-capitalization select,
+.input-field-capitalization input[type="date"]{
+    color: #707070;
+}
+.input-field-capitalization input[type="date"]:valid{
+    color: #333;
+}
+
+/*============*/
+
+form .fields .input-field-capitalization-Name{
+    display: flex;
+    width: calc(100% / 5 - 30px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field-capitalization-Name label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input-field-capitalization-Name input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field-capitalization-Name input :focus,
+.input-field-capitalization-Name select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field-capitalization-Name select,
+.input-field-capitalization-Name input[type="date"]{
+    color: #707070;
+}
+.input-field-capitalization-Name input[type="date"]:valid{
+    color: #333;
+}
+
+
+
+
+
+
+.Sub{
+    font-size: small;
+}
+
+@media (max-width: 750px) {
+    .container form{
+        overflow-y: scroll;
+    }
+    .container form::-webkit-scrollbar{
+       display: none;
+    }
+    form .fields .input-field{
+        width: calc(100% / 2 - 15px);
+    }
+}
+
+@media (max-width: 550px) {
+    form .fields .input-field{
+        width: 100%;
+    }
+}
+</style>
+<body>
+  
+    <div class="form-container">
+        <header>Accreditation Form for Account Information   Homestay</header>
+        <br>
+
+        <p><i>Please print legibly all information required. Do not abbreviate the information supplied.
+             Place"/" marks in approproiate boxes "N/A" if not applicable </i></p>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details act">
+                    <span class="title">ACCOUNT IDENTIFIER DETAILS</span>
+
+                    <div class="fields">
+                    
+                        <div class="input-field">
+                            <label>Officail Email Address</label>
+                            <input type="text" id="email5" name="email5" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-field">
+                            <label>TIN</label>
+                            <input type="number" id="tin5" name="tin5" placeholder="Enter your TIN no" required>
+
+                        </div>
+
+                        <div class="Sub">
+                            <p><i> NOTE: Make sure that the email address you provided is ACTIVE and VALID. For ESTABLISHMENTS, ensure that this is a corporate email address or
+                                an email address that will be permanently associated to your company. Please refrain from using your personal email address as notifications
+                                
+                                and official communications will be forwarded to your registered email.</i></p>
+
+                        </div>
+                    </div>
+
+                                   
+                </div>
+                
+                <div class="homestay details">
+                    <span class="title">HOMESTAY DETAILS</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Homestay's Name</label>
+                            <input type="text"  id="email5" name="email5"  placeholder="Enter Homestay's Name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Host's Name</label>
+                            <input type="text"  id="name5" name="name5"  placeholder="Enter Host's Name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Address</label>
+                            <input type="text" id="address5" name="address5"  placeholder="Permanent or Temporary" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Website (if any)</label>
+                            <input type="text" id="website5" name="website5"  placeholder="Optional">
+                        </div>
+                        <div class="input-field">
+                            <label>Contact Number</label>
+                            <input type="number" id="number5" name="number5"  placeholder="Enter Contact number" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Email Address</label>
+                            <input type="text" id="emailadd5" name="emailadd5"  placeholder="Enter Email Address" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date Established</label>
+                            <input type="date" id="date5" name="date5"  placeholder="Enter date" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Type of Organization</label>
+                            <select required>
+                                <option disabled selected>Select Type of Organization</option>
+                                <option id="single5" name="single 5" >Single Proprietorship</option>
+                                <option id="others" name="others" >Others</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                                <label ></label>
+                        </div>
+                        <i>-----------------------------------------------------------------------------------------------  </i>
+                        <div class="input-field">
+                            <label>Permit</label>
+                            <select required>
+                                <option disabled selected>Select Permit</option>
+                                <option id="mayor5" name="mayor5" >Mayor's/Business Permit</option>
+                                <option>DTI Permit</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>Permit Number</label>
+                            <input type="text" id="permit5" name="permit5" placeholder="Permit Number" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Valid Until</label>
+                            <input type="date" id="date5" name="date5"  placeholder="Enter date" >
+                        </div>
+
+                    
+                    
+                                 
+                </div>
+
+                <div class="homestay details">
+                    <span class="title">Specific Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Total Number of Lettable Room</label>
+                            <input type="number"  id="trainingroom5" name="trainingroom5"  placeholder="Enter Total Number of Lettable Room" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Name of Homestay Association</label>
+                            <input type="text"  id="homestay5" name="homestay5"  placeholder="Enter Name of Homestay Association" required>
+                        </div>
+                
+
+                        <i>Attendance to Relevant Training Programs</i>
+                        
+
+                    
+                    
+                                 
+                </div>
+                <div class="homestay details">
+                    <div class="fields">
+        
+                        <div class="input-field-capitalization">
+                            <label>TITLE OF LEARNING AND DEVELOPMENT
+                                INTERVENTIONS/TRAINING PROGRAMS</label>
+                            <input type="text"  id= "title5" name="title5" placeholder="Enter Title" required>
+                            <input type="text"  id= "title5.1" name="title5.1" placeholder="Enter Title" required>
+                            
+                        </div>
+                        <div class="input-field-capitalization">
+                        <br>    <label>INCLUSIVE DATES</label>
+                            
+                            <br>
+                          
+                            <input type="date"  id= "inclusive5" name="inclusive5" placeholder="Enter Date" required>
+                            <input type="date"  id= "inclusive5.1" name="inclusive5.1" placeholder="Enter Date" required>
+                            
+                            
+                        </div>
+                        <div class="input-field-capitalization">
+                            <label>CONDUCTED BY/SPONSORED BY</label>
+                            <br>
+                            <input type="text"  id= "conducted5" name="conducted5" placeholder="Enter CONDUCTED BY/SPONSORED BY" required>
+                            <input type="text"  id= "conducted5.1" name="conducted5.1" placeholder="Enter CONDUCTED BY/SPONSORED BY" required>
+                            
+                        </div>
+                        <div class="input-field-capitalization">
+                            <br>
+                            <label>NO. OF HOURS</label>
+                            
+                            <br>
+                            <input type="number"  id= "hours5" name="hours5" placeholder="Enter Amount" required>
+                            <input type="number"  id= "hours5.1" name="hours5.1" placeholder="Enter Amount" required>
+                            
+                        </div>
+                    
+                        
+                
+                    </div>
+<i>Name of Family Members</i>
+                    <div class="fields">
+        
+                        <div class="input-field-capitalization-Name">
+                            <label>Last Name</label>
+                            <input type="text"  id= "last5" name="last5" placeholder="Enter Last Name" required>
+                            <input type="text"  id= "last5.1" name="last5.1" placeholder="Enter Last Name" required>
+                            <input type="text"  id= "last5.2" name="last5.2" placeholder="Enter Last Name" required>
+                            <input type="text"  id= "last5.3" name="last5.3" placeholder="Enter Last Name" required>
+                            <input type="text"  id= "last5.4" name="last5.4" placeholder="Enter Last Name" required>
+                            <input type="text"  id= "last5.5" name="last5.5" placeholder="Enter Last Name" required>
+                            <input type="text"  id= "last5.6" name="last5.6" placeholder="Enter Last Name" required>
+                            <input type="text"  id= "last5.7" name="last5.7" placeholder="Enter Last Name" required>
+                            <input type="text"  id= "last5.8" name="last5.8" placeholder="Enter Last Name" required>
+                            <input type="text"  id= "last5.9" name="last5.9" placeholder="Enter Last Name" required>
+                            
+                        </div>
+                        <div class="input-field-capitalization-Name">
+                          <label>First Name</label>
+                            
+                           
+                          
+                            <input type="text"  id= "first5" name="first5" placeholder="First Name" required>
+                            <input type="text"  id= "first5.1" name="first5.1" placeholder="First Name" required>
+                            <input type="text"  id= "first5.2" name="first5.2" placeholder="First Name" required>
+                            <input type="text"  id= "first5.3" name="first5.3" placeholder="First Name" required>
+                            <input type="text"  id= "first5.4" name="first5.4" placeholder="First Name" required>
+                            <input type="text"  id= "first5.5" name="first5.5" placeholder="First Name" required>
+                            <input type="text"  id= "first5.6" name="first5.6" placeholder="First Name" required>
+                            <input type="text"  id= "first5.7" name="first5.7" placeholder="First Name" required>
+                            <input type="text"  id= "first5.8" name="first5.8" placeholder="First Name" required>
+                            <input type="text"  id= "first5.9" name="first5.9" placeholder="First Name" required>
+                            
+                            
+                        </div>
+                        <div class="input-field-capitalization-Name">
+                            <label>Middle Name</label>
+                          
+                            <input type="text"  id= "middle5" name="middle5" placeholder="Enter Middle Name" required>
+                            <input type="text"  id= "middle5.1" name="middle5.1" placeholder="Enter Middle Name" required>
+                            <input type="text"  id= "middle5.2" name="middle5.2" placeholder="Enter Middle Name" required>
+                            <input type="text"  id= "middle5.3" name="middle5.3" placeholder="Enter Middle Name" required>
+                            <input type="text"  id= "middle5.4" name="middle5.4" placeholder="Enter Middle Name" required>
+                            <input type="text"  id= "middle5.5" name="middle5.5" placeholder="Enter Middle Name" required>
+                            <input type="text"  id= "middle5.6" name="middle5.6" placeholder="Enter Middle Name" required>
+                            <input type="text"  id= "middle5.7" name="middle5.7" placeholder="Enter Middle Name" required>
+                            <input type="text"  id= "middle5.8" name="middle5.8" placeholder="Enter Middle Name" required>
+                            <input type="text"  id= "middle5.9" name="middle5.9" placeholder="Enter Middle Name" required>
+                            
+                        </div>
+                        <div class="input-field-capitalization-Name">
+                            
+                            <label>Nationality</label>
+                            
+                           
+                            <input type="text"  id= "nationality5" name="nationality5" placeholder="Enter Nationality" required>
+                            <input type="text"  id= "nationality5.1" name="nationality5.1" placeholder="Enter Nationality" required>
+                            <input type="text"  id= "nationality5.2" name="nationality5.2" placeholder="Enter Nationality" required>
+                            <input type="text"  id= "nationality5.3" name="nationality5.3" placeholder="Enter Nationality" required>
+                            <input type="text"  id= "nationality5.4" name="nationality5.4" placeholder="Enter Nationality" required>
+                            <input type="text"  id= "nationality5.5" name="nationality5.5" placeholder="Enter Nationality" required>
+                            <input type="text"  id= "nationality5.6" name="nationality5.6" placeholder="Enter Nationality" required>
+                            <input type="text"  id= "nationality5.7" name="nationality5.7" placeholder="Enter Nationality" required>
+                            <input type="text"  id= "nationality5.8" name="nationality5.8" placeholder="Enter Nationality" required>
+                            <input type="text"  id= "nationality5.9" name="nationality5.9" placeholder="Enter Nationality" required>
+                            
+                        </div>
+                        <div class="input-field-capitalization-Name">
+                            
+                            <label>Issue ID</label>
+                            
+                            
+                            <input type="text"  id= "issue5" name="issue5" placeholder="Enter Issue ID" required>
+                            <input type="text"  id= "issue5.1" name="issue5.1" placeholder="Enter Issue ID" required>
+                            <input type="text"  id= "issue5.2" name="issue5.2" placeholder="Enter Issue ID" required>
+                            <input type="text"  id= "issue5.3" name="issue5.3" placeholder="Enter Issue ID" required>
+                            <input type="text"  id= "issue5.4" name="issue5.4" placeholder="Enter Issue ID" required>
+                            <input type="text"  id= "issue5.5" name="issue5.5" placeholder="Enter Issue ID" required>
+                            <input type="text"  id= "issue5.6" name="issue5.6" placeholder="Enter Issue ID" required>
+                            <input type="text"  id= "issue5.7" name="issue5.7" placeholder="Enter Issue ID" required>
+                            <input type="text"  id= "issue5.8" name="issue5.8" placeholder="Enter Issue ID" required>
+                            <input type="text"  id= "issue5.9" name="issue5.9" placeholder="Enter Issue ID" required>
+                            
+                        </div>
+                    
+                        
+                
+                    </div>
+
+                    
+                    
+                                 
+                </div>
+
+                <div class="homestay details">
+                    <span class="title">AUTHORIZED REPRESENTATIVE (to transact business with DOT)</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>REPRESENTATIVE'S FULL NAME</label>
+                            <input type="text"  id="representative5" name="representative5"  placeholder="Enter Homestay's Name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>DESIGNATION</label>
+                            <input type="text"  id="designation5" name="designation5"  placeholder="Enter Host's Name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>CONTACT NUMBERS</label>
+                            <input type="number" id="contact5" name="contact5"  placeholder="Permanent or Temporary" required>
+                        </div>
+                        <div class="input-field">
+                            <label>EMAIL ADDRESS</label>
+                            <input type="text" id="emailaddress5" name="emailaddress5"  placeholder="Optional">
+                        </div>
+                        
+
+                        <div class="Sub">
+                        <br>
+                            <p><i> NOTE: Make sure that the email address you provided is ACTIVE and VALID. For ESTABLISHMENTS, ensure that this is a corporate email address or
+                                an email address that will be permanently associated to your company. Please refrain from using your personal email address as notifications
+                                
+                                and official communications will be forwarded to your registered email.</i></p>
+<br>
+                       
+
+<div class="details Doc">
+    <span class="title">DOCUMENTARY REQUIREMENTS (Submitted Documents Evaluator's Remarks)</span>
+
+    <div class="fields">
+        
+        <div class="Sub">
+            <br>
+            <li>Valid Mayor's Permit/Business License</li>
+            <li>Comprehensive General Liability Insurance Policy (for Regular  
+                Accreditation, minimum coverage of P200,000.00 and Premium  
+                Accreditation, minimum of coverage of P300,000.00) 
+                </li>
+            <li>Certification for Key Employees (e.g. Housekeeping, Front Office,  
+                Food & Beverage, etc.) 
+                </li>
+            <li>Quality Recognition and/or Awards from Reputable Institutions </li>
+            <li>Other documents</li>
+            <li>Other Remarks </li>
+        </div>
+
+    </div>                    
+        
+                            
+                
+            </div>
+
+
+
+           
+                   
+                    <button class="btn"> Submit
+                    <i class="uil uil-navigator"></i>
+                </button>
+                     
+                    </div>                
+                </div>
+
+               
+            </div>
+
+            
