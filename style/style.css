@@ -42,12 +42,12 @@ body {
     color: #000;
     width: 100%;
     height: 80vh;
-    background-color: #515151;
     margin: 1%;
 }
 
 .holder3 a:hover {
-    background-color: #00aa06;
+    transform: translateY(-0.5%);
+    box-shadow:  0 4rem 8rem rgba(0,0,0,0.2);
 }
 
 .card1,
@@ -58,12 +58,30 @@ body {
     background-color: #a9a9a9;
     margin: 2%;
     margin-top: 4%;
+    border-radius: 15px;
 }
 
 .card1 h3,
 .card2 h3,
 .card3 h3 {
     margin-top: 4%;
+    border-radius: 5px;
+}
+
+.image1 img {
+    border-radius: 15px;
+    height: 90%;
+    margin-top: 10px;
+}
+
+.image1 span {
+    display: flex;
+}
+
+.details-popular {
+    height: 60vh;
+    width: 60%;
+    margin-left: 15px;
 }
 
 .services-h2 {
@@ -1357,3 +1375,22 @@ footer{
     
     }    
 }
+
+abbr {
+    font-style: italic;
+    position: relative;
+}
+
+abbr:hover::after {
+    background: #add8e6;
+    border-radius: 4px;
+    bottom: 100%;
+    content: attr(title);
+    display: block;
+    left: 100%;
+    padding: 1em;
+    position: absolute;    
+    width: 280px;
+    z-index: 1;
+  }
+
