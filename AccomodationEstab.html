@@ -23,21 +23,212 @@
       <link rel="stylesheet" 
       href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
 
+
+      <style>
+           body{
+        background-color: antiquewhite;
+      }
+      
+      .account-holder{
+    
+    margin: auto;
+    margin-top: 50px;
+    width: 60%;
+    height: 55vh;
+    background-color: #fff;
+    border: 3px solid #73AD21;
+    border-radius: 25px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    
+    
+    }
+    .account-holder1{
+      width: 20%;
+      box-sizing: border-box;
+      display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: 1s;
+    
+    }
+    .account-holder img{
+      margin-top: 5px;
+      margin: 5;
+      width: 90px;
+      height: 10;
+      border: 1px solid #73AD21 ;
+    }
+    img:hover{
+      transform: scale(1.3s);
+      box-shadow: 0 0 10px 5px #73AD21 ;
+      z-index: 2;
+    
+    
+    }
+    
+    h3{
+      padding:5px;
+      font-size: large;
+      font-weight: 900;
+      text-align: center;
+     
+    }
+    h4{
+      font-size: medium;
+      color: black;
+    }
+    a{
+      text-decoration: none;
+      text-align: center;
+      margin: 5px;
+      margin-top: 2px;
+    }
+    .btn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+    .container{
+      margin-top:50px;
+    }
+    .container ol li{
+      font-size: 14px;
+    }
+    @media screen and (max-width:1400px){
+    
+      .account-holder{
+        width: 70%;
+        height: 80vh;
+        margin: 30px;
+        margin-top: 20px;
+      }
+    
+    
+    }
+    @media screen and (max-width:900px) {
+      .account-holder{
+        width: 80%;
+        height: 70vh;
+        margin: auto;
+        margin-top: 10px;
+      }
+      .account-holder img{
+      margin-top: 2px;
+      width: 100px;
+      height: 20;
+    }
+    img:hover{
+      transform: scale(1.3s);
+      box-shadow: 0 0 10px 5px #73AD21 ;
+      z-index: 2;
+    
+    
+    }
+    h4{
+      font-size: medium;
+      color: black;
+    }
+    .account-holder1{
+      width: 33.3%;
+      box-sizing: border-box;
+      display: flex;
+     align-items: center;
+     justify-content: center;
+    
+    }
+    .container ol li{
+      font-size: 12px;
+    }
+    .btn{
+      display: block;
+      margin: 20px;
+    }
+    
+    }
+    @media screen and (max-width:678px) {
+      .account-holder{
+        width: 80%;
+        height: 70vh;
+      }
+      .account-holder img{
+      margin-top: 0;
+      width: 70px;
+      height: 10;
+    }
+    img:hover{
+      transform: scale(1.3s);
+      box-shadow: 0 0 10px 5px #73AD21 ;
+      z-index: 2;
+    
+    
+    }
+    .account-holder1{
+      width: 50%;
+      box-sizing: border-box;
+      display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: 1s;
+    
+    }
+    
+    h4{
+      font-size: small;
+      color: black;
+    }
+    .container ol li{
+      font-size: 10px;
+    }
+    .btn{
+      display: block;
+      margin: 20px;
+    }
+    }
+      </style>
+
 <body>
 
-
-  <!-- Start of breadcrumb -->
-
-    <div class="container">
+          <div class="container">
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
           <ol class="breadcrumb" class="position-absolute">
             <li class="breadcrumb-item"><a href="index.html">Accreditation</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Business</li>
+            <li class="breadcrumb-item active" aria-current="page">Accomodation Establishment</li>
           </ol>
         </nav>
       </div>
     
     <!-- End of breadcrumb -->
+    
+    
+      <div class="account-holder">
+        <h3>Accomodation Establishment</h3>
+        <div class="account-holder1" style="float: right;">
+          <a href="Homestay.html" target="_blank">
+              <img src="/images/AccomodationEstablishment-icon.png"  class="rounded-circle">
+        <h4>Homestay</h4>
+      </a>
+    
+      </div>
+      <div class="account-holder1" style="float: left;">
+        <a href="MabuhayAccomodation.html" target="_blank">
+    
+        <img src="/images/Travel and Tour agencies Icon.png"  class="rounded-circle">
+        <h4>Mabuhay Accomodation</h4>
+    </a>    
+    
+    </div>
+    <div class="account-holder1" style="float: left;">
+      <a href="Hotel&Resorts.html" target="_blank">
+    
+      <img src="/images/Tour and transport operators Icon.png"  class="rounded-circle">
+    <h4>Hotels and Resorts </h4>
+    </a>    
+    
+      </div>
 
     
 </body>
