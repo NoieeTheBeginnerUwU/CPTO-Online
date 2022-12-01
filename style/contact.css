@@ -12,7 +12,7 @@
 .contact p,
 a,
 i {
-    color: rgb(255, 255, 255) !important;
+    color: rgb(255, 255, 255);
     text-align: justify;
     text-align: left;
     font-family: 'Poppins', sans-serif;
@@ -67,7 +67,7 @@ h4 {
     cursor: pointer;
     transition: 0.2s;
     border-radius: 15px;
-    background: rgba(0, 31, 71, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: saturate(180%) blur(2px);
 }
 
