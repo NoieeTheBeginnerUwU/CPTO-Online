@@ -295,7 +295,7 @@ form .fields .input-field-capitalization{
                        
                         <div class="input-field">
                             <label>Business Address</label>
-                            <input type="text" id="address" name= "address" placeholder="Permanent or Temporary" required>
+                            <input type="text" id="EstabAddress" name= "address" placeholder="Permanent or Temporary" required>
                         </div>
                         <div class="input-field">
                             <label>Business Website</label>
@@ -312,7 +312,7 @@ form .fields .input-field-capitalization{
 
                         <div class="input-field">
                             <label>Date Established</label>
-                            <input type="date" id="date" name="date" placeholder="Enter date" required>
+                            <input type="dateEstab" id="dateEstab" name="dateEstab" placeholder="Enter Establishment date" required>
                         </div>
                         <div class="homestay details">
                             <span class="title"> OWNERSHIP INFORMATION</span>
@@ -340,25 +340,25 @@ form .fields .input-field-capitalization{
                                         </div>
                                         <div class="input-field">
                                             <label>Address</label>
-                                            <input type="text"  id= "address" name="address"placeholder="Enter Address" required>
+                                            <input type="text"  id=" ManagingAddress" name="address"placeholder="Enter Address" required>
                                         </div>
                         <div class="input-field">
                             <label>Type of Organization</label>
-                            <select required>
+                            <select required id="OrgType">
                                 <option disabled selected>Select Type of Organization</option>
-                                <option id="single" name="single">Single Proprietorship</option>
-                                <option id="partnership" name="partnership">Partnership</option>
-                                <option id="corp" name="corp">Corporation</option>
-                                <option id="coop" name="coop">Cooperative</option>
+                                <option id="single" name="single" value="single">Single Proprietorship</option>
+                                <option id="partnership" name="partnership" value="partneship">Partnership</option>
+                                <option id="corp" name="corp" value="corp">Corporation</option>
+                                <option id="coop" name="coop" value="coop">Cooperative</option>
                             </select>
                         </div>
                         <div class="input-field">
                             <label>Permit</label>
-                            <select required>
+                            <select required id="permit">
                                 <option disabled selected>Select Permit</option>
-                                <option id="mayor" name="mayor">Mayor's/Business Permit</option>
-                                <option id="dti" name="dti">DTI Permit</option>
-                                <option id="sec" name="sec">SEC/CDA Registration</option>
+                                <option id="mayor" name="mayor" value="mayor">Mayor's/Business Permit</option>
+                                <option id="dti" name="dti" value="dti">DTI Permit</option>
+                                <option id="sec" name="sec" value="sec">SEC/CDA Registration</option>
                             </select>
                         </div>
                         <div class="input-field">
@@ -367,7 +367,7 @@ form .fields .input-field-capitalization{
                         </div>
                         <div class="input-field">
                             <label>Valid Until</label>
-                            <input type="date" id="date" name="date" placeholder="Enter date" required>
+                            <input type="dateValid" id="dateValid" name="dateValid" placeholder="Enter Validity date" required>
                         </div>
                         <div class="homestay details">
                             <span class="title">GENERAL MANAGER</span>
