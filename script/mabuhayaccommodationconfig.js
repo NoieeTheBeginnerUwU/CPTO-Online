@@ -25,3 +25,7 @@ const firebaseConfig = {
     const app = initializeApp(firebaseConfig);
     const auth = getAuth();
     const database = getDatabase(app);
+
+    function alertBoi(){
+        alert("Magnanakaw alert!");
+    }

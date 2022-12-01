@@ -273,7 +273,7 @@ form .fields .input-field-capitalization{
                     
                         <div class="input-field">
                             <label>Officail Email Address</label>
-                            <input type="text" id= "email" name= "email"placeholder="Enter your email" required>
+                            <input type="text" id= "account-email" name= "account-email"placeholder="Enter your email" required>
                         </div>
                         <div class="input-field">
                             <label>TIN</label>
@@ -295,7 +295,7 @@ form .fields .input-field-capitalization{
                        
                         <div class="input-field">
                             <label>Business Address</label>
-                            <input type="text" id="address" name= "address" placeholder="Permanent or Temporary" required>
+                            <input type="text" id="business-address" name= "business-address" placeholder="Permanent or Temporary" required>
                         </div>
                         <div class="input-field">
                             <label>Business Website</label>
@@ -303,16 +303,16 @@ form .fields .input-field-capitalization{
                         </div>
                         <div class="input-field">
                             <label>Contact Number</label>
-                            <input type="number" id="number" name="number" placeholder="Enter Contact number" required>
+                            <input type="number" id="business-number" name="business-number" placeholder="Enter Contact number" required>
                         </div>
                         <div class="input-field">
                             <label>Email Address</label>
-                            <input type="text" id= "emailad" name="emailad" placeholder="Enter Email Address" required>
+                            <input type="text" id= "business-email" name="business-email" placeholder="Enter Email Address" required>
                         </div>
 
                         <div class="input-field">
                             <label>Date Established</label>
-                            <input type="date" id="date" name="date" placeholder="Enter date" required>
+                            <input type="date" id="date-established" name="date-established" placeholder="Enter date" required>
                         </div>
                         <div class="homestay details">
                             <span class="title"> OWNERSHIP INFORMATION</span>
@@ -320,11 +320,11 @@ form .fields .input-field-capitalization{
                             <div class="fields">
                                 <div class="input-field">
                                     <label>Owner's/Corporation Name</label>
-                                    <input type="text"  id= "name" name="name" placeholder="Enter Corporation Name" required>
+                                    <input type="text"  id= "corporation-name" name="corporation-name" placeholder="Enter Corporation Name" required>
                                 </div>
                                 <div class="input-field">
                                     <label>Address</label>
-                                    <input type="text"  id= "add" name="add" placeholder="Enter Address" required>
+                                    <input type="text"  id= "corporation-address" name="corporation-address" placeholder="Enter Address" required>
                                 </div>
                                 <div class="input-field">
                                     <label>Nationality (if applicable)</label>
@@ -336,25 +336,25 @@ form .fields .input-field-capitalization{
                                     <div class="fields">
                                         <div class="input-field">
                                             <label>Company Name</label>
-                                            <input type="text"  id= "compname" name="compname" placeholder="Enter Company Name" required>
+                                            <input type="text"  id= "company-name" name="company-name" placeholder="Enter Company Name" required>
                                         </div>
                                         <div class="input-field">
                                             <label>Address</label>
-                                            <input type="text"  id= "address" name="address"placeholder="Enter Address" required>
+                                            <input type="text"  id= "company-address" name="company-address"placeholder="Enter Address" required>
                                         </div>
                         <div class="input-field">
                             <label>Type of Organization</label>
-                            <select required>
+                            <select id="oranization-type" required>
                                 <option disabled selected>Select Type of Organization</option>
-                                <option id="single" name="single">Single Proprietorship</option>
-                                <option id="partnership" name="partnership">Partnership</option>
-                                <option id="corp" name="corp">Corporation</option>
-                                <option id="coop" name="coop">Cooperative</option>
+                                <option id="single" name="single" value="single">Single Proprietorship</option>
+                                <option id="partnership" name="partnership" value="partnership">Partnership</option>
+                                <option id="corp" name="corp" value="corporation">Corporation</option>
+                                <option id="coop" name="coop" value="cooperative">Cooperative</option>
                             </select>
                         </div>
                         <div class="input-field">
                             <label>Permit</label>
-                            <select required>
+                            <select id="organization permit" required>
                                 <option disabled selected>Select Permit</option>
                                 <option id="mayor" name="mayor">Mayor's/Business Permit</option>
                                 <option id="dti" name="dti">DTI Permit</option>
@@ -363,11 +363,11 @@ form .fields .input-field-capitalization{
                         </div>
                         <div class="input-field">
                             <label>Permit Number</label>
-                            <input type="text" id= "permit" name="permit" placeholder="Permit Number" required>
+                            <input type="text" id= "permit-number" name="permit-number" placeholder="Permit Number" required>
                         </div>
                         <div class="input-field">
                             <label>Valid Until</label>
-                            <input type="date" id="date" name="date" placeholder="Enter date" required>
+                            <input type="date" id="valid-date" name="valid-date" placeholder="Enter date" required>
                         </div>
                         <div class="homestay details">
                             <span class="title">GENERAL MANAGER</span>
@@ -547,7 +547,7 @@ form .fields .input-field-capitalization{
                 </div>
 
 
-                <button class="btn"> Submit
+                <button class="btn" onclick="alertBoi()"> Submit
                     <i class="uil uil-navigator"></i>
                 </button>
                 
@@ -562,5 +562,34 @@ form .fields .input-field-capitalization{
 
                
             </div>
+
+<script>
+    import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+    import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        signOut
+    } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+    import {getDatabase, set, ref, update} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
+    const firebaseConfig = {
+    apiKey: "AIzaSyDA1XjvPrrZiMLhYRRV1Ar23p4SF2lJq9I",
+    authDomain: "cpto-d7b0b.firebaseapp.com",
+    projectId: "cpto-d7b0b",
+    storageBucket: "cpto-d7b0b.appspot.com",
+    messagingSenderId: "633926478402",
+    appId: "1:633926478402:web:3e659a8d5f50793d299bdb",
+    measurementId: "G-WNZKRQGELD"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const database = getDatabase(app);
+
+    var email = document.getElementById('email').value;
+    
+
+</script>
 
             
