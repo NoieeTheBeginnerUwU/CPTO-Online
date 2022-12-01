@@ -295,11 +295,7 @@ form .fields .input-field-capitalization{
                        
                         <div class="input-field">
                             <label>Business Address</label>
-<<<<<<< HEAD
                             <input type="text" id="business-address" name= "business-address" placeholder="Permanent or Temporary" required>
-=======
-                            <input type="text" id="EstabAddress" name= "address" placeholder="Permanent or Temporary" required>
->>>>>>> cf77381338c88cc38c552c874ac0dd8ac41952d7
                         </div>
                         <div class="input-field">
                             <label>Business Website</label>
@@ -316,11 +312,7 @@ form .fields .input-field-capitalization{
 
                         <div class="input-field">
                             <label>Date Established</label>
-<<<<<<< HEAD
                             <input type="date" id="date-established" name="date-established" placeholder="Enter date" required>
-=======
-                            <input type="dateEstab" id="dateEstab" name="dateEstab" placeholder="Enter Establishment date" required>
->>>>>>> cf77381338c88cc38c552c874ac0dd8ac41952d7
                         </div>
                         <div class="homestay details">
                             <span class="title"> OWNERSHIP INFORMATION</span>
@@ -348,7 +340,6 @@ form .fields .input-field-capitalization{
                                         </div>
                                         <div class="input-field">
                                             <label>Address</label>
-<<<<<<< HEAD
                                             <input type="text"  id= "company-address" name="company-address"placeholder="Enter Address" required>
                                         </div>
                         <div class="input-field">
@@ -359,31 +350,15 @@ form .fields .input-field-capitalization{
                                 <option id="partnership" name="partnership" value="partnership">Partnership</option>
                                 <option id="corp" name="corp" value="corporation">Corporation</option>
                                 <option id="coop" name="coop" value="cooperative">Cooperative</option>
-=======
-                                            <input type="text"  id=" ManagingAddress" name="address"placeholder="Enter Address" required>
-                                        </div>
-                        <div class="input-field">
-                            <label>Type of Organization</label>
-                            <select required id="OrgType">
-                                <option disabled selected>Select Type of Organization</option>
-                                <option id="single" name="single" value="single">Single Proprietorship</option>
-                                <option id="partnership" name="partnership" value="partneship">Partnership</option>
-                                <option id="corp" name="corp" value="corp">Corporation</option>
-                                <option id="coop" name="coop" value="coop">Cooperative</option>
->>>>>>> cf77381338c88cc38c552c874ac0dd8ac41952d7
                             </select>
                         </div>
                         <div class="input-field">
                             <label>Permit</label>
-<<<<<<< HEAD
                             <select id="organization permit" required>
-=======
-                            <select required id="permit">
->>>>>>> cf77381338c88cc38c552c874ac0dd8ac41952d7
                                 <option disabled selected>Select Permit</option>
-                                <option id="mayor" name="mayor" value="mayor">Mayor's/Business Permit</option>
-                                <option id="dti" name="dti" value="dti">DTI Permit</option>
-                                <option id="sec" name="sec" value="sec">SEC/CDA Registration</option>
+                                <option id="mayor" name="mayor">Mayor's/Business Permit</option>
+                                <option id="dti" name="dti">DTI Permit</option>
+                                <option id="sec" name="sec">SEC/CDA Registration</option>
                             </select>
                         </div>
                         <div class="input-field">
@@ -392,11 +367,7 @@ form .fields .input-field-capitalization{
                         </div>
                         <div class="input-field">
                             <label>Valid Until</label>
-<<<<<<< HEAD
-                            <input type="date" id="valid-date" name="valid-date" placeholder="Enter date" required>
-=======
-                            <input type="dateValid" id="dateValid" name="dateValid" placeholder="Enter Validity date" required>
->>>>>>> cf77381338c88cc38c552c874ac0dd8ac41952d7
+                            <input type="date" id="valid-date" name="valid-sdate" placeholder="Enter date" required>
                         </div>
                         <div class="homestay details">
                             <span class="title">GENERAL MANAGER</span>
@@ -616,8 +587,20 @@ form .fields .input-field-capitalization{
     const auth = getAuth();
     const database = getDatabase(app);
 
-    var email = document.getElementById('email').value;
-    
+    var email = document.getElementById('account-email').value;
+    var tin = document.getElementById('tin').value;
+    var est_name = document.getElementById('estab').value;
+    var business_address = document.getElementById('business-address').value;
+    var business_website = document.getElementById('website').value;
+    var business_number = document.getElementById('business-number').value;
+    var business_email = document.getElementById('business-email').value;
+    var business_established = document.getElementById('date-established').value;
+    var corporation_name = document.getElementById('corporation-name').value;
+    var corporation_address = document.getElementById('corporation-address').value;
+    var corporation_nationality = document.getElementById('nationality').value;
+    var company_name = document.getElementById('company-name').value;
+    var company_address = document.getElementById('company-address').value;
+    var orh
 
 </script>
 
