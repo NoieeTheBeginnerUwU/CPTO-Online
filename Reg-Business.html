@@ -216,7 +216,7 @@
 <body>
     
 
-    <div class="form-container">
+    <div class="form-container" id="form">
         <header>Account Information For Business</header>
         <br>
 
@@ -295,7 +295,7 @@
                                         </div>
                                         <div class="input-field">
                                             <label>Address</label>
-                                            <input type="text"  id= "address" name="address"placeholder="Enter Address" required>
+                                            <input type="text"  id= "compaddress" name="compaddress"placeholder="Enter Address" required>
                                         </div>
                         <div class="input-field">
                             <label>Type of Organization</label>
@@ -342,7 +342,7 @@
                                 </div>
                                 <div class="input-field">
                                     <label>Nationality</label>
-                                    <input type="text"  id= "nationalityy" name="nationlaityy" placeholder="Optional" >
+                                    <input type="text"  id= "nationalityy" name="nationlatyy" placeholder="Optional" >
                                 </div>
                                 <input type="submit" value="submit form" id="btn">
                        
@@ -400,7 +400,8 @@
     let btn = document.getElementById('btn');
 
     btn.addEventListener('click', (e) => {
-        
+        send()
+        printTable()
     })
 
     function send(){
@@ -408,20 +409,20 @@
         let estab_name = document.getElementById('estab').value;
         let bus_address = document.getElementById('address').value;
         let bus_website = document.getElementById('website').value;
-        let contact_num = document.getElementById('numbers').value;
+        let contact_num = document.getElementById('number').value;
         let email_ad = document.getElementById('emailad').value;
         let date_estab = document.getElementById('date').value;
         let corp_name  = document.getElementById('name').value;
         let corp_address = document.getElementById('add').value;
         let corp_nationality = document.getElementById('nationality').value;
-        var company_name = document.getElementById('company-name').value;
-        var company_address = document.getElementById('company-address').value;
+        var company_name = document.getElementById('compname').value;
+        var company_address = document.getElementById('compaddress').value;
         var org_type = document.getElementById('org-type');
         var org_permit = document.getElementById('permit-type').value;
         var org_permitno = document.getElementById('permit').value;
         var org_validtill = document.getElementById('date');
         var manager = document.getElementById('manager').value;
-        var manager_contact = document.getElementById('tel').value;
+        var manager_contact = document.getElementById('contact').value;
         var manager_email = document.getElementById('emaill').value;
         var manager_nationality = document.getElementById('nationalityy').value;
 
@@ -450,4 +451,15 @@
             manager_nationality: manager_nationality    
         }).then(alert("Business Registration Request Sent."))
     }   
+    function printTable(){
+        const element = document.getElementById('form');
+        html2pdf()
+        .from(element)
+        .save()
+    }
+
+</script>
+<script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+<script>
+
 </script>
