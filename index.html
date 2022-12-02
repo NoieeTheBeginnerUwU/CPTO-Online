@@ -26,10 +26,11 @@
             .image1{
                 margin: 1%;
             }
-            .image1 section{
+            .image1 .details-popular{
                 height: 24vh;
                 background-color: rgb(238, 238, 238);
-            }.card1{
+            }
+            .card1{
                 font-size: 1.7rem;
                 color: rgb(255, 255, 255);
                 background-image: url('images/pexels-spencer-davis-4353813.jpg');
@@ -58,6 +59,9 @@
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
+            }
+            .navbar li a{
+                text-decoration: none;
             }
         </style>
     </head>
@@ -154,17 +158,17 @@
     margin: 10% auto;
     margin-left: 35.5%;">
 
-    <video autoplay loop muted plays-inline  class="vid" src="images/Calaguas_1080p.mp4">
+    <video autoplay loop muted plays-inline  class="vid" src="images/Calaguas 1080p.mp4">
 
     </video>
 <div class="holder">
-    <p class="bnv"> <i class="fa fa-home"></i> Homepage > featured</p>
+    <p class="bnv"> <i class="fa fa-home"></i> Homepage > Featured</p>
     <h1 style="background-image: url('images/7.webp');background-clip:text;    --webkit-background-clip: text;">CAMARINES NORTE</h1>
-    <section>
+    <span class="details-popular">
         Camarines Norte is the northernmost Province in Bicol Region, It is the gateway to Bicolandia. Home of the First Rizal Monument, century old churches, cascading waterfalls and paradise like islands/beaches.
 
-Come and explore CamNorte. Visit Calaguas Island in Vinzons which showcase the powdery white sand and crystal clear water, truly a world class destination. Another must see is the Parola island in Jose Panganiban that showcase its unique pink sand or go island hopping at the 7 islands of Mercedes. We also offer different kinds of falls like 16 cascading falls of Mananap, 70 ft. Colasi falls and 53 ft. Nacali falls. If you are into culture and history, we offer First Rizal Monument or also known as First Bantayog Monument. Another interesting place to visit is the town of Vinzons that showcases a heritage church and multiple century old houses. If you are into arts and crafts, visit the town of Jose Panganiban and Paracale that showcase gold handicraft.
-    </section>
+Come and explore CamNorte. Visit <abbr title="Calaguas, also known as Calaguas Islands, is a group of islands located in the Philippine province of Camarines Norte. It includes the major islands of Tinaga Island and Guintinua Island, the minor Maculabo Island, as well as several other minor. ">Calaguas</abbr> Island in Vinzons which showcase the powdery white sand and crystal clear water, truly a world class destination. Another must see is the Parola island in Jose Panganiban that showcase its unique pink sand or go island hopping at the 7 islands of Mercedes. We also offer different kinds of falls like 16 cascading falls of Mananap, 70 ft. Colasi falls and 53 ft. Nacali falls. If you are into culture and history, we offer First Rizal Monument or also known as First Bantayog Monument. Another interesting place to visit is the town of Vinzons that showcases a heritage church and multiple century old houses. If you are into arts and crafts, visit the town of Jose Panganiban and Paracale that showcase gold handicraft.
+    </span class="details-popular">
 </div>
 
 <div class="holder2">
@@ -172,14 +176,14 @@ Come and explore CamNorte. Visit Calaguas Island in Vinzons which showcase the p
         <h2> <i class="fa fa-map"></i> Featured</h2>
         <div class="holder4" style="display: flex; flex-direction:row;">
             <div style="display:flex;">
-                <img src="images/pexels-ben-mack-5326926.jpg" alt="" style="width: 500px; height: 60vh;margin-left: 4%;">
-                <section style="color:rgba(255, 255, 255, 0.79);background-color: rgba(0, 0, 0, 0.664);">
+                <img src="images/pexels-ben-mack-5326926.jpg" alt="" style="width: 400px; height: 60vh;margin-left: 4%; border-radius: 10px; border: 2px solid black;">
+                <span class="details-popular" style="color:rgba(255, 255, 255, 0.79);background-color: rgba(0, 0, 0, 0.664); border-radius: 10px; backdrop-filter: blur(5px); ">
                     <h3>Calaguas Island</h3>
                     <br>
                     Calaguas, also known as Calaguas Islands, is a group of islands located in the Philippine province of Camarines Norte. It includes the major islands of Tinaga Island and Guintinua Island, the minor Maculabo Island, as well as several other minor. The group of islands is around 200 km away from the capital city of Manila and can be accessed through the ports at Paracale and Daet, Camarines Norte.
-                    <br><br>    
+                    <br><br>
                     Most of the islands are under the administrative jurisdiction of Vinzons, while the minor island of Maculabo is under the jurisdiction of the municipality of Paracale. Recently, the island of Tinaga, where the well-known long beach called Mahabang Buhangin is located, is experiencing an influx of tourists despite the absence of accommodation. Campers and backpackers visit Mahabang Buhangin to experience its powdery white sands.                
-                </section>  
+                </span class="details-popular">  
             </div>
         </div>
     </div>
@@ -196,66 +200,68 @@ Come and explore CamNorte. Visit Calaguas Island in Vinzons which showcase the p
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
     "
 
     >
-        <div class="image1" style="width: 100%;">
-            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 500px;">
-            <section>
+        <div class="image1" style="width: 100%; ">
+            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 400px;">
+            <span class="details-popular">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            </section>
+            </span class="details-popular">
         </div>
         <div class="image1" style="width: 100%;">
-            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 500px;">
-            <section>
+            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 400px;">
+            <span class="details-popular">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            </section>
+            </span class="details-popular">
         </div>
         <div class="image1" style="width: 100%;">
-            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 500px;">
-            <section>
+            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 400px;">
+            <span class="details-popular">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            </section>
+            </span class="details-popular">
         </div>
         <div class="image1" style="width: 100%;">
-            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 500px;">
-            <section>
+            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 400px;">
+            <span class="details-popular">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            </section>
+            </span class="details-popular">
         </div> 
         <div class="image1" style="width: 100%;">
-            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 500px;">
-            <section>
+            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 400px;">
+            <span class="details-popular">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            </section>
+            </span class="details-popular">
         </div>
         <div class="image1" style="width: 100%;">
-            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 500px;">
-            <section>
+            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 400px;">
+            <span class="details-popular">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            </section>
+            </span class="details-popular">
         </div>
         <div class="image1" style="width: 100%;">
-            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 500px;">
-            <section>
+            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 400px;">
+            <span class="details-popular">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            </section>
+            </span class="details-popular">
         </div>
         <div class="image1" style="width: 100%;">
-            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 500px;">
-            <section>
+            <img src="images/pexels-gerald-yambao-2413238.jpg" alt=""  style="width: 400px;">
+            <span class="details-popular">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            </section>
+            </span class="details-popular">
         </div>
     </div>
 
 </div>
 
 <div class="holder2">
-    <div class="services-h2">
+    <div class="services-h2" style="backdrop-filter: blur(5px);">
         <h2> <i class="fa-solid fa-stars"></i> Services we offer</h2>
     </div>
-    <div class="holder3">
+    <div class="holder3" style="backdrop-filter: blur(5px);">
         <a href="reqinv.html">
             <div class="card1">
                 <h3>Tourism Related Requests and Invitations</h3>

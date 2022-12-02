@@ -9,10 +9,8 @@
 
 }
 
-.contact p,
-a,
-i {
-    color: rgb(255, 255, 255) !important;
+.contact p, a, i {
+    color: rgb(255, 255, 255);
     text-align: justify;
     text-align: left;
     font-family: 'Poppins', sans-serif;
@@ -26,13 +24,13 @@ i {
     box-shadow: 0 4px 8px 0 rgba(3, 26, 19, 0.9), 0 6px 20px 0 rgba(25, 25, 26, 0.3);
 }
 
-h4 {
+.contact h4 {
     font-size: 18px !important;
     text-align: left;
     padding-left: 10px;
     color: white;
     font-family: 'Poppins', sans-serif;
-
+    margin-top: 1em;
 }
 
 .contact-intro {
@@ -42,7 +40,7 @@ h4 {
     text-align: center;
     margin-top: .7em;
     line-height: 1.1;
-    background: linear-gradient(-45deg, rgb(0, 65, 11), rgb(0, 45, 247));
+    background: linear-gradient(-45deg, rgb(0, 182, 30), rgb(0, 45, 247));
     background-size: 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -67,8 +65,9 @@ h4 {
     cursor: pointer;
     transition: 0.2s;
     border-radius: 15px;
-    background: rgba(0, 31, 71, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: saturate(180%) blur(2px);
+    
 }
 
 .contact-bottom {
