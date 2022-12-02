@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/wtgo.css">
         <link rel="stylesheet" href="style/style.css">
         <link rel="script" href="script/script.js">
         <link rel="shortcut icon" href="/images/logo.png">
@@ -23,7 +22,14 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-        
+      <link rel="stylesheet" href="style/wtgo.css">
+      <style>
+              body {
+                  background-image: url('images/labo.jpg');
+                  background-size: cover;
+                  background-repeat: no-repeat; 
+              }
+          </style>
 
         <title>CPTO Online</title>
     </head>
@@ -113,30 +119,111 @@
 <!--header end-->
 
 
-<div class="name">
-    <p>Labo</p>
-</div>
-<div class="col-sm-6">
-    <!--Google world-->
-    <div class="mt-1 mb-3 p-3 button-container bg-white shadow-sm border">
-        <div id="google_world_map" class="google-maps"></div>
+<div class="holder-wtgo">
+    <div class="col-sm-6">
+        <div class="mt-1 mb-3 p-3 button-container bg-white shadow-sm border">
+            <div id="google_ptm_map" class="google-maps"></div>
+        </div>
     </div>
-    <!--/Line Chart-->
-
-</div>
 
     <!--Maps-->
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
-    <script src="script/maps/google-map-data.js"></script>
-    <!--Bootstrap Calendar JS-->
-    <script src="/script/maps/jquery-jvectormap-2.0.2.min.js"></script>
-    <script src="/script/maps/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="/script/maps/jvector-maps.js"></script>
+    <script>
+    $(function() {
+//============================Google maps=============================
+if($("#google_ptm_map").length > 0){
+    var gPTMCords = new google.maps.LatLng(14.1528, 122.6730);
+    var gPTMOptions = {zoom: 9,center: gPTMCords, mapTypeId: google.maps.MapTypeId.ROADMAP}    
+    var gPTM = new google.maps.Map(document.getElementById("google_ptm_map"), gPTMOptions);
+    
+    var cords = new google.maps.LatLng(14.1528, 122.6730);
+    var marker = new google.maps.Marker({position: cords, map: gPTM, title: "Marker 1"});  
+    cords = new google.maps.LatLng(50.5, 30.55);
+    marker = new google.maps.Marker({position: cords, map: gPTM, title: "Marker 2"});
+    cords = new google.maps.LatLng(50.8, 30.55);
+    marker = new google.maps.Marker({position: cords, map: gPTM, title: "Marker 3"});    
+}
+
+
+if($("#google_world_map").length > 0){
+    
+    var gWorldCords = new google.maps.LatLng(50, 0); 
+    var gWorldOptions = {zoom: 1,center: gWorldCords, mapTypeId: google.maps.MapTypeId.ROADMAP}    
+    var gWorld = new google.maps.Map(document.getElementById("google_world_map"), gWorldOptions);
+    
+    var gEUCords = new google.maps.LatLng(50, 10); 
+    var gEUOptions = {zoom: 3,center: gEUCords, mapTypeId: google.maps.MapTypeId.ROADMAP}    
+    var gEU = new google.maps.Map(document.getElementById("google_eu_map"), gEUOptions);
+    
+    function google_map_search() {
+            
+        var gSearch = new google.maps.Map(document.getElementById('google_search_map'), {
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+        
+        var defaultBounds = new google.maps.LatLngBounds(
+            new google.maps.LatLng(-33.8902, 151.1759),
+            new google.maps.LatLng(-33.8474, 151.2631));
+            
+        gSearch.fitBounds(defaultBounds);
+
+        var input = /** @type {HTMLInputElement} */(document.getElementById('target'));
+
+        var searchBox = new google.maps.places.SearchBox(input);
+        var markers = [];
+
+        google.maps.event.addListener(searchBox, 'places_changed', function() {
+            var places = searchBox.getPlaces();
+
+            for (var i = 0, marker; marker = markers[i]; i++) {
+            marker.setMap(null);
+            }
+
+            markers = [];
+            var bounds = new google.maps.LatLngBounds();
+            for (var i = 0, place; place = places[i]; i++) {
+            var image = {
+                url: place.icon,
+                size: new google.maps.Size(71, 71),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(17, 34),
+                scaledSize: new google.maps.Size(25, 25)
+            };
+
+            var marker = new google.maps.Marker({
+                map: gSearch,
+                icon: image,
+                title: place.name,
+                position: place.geometry.location
+            });
+
+            markers.push(marker);
+
+            bounds.extend(place.geometry.location);
+            }
+
+            gSearch.fitBounds(bounds);
+        });
+
+        google.maps.event.addListener(gSearch, 'bounds_changed', function() {
+            var bounds = gSearch.getBounds();
+            searchBox.setBounds(bounds);
+        });
+    }
+
+    google.maps.event.addDomListener(window, 'load', google_map_search);    
+        
+}
+
+//============================Google maps=============================
+});
+    </script>
 
 
 <!--Main content start-->
-<div class="holder">
-    <section> 
+<div class="holder-togo">
+    <h1>Labo</h1>
+    <section style="margin-top: .1em; ">
         The town Labo is geographically located relatively at the center of the province of Camarines Norte. It is approximately 335 kilometers south of Manila and 17 kilometers away from Daet, the capital town of the province. Labo being located at the center of the province and the most populous town, serves as the agricultural center as well as potential center for business, trade, tourism as well as secondary industrial growth center. Labo is a landlocked municipality surrounded with plains and mountains and there's no nearby beach to visit.
         
         There's a lot of tourist spots that you can visit here in Labo. You can enjoy trekking with your friends and family at Mt. Cadig and Mt. Bagacay. You can also visit some of the resorts and waterfalls here in Labo. They offer unique experiences for the guests wherein you can dine and relax during your leisure time.
@@ -144,6 +231,7 @@
         #LABO #HeartOfCamarinesNorte #MtCadig #MtBagacay
     </section>
 
+</div>
 </div>
 <!--Main content end-->
 

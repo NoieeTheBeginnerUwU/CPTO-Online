@@ -19,7 +19,15 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-    
+      <link rel="stylesheet" href="style/wtgo.css">
+      <style>
+              body {
+                  background-image: url('images/vinzons.jpg');
+                  background-size: cover;
+                  background-repeat: no-repeat; 
+              }
+          </style>
+
         <title>CPTO Online</title>
     </head>
 <body>
@@ -104,52 +112,121 @@
 <script src="chat.js"></script>
 
 <!--header end-->
-<h1 style="text-align: center; margin:1%;">VINZONS</h1>
-    <div id="m1" style="width:60%;height:60vh;margin: 0 auto;"></div>
+<div class="holder-wtgo" style="background-color: rgba(0, 0, 0, 0.4);">
+    <div class="col-sm-6">
+        <div class="mt-1 mb-3 p-3 button-container bg-white shadow-sm border">
+            <div id="google_ptm_map" class="google-maps"></div>
+        </div>
+    </div>
 
+    <!--Maps-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
     <script>
-        function sample() {
-        var choice1 = {
-        center: new google.maps.LatLng(51.503442,-0.120540),
-        zoom:7,
-        mapTypes: google.maps.MapTypeId.ROADMAP
-        };
-        var choice2 = {
-        center: new google.maps.LatLng(51.503442,-0.120540),
-        zoom:7,
-        mapTypes: google.maps.MapTypeId.SATELLITE
-        };
-        var choice3 = {
-        center: new google.maps.LatLng(51.503442,-0.120540),
-        zoom:7,
-        mapTypes: google.maps.MapTypeId.HYBRID
-        };
-        var choice4 = {
-        center: new google.maps.LatLng(51.503442,-0.120540),
-        zoom:7,
-        mapTypes: google.maps.MapTypeId.TERRAIN
-        };
-        var i = new google.maps.Map(document.getElementById("m1"),choice1);
-        var j = new google.maps.Map(document.getElementById("m2"),choice2);
-        var k = new google.maps.Map(document.getElementById("m3"),choice3);
-        var l = new google.maps.Map(document.getElementById("m4"),choice4);
-        }
-        </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpYWf3wbQi8uyUp8bghk2k_vcPtx8hyLU&callback=sample"></script>
+    $(function() {
+//============================Google maps=============================
+if($("#google_ptm_map").length > 0){
+    var gPTMCords = new google.maps.LatLng(14.2114, 122.8874);
+    var gPTMOptions = {zoom: 9,center: gPTMCords, mapTypeId: google.maps.MapTypeId.ROADMAP}    
+    var gPTM = new google.maps.Map(document.getElementById("google_ptm_map"), gPTMOptions);
+    
+    var cords = new google.maps.LatLng(14.2114, 122.8874);
+    var marker = new google.maps.Marker({position: cords, map: gPTM, title: "Marker 1"});  
+    cords = new google.maps.LatLng(50.5, 30.55);
+    marker = new google.maps.Marker({position: cords, map: gPTM, title: "Marker 2"});
+    cords = new google.maps.LatLng(50.8, 30.55);
+    marker = new google.maps.Marker({position: cords, map: gPTM, title: "Marker 3"});    
+}
+
+
+if($("#google_world_map").length > 0){
+    
+    var gWorldCords = new google.maps.LatLng(50, 0); 
+    var gWorldOptions = {zoom: 1,center: gWorldCords, mapTypeId: google.maps.MapTypeId.ROADMAP}    
+    var gWorld = new google.maps.Map(document.getElementById("google_world_map"), gWorldOptions);
+    
+    var gEUCords = new google.maps.LatLng(50, 10); 
+    var gEUOptions = {zoom: 3,center: gEUCords, mapTypeId: google.maps.MapTypeId.ROADMAP}    
+    var gEU = new google.maps.Map(document.getElementById("google_eu_map"), gEUOptions);
+    
+    function google_map_search() {
+            
+        var gSearch = new google.maps.Map(document.getElementById('google_search_map'), {
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+        
+        var defaultBounds = new google.maps.LatLngBounds(
+            new google.maps.LatLng(-33.8902, 151.1759),
+            new google.maps.LatLng(-33.8474, 151.2631));
+            
+        gSearch.fitBounds(defaultBounds);
+
+        var input = /** @type {HTMLInputElement} */(document.getElementById('target'));
+
+        var searchBox = new google.maps.places.SearchBox(input);
+        var markers = [];
+
+        google.maps.event.addListener(searchBox, 'places_changed', function() {
+            var places = searchBox.getPlaces();
+
+            for (var i = 0, marker; marker = markers[i]; i++) {
+            marker.setMap(null);
+            }
+
+            markers = [];
+            var bounds = new google.maps.LatLngBounds();
+            for (var i = 0, place; place = places[i]; i++) {
+            var image = {
+                url: place.icon,
+                size: new google.maps.Size(71, 71),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(17, 34),
+                scaledSize: new google.maps.Size(25, 25)
+            };
+
+            var marker = new google.maps.Marker({
+                map: gSearch,
+                icon: image,
+                title: place.name,
+                position: place.geometry.location
+            });
+
+            markers.push(marker);
+
+            bounds.extend(place.geometry.location);
+            }
+
+            gSearch.fitBounds(bounds);
+        });
+
+        google.maps.event.addListener(gSearch, 'bounds_changed', function() {
+            var bounds = gSearch.getBounds();
+            searchBox.setBounds(bounds);
+        });
+    }
+
+    google.maps.event.addDomListener(window, 'load', google_map_search);    
+        
+}
+
+//============================Google maps=============================
+});
+    </script>
 
 
 <!--Main content start-->
-<div class="holder">
-    <section>
-        In an era ofcompeting tourist destinations, the town of Vinzons hold an exceptional place among the most popular tourist spots not only in the country but internationally as well.
+<div class="holder-togo" style="background-color: rgba(0, 0, 0, 0.2);">
+    <h1>Vinzons</h1>
+    <section style="margin-top: .1em; ">
+        Daet is the capital town, the service center, the commercial hub, and the jump-off point of tourism attractions in the province of Camarines Norte. It takes pride as the home of National Hero Dr. Jose P. Rizal, locally known as "Bantayog".     
         
-        Tourism Experience in Vinzons comes with a promising white sand beach an crystal clear waters of Calaguas Group of Islands, a view of the 408-year old limestone museum chuch restored in the 15th century setting, and the Wenceslao Q. Vinzons National Historical Landmark known to be the family house of the martyred hero. With a seamless fusion of culture and adventure, Vinzons is conceivably among the most viable tourism destinations in the country.
+        It is one of the popular surfing destinations in the country and is dubbed the "Surfing Capital in Bicol" with the presence of Bagasbas Beach, which is characterized by long and wide stretch of fine gray sand and waves that roll from Pacific Ocean, making it an ideal spot for surfers of any level.
         
-        A 145% increase in tourist arrivals was witnessed from 2015 to 2019. Travellers seeking adventure, desirous to walk barefoot on fine white sand, find themselves craving for delectable native dishes, eager to learn Vinzonian culture and tradition, and pleased to find a home in a distant paradise.
+        It is famed for the bountiful harvest if "Queen Formosa" the sweetest pineapple variety in the world from which "Pinyasan", the longest running festival in the province, is centered.
         
-        #VINZONS #408YearOldChurch #CalaguasGroupOfIslands
+        #DAET #CapitalTownOfCamNorte #HomeOfQueenFormosa #TheSweetestPineapple
     </section>
 
+</div>
 </div>
 <!--Main content end-->
 

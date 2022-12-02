@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/wtgo.css">
         <link rel="stylesheet" href="style/style.css">
         <link rel="script" href="script/script.js">
         <link rel="shortcut icon" href="/images/logo.png">
@@ -19,7 +20,14 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-    
+      <style>
+        body {
+            background-image: url('images/bagasbas2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+    </style>
         <title>CPTO Online</title>
     </head>
 <body>
@@ -103,59 +111,34 @@
 <script src="responses.js"></script>
 <script src="chat.js"></script>
 
-
-
-<!--header end-->
-
-
-
-<h1 style="text-align: center; margin:1%;">DAET</h1>
-    <div id="m1" style="width:60%;height:60vh;margin: 0 auto;"></div>
-
-    <script>
-        function sample() {
-        var choice1 = {
-        center: new google.maps.LatLng(51.503442,-0.120540),
-        zoom:7,
-        mapTypes: google.maps.MapTypeId.ROADMAP
-        };
-        var choice2 = {
-        center: new google.maps.LatLng(51.503442,-0.120540),
-        zoom:7,
-        mapTypes: google.maps.MapTypeId.SATELLITE
-        };
-        var choice3 = {
-        center: new google.maps.LatLng(51.503442,-0.120540),
-        zoom:7,
-        mapTypes: google.maps.MapTypeId.HYBRID
-        };
-        var choice4 = {
-        center: new google.maps.LatLng(51.503442,-0.120540),
-        zoom:7,
-        mapTypes: google.maps.MapTypeId.TERRAIN
-        };
-        var i = new google.maps.Map(document.getElementById("m1"),choice1);
-        var j = new google.maps.Map(document.getElementById("m2"),choice2);
-        var k = new google.maps.Map(document.getElementById("m3"),choice3);
-        var l = new google.maps.Map(document.getElementById("m4"),choice4);
-        }
-        </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpYWf3wbQi8uyUp8bghk2k_vcPtx8hyLU&callback=sample"></script>
-
-
-<!--Main content start-->
-<div class="holder">
-    <section>
-        Daet is the capital town, the service center, the commercial hub, and the jump-off point of tourism attractions in the province of Camarines Norte. It takes pride as the home of National Hero Dr. Jose P. Rizal, locally known as "Bantayog". 
-        
-        It is one of the popular surfing destinations in the country and is dubbed the "Surfing Capital in Bicol" with the presence of Bagasbas Beach, which is characterized by long and wide stretch of fine gray sand and waves that roll from Pacific Ocean, making it an ideal spot for surfers of any level.
-        
-        It is famed for the bountiful harvest if "Queen Formosa" the sweetest pineapple variety in the world from which "Pinyasan", the longest running festival in the province, is centered.
-        
-        #DAET #CapitalTownOfCamNorte #HomeOfQueenFormosa #TheSweetestPineapple
-    </section>
-
+    <div class="holder-wtgo">
+        <div class="col-sm-6">
+            <div class="mt-1 mb-3 p-3 button-container bg-white shadow-sm border">
+                <div id="google_ptm_map" class="google-maps"></div>
+            </div>
+        </div>
+    
+        <!--Maps-->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+        <script src="script/maps/google-map-data.js"></script>
+    
+    
+    <!--Main content start-->
+    <div class="holder-togo">
+        <h1>Daet</h1>
+        <section style="margin-top: .1em; ">
+            Daet is the capital town, the service center, the commercial hub, and the jump-off point of tourism attractions in the province of Camarines Norte. It takes pride as the home of National Hero Dr. Jose P. Rizal, locally known as "Bantayog".     
+            
+            It is one of the popular surfing destinations in the country and is dubbed the "Surfing Capital in Bicol" with the presence of Bagasbas Beach, which is characterized by long and wide stretch of fine gray sand and waves that roll from Pacific Ocean, making it an ideal spot for surfers of any level.
+            
+            It is famed for the bountiful harvest if "Queen Formosa" the sweetest pineapple variety in the world from which "Pinyasan", the longest running festival in the province, is centered.
+            
+            #DAET #CapitalTownOfCamNorte #HomeOfQueenFormosa #TheSweetestPineapple
+        </section>
+    
+    </div>
 </div>
+
 <!--Main content end-->
 
 
