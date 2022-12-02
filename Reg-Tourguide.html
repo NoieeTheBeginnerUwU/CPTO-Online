@@ -234,7 +234,7 @@ form .fields .input-field{
         <p><i>Please print legibly all information required. Do not abbreviate the information supplied.
              Place"/" marks in approproiate boxes "N/A" if not applicable </i></p>
 
-        <form action="#">
+        <form>
             <div class="form first">
                 <div class="details act">
                     <span class="title">ACCOUNT IDENTIFIER DETAILS</span>
@@ -298,33 +298,33 @@ form .fields .input-field{
                         </div>
                         <div class="input-field">
                             <label>Gender</label>
-                            <select required>
+                            <select id="gender17" required>
                                 <option disabled selected>Select Gender</option>
-                                <option id="male17" name="male17" >Male</option>
-                                <option id="female17" name="female17" >Female</option>
+                                <option id="male17" name="male17" value="male">Male</option>
+                                <option id="female17" name="female17" value="female">Female</option>
                         
                             </select>
                         </div>
                      
                         <div class="input-field">
                             <label>Civil Status</label>
-                            <select required>
+                            <select id="status17" required>
                                 <option disabled selected>Select Civil Status</option>
-                                <option id="single17" name="single17" >Single</option>
-                                <option id="married17" name="married17" >Married</option>
+                                <option id="single17" name="single17" value="singe">Single</option>
+                                <option id="married17" name="married17" value="married">Married</option>
                                 <option>Others</option>
                             </select>
                         </div>
                         <div class="input-field">
                             <label>Tour Guide Type</label>
-                            <select required>
+                            <select id="type17" required>
                                 <option disabled selected>Select Specialization</option>
-                                <option id="community17" name="community17" >Community Guide</option>
-                                <option id="regional17" name="regional17" >Regional Guide</option>
-                                <option id="cave17" name="cave17">Cave Guide</option>
-                                <option id="firefly17" name="firefly17">Firefly Guide</option>
-                                <option id="eco17" name="eco17">Eco-Guide</option>
-                                <option id="mountain17" name="mountain17">Mountain Guide</option>
+                                <option id="community17" name="community17" value="community guide">Community Guide</option>
+                                <option id="regional17" name="regional17" value="regional guide">Regional Guide</option>
+                                <option id="cave17" name="cave17" value="cave guide">Cave Guide</option>
+                                <option id="firefly17" name="firefly17" value="firefly guide">Firefly Guide</option>
+                                <option id="eco17" name="eco17" value="eco guide">Eco-Guide</option>
+                                <option id="mountain17" name="mountain17" value="mountain guide">Mountain Guide</option>
                             </select>
                         </div>
                       
@@ -369,7 +369,7 @@ form .fields .input-field{
                                             <input type="date" id="valid17" name="valid17" placeholder="Enter Valid Until" >
                                         </div>
 
-                      
+                                        <input type="submit" id="btn"> 
                         
                                 
                     </div> 
@@ -385,18 +385,97 @@ form .fields .input-field{
                 
             </div>
 
-           <button class="btn"> Submit
-                    <i class="uil uil-navigator"></i>
-                </button>
                    
                    
                      
                     </div>                
                 </div>
 
-               
-            </div>
 
-            
+            </div>
+        </form>
+    </div>
+
 </body>
 </html>
+
+<script type="module">
+
+    import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+    import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        signOut
+    } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+    import {getDatabase, set, ref, update} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
+    const firebaseConfig = {
+    apiKey: "AIzaSyDA1XjvPrrZiMLhYRRV1Ar23p4SF2lJq9I",
+    authDomain: "cpto-d7b0b.firebaseapp.com",
+    projectId: "cpto-d7b0b",
+    storageBucket: "cpto-d7b0b.appspot.com",
+    messagingSenderId: "633926478402",
+    appId: "1:633926478402:web:3e659a8d5f50793d299bdb",
+    measurementId: "G-WNZKRQGELD"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const database = getDatabase(app);
+    let btn = document.getElementById('btn');
+
+    btn.addEventListener('click', (e) => {
+        send();
+    })
+
+    function send(){
+        let email16 = document.getElementById('email16').value;
+        let prefix = document.getElementById('prefix17').value;
+        let suffix = document.getElementById('suffix17').value;
+        let firstname = document.getElementById('first17').value;
+        let middlename = document.getElementById('middle17').value;
+        let lastname = document.getElementById('last17').value;
+        let maidenname = document.getElementById('maden17').value;
+        let mobilenumber = document.getElementById('mobile17').value;
+        let phonenumber = document.getElementById('phone17').value;
+        let nationality = document.getElementById('nationality17').value;
+        let birthday = document.getElementById('dob17').value;
+        let gender = document.getElementById('gender17');
+        let status = document.getElementById('status17');
+        let type = document.getElementById('type17');
+        let number = document.getElementById('no17').value;
+        let street = document.getElementById('street17').value;
+        let region = document.getElementById('region17').value;
+        let city = document.getElementById('city17').value;
+        let municipality = document.getElementById('municipality17').value;
+        let permit = document.getElementById('permit17').value;
+        let place = document.getElementById('place17').value;
+        let valid = document.getElementById('valid17').value;
+        let tgID = 0;
+        alert("working");
+        set(ref(database, 'Registration/Tour-Guide' + ++tgID), {
+            email: email16,
+            prefix: prefix,
+            suffix: suffix,
+            firstname: firstname,
+            middlename: middlename,
+            lastname: lastname,
+            maidenname: maidenname,
+            mobilenumber: mobilenumber,
+            phonenumber: phonenumber,
+            nationality: nationality,
+            gender: gender,
+            status: status,
+            type: type,
+            number: number,
+            street: street,
+            region: region,
+            city: city,
+            municipality: municipality,
+            permit: permit,
+            place: place,
+            valid: valid
+        }).then(alert("Tour Guide Registration Request Sent."))
+    }   
+</script>

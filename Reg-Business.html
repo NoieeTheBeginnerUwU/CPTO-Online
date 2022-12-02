@@ -299,7 +299,7 @@
                                         </div>
                         <div class="input-field">
                             <label>Type of Organization</label>
-                            <select required>
+                            <select id="org-type" required>
                                 <option disabled selected>Select Type of Organization</option>
                                 <option id="single" name="single">Single Proprietorship</option>
                                 <option id="partnership" name="partnership">Partnership</option>
@@ -309,7 +309,7 @@
                         </div>
                         <div class="input-field">
                             <label>Permit</label>
-                            <select required>
+                            <select id="permit-type" required>
                                 <option disabled selected>Select Permit</option>
                                 <option id="mayor" name="mayor">Mayor's/Business Permit</option>
                                 <option id="dti" name="dti">DTI Permit</option>
@@ -344,7 +344,7 @@
                                     <label>Nationality</label>
                                     <input type="text"  id= "nationalityy" name="nationlaityy" placeholder="Optional" >
                                 </div>
-
+                                <input type="submit" value="submit form" id="btn">
                        
                     </div> 
                     <br>
@@ -356,9 +356,6 @@
                     </div>              
                 </div>
 
-                <button class="btn"> Submit
-                    <i class="uil uil-navigator"></i>
-                </button>
             </div>
 
            
@@ -375,3 +372,82 @@
 
 </body>
 </html>
+
+<script type="module">
+
+    import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+    import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        signOut
+    } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+    import {getDatabase, set, ref, update} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
+    const firebaseConfig = {
+    apiKey: "AIzaSyDA1XjvPrrZiMLhYRRV1Ar23p4SF2lJq9I",
+    authDomain: "cpto-d7b0b.firebaseapp.com",
+    projectId: "cpto-d7b0b",
+    storageBucket: "cpto-d7b0b.appspot.com",
+    messagingSenderId: "633926478402",
+    appId: "1:633926478402:web:3e659a8d5f50793d299bdb",
+    measurementId: "G-WNZKRQGELD"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const database = getDatabase(app);
+    let btn = document.getElementById('btn');
+
+    btn.addEventListener('click', (e) => {
+        
+    })
+
+    function send(){
+        let email = document.getElementById('email').value;
+        let estab_name = document.getElementById('estab').value;
+        let bus_address = document.getElementById('address').value;
+        let bus_website = document.getElementById('website').value;
+        let contact_num = document.getElementById('numbers').value;
+        let email_ad = document.getElementById('emailad').value;
+        let date_estab = document.getElementById('date').value;
+        let corp_name  = document.getElementById('name').value;
+        let corp_address = document.getElementById('add').value;
+        let corp_nationality = document.getElementById('nationality').value;
+        var company_name = document.getElementById('company-name').value;
+        var company_address = document.getElementById('company-address').value;
+        var org_type = document.getElementById('org-type');
+        var org_permit = document.getElementById('permit-type').value;
+        var org_permitno = document.getElementById('permit').value;
+        var org_validtill = document.getElementById('date');
+        var manager = document.getElementById('manager').value;
+        var manager_contact = document.getElementById('tel').value;
+        var manager_email = document.getElementById('emaill').value;
+        var manager_nationality = document.getElementById('nationalityy').value;
+
+        let busID = 0;
+        alert("working");
+        set(ref(database, 'Registration/Business' + ++busID), {
+            business_ID: ++busID,
+            estab_name: estab_name,
+            bus_address: bus_address,
+            bus_website: bus_website,
+            contact_num: contact_num,
+            email_ad: email_ad,
+            date_estab: date_estab,
+            corp_name: corp_name,
+            corp_address: corp_address,
+            corp_nationality: corp_nationality,
+            company_name: company_name,
+            company_address: company_address,
+            org_type: org_type,
+            org_permit: org_permit,
+            org_permitno: org_permitno,
+            org_validtill: org_validtill,
+            manager: manager,
+            manager_contact: manager_contact,
+            manager_email: manager_email,
+            manager_nationality: manager_nationality    
+        }).then(alert("Business Registration Request Sent."))
+    }   
+</script>

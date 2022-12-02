@@ -128,13 +128,77 @@
 
 
 <!--Main content start-->
+<style>
+/* Style the buttons that are used to open and close the accordion panel */
+.container{
+    margin-top: 5%;
+    width: 60%;
+    height: 80vh;
+    background-color: rgba(7, 0, 45, 0.542);
+}   
+.accordion {
+  background-color: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.817);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  height: 60vh;
+  background-color: transparent;
+  color: white;
+  display: none;
+  overflow: hidden;
+}
+</style>
 
 <div class="holder">
-    <div class="logo">
-        <img class="logo-img" src="images/logo.png" alt="logo" style="background-color: rgba(255,255,255,.1);">
+    <div class="container">
+        <button class="accordion">Blog 1</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div>
+        
+        <button class="accordion">blog 2</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div>
+        
+        <button class="accordion">blog 3</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div>  
     </div>
-
 </div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
 <!--Main content end-->
 
 
