@@ -282,41 +282,18 @@
     </div>
 </div>
 <style>
-    .card1{
-        background-color: white;
-        
-    }
-    .card2{
-        background-color: white;
-    }
-    .card3{
-        background-color: white;
-    }.news{
-        margin: 0 auto;
-        width: 90%;
+.news{
+        width: 100%;
         height: 80vh;
-        display: block;
-        background-color: rgb(237, 237, 237);
-        overflow-y: scroll;
-        overflow-x: hidden;
-        white-space: nowrap;
-        border: 4px black;
-    }.news-item{
         display: flex;
         flex-direction: column;
-        justify-items: center;
-        width: 80%;
-        height: 50vh;
-        background: rgb(255, 255, 255);
-        box-shadow: black 5px;
-        margin: 0 auto;
-        margin-top: 2%;
-    }
-    .news.news-item p{
-
-        align-items: center;
+        background-color: rgb(255, 255, 255);
+        border: 4px black;
+        overflow-x: hidden;
+        overflow-y: scroll;
         text-align: center;
-        width: auto;
+    }div div {
+        text-align: left;
     }
 </style>
 <div class="holder" style="width: 100%;">
@@ -566,21 +543,37 @@ window.onload = SelectAllData;
 function AddItemsToTable(author, title, description){
     var tbody = document.getElementById("news");
     var div = document.createElement("div");
-    div.style.backgroundColor= 'grey';
-    div.style.width = "30%";
-    div.style.height = "70vh"
-    div.style.margin = "0 auto";
-    var td1 = document.createElement("h2");
-    var td2 = document.createElement("p");
+    var div2 = document.createElement("div");
+    div2.style.backgroundColor= 'green';
+    div2.style.color = "white";
+    div2.style.width = "70%";
+    div2.style.height = "40vh"
+    div.style.backgroundColor= 'rgba(0,0,0,.4)';
+    div.style.color = "white";
+    div.style.width = "90%";
+    div.style.height = "40vh"
+    div.style.margin = "1%";
+    div.style.display = "flex"
+    var td1 = document.createElement("p");
+    var td2 = document.createElement("h2");
     var td3 = document.createElement("p");
+    var img = document.createElement("div");
+    img.style.width = "30%";
+    img.style.height = "100%";
+    img.style.background = "grey";
+    img.style.margin = "0 auto";
+    img.style.backgroundImage = "url('https://images.pexels.com/photos/256523/pexels-photo-256523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')"
+    img.style.backgroundSize = "contain";
 
     td1.innerHTML = author;
     td2.innerHTML = title;
     td3.innerHTML = description;
 
-    div.appendChild(td1);
-    div.appendChild(td2);
-    div.appendChild(td3);
+    div2.appendChild(td2);
+    div2.appendChild(td1);
+    div2.appendChild(td3);
+    div.appendChild(img);
+    div.appendChild(div2)
     tbody.appendChild(div);
 
  }

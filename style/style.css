@@ -170,6 +170,8 @@ header {
     margin: 0px 30px;
     transition: all .50s ease;
     text-transform: uppercase;
+}.navbar li a{
+    text-decoration: none;
 }
 
 .cpto-logo {
@@ -1393,4 +1395,5 @@ abbr:hover::after {
     width: 280px;
     z-index: 1;
   }
+
 
