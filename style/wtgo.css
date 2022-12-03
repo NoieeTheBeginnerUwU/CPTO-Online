@@ -2,6 +2,7 @@
     display: flex;
     background-color: rgba(0, 0, 0, 0.4);
     height: 100vh;
+    
 }
 
 .google-maps {
@@ -9,6 +10,7 @@
     height: 55vh; 
     margin: 0; 
     margin-left: 2em;
+    margin-right: 20px;
     margin-top: 10em;
     border-radius: 5px;
     z-index: 1;
@@ -36,3 +38,4 @@
     font-size: 50px;
     margin-top: .4em;
 }
+
