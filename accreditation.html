@@ -193,7 +193,22 @@
     
 <body>
 <!--header start-->
+<!--------------------------------------------------------------------------------------->
+<script src="https://cdjns.cloudflare.com/ajax/libs/jquery/3.4.1./jquery.mins.css"></script>
+<script>
+    setTimeout(function(){
+        $('.loader_bg').fadeToggle();
+    },1000);
+</script>
 
+    <div class="loader_bg">
+        <div class="loader">
+            <div class="loader_in">
+
+            </div>
+        </div>
+    </div>
+<!-------------------------------------------------------------------------------------->
 <header>
     <h1 style="color: white; font-size: 1.1rem; font-weight:900;"><i class="fa fa-compass">CNPTO <span style="color: rgb(69, 255, 1);">Online</span></i></h1>
     <ul class="navbar">
@@ -228,6 +243,10 @@
 
 <!--Main content start-->
 
+
+<div class="blocker" id="blocker">
+  <h1 style="font-size: 10rem; text-align:center; margin-top: 10%; color: white;">Boy login ka muna</h1>
+</div>
 <div class="account-holder">
     <h3>Business</h3>
     <div class="account-holder1" style="float: right;">
@@ -297,3 +316,10 @@
     
 </body>
 </html>
+
+<script>
+  if(localStorage!==0){
+      var blocker = document.getElementById('blocker');
+      blocker.style.display = "none";
+  }
+</script>
