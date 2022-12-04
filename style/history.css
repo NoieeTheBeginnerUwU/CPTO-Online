@@ -40,6 +40,8 @@
 .card-blog section {
     display: flex;
     text-align: justify;
+    font-size: 14px;
+    
 }
 
 @media only screen and (min-width: 320px){
