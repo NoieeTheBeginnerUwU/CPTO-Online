@@ -1427,7 +1427,7 @@ abbr:hover::after {
     width: 100%;
     height: 200vh;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.491);
+    background-color: rgba(0, 0, 0, 0.749);
 }
 
 .loader_bg{
@@ -1492,6 +1492,7 @@ abbr:hover::after {
 .bread{
     margin-top: 5.5%;
 }
+
 .req_inv{
     width: 80%;
     height: 80vh;
@@ -1541,6 +1542,7 @@ abbr:hover::after {
     }
 
 }
+/*  --------------------------------------------------- */
 .right_req{
     width: 80%;
     height: 80%;
@@ -1561,7 +1563,51 @@ abbr:hover::after {
     background-color: #00aa06;
     color: white;
 }#subBtn:hover{
-    
+    background-color: #07e70f;    
+}
+.blocker-content{
+    width: 50%;
+    height: 60vh;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    margin-top: 7%;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.664);
 }
 
+/*  --------------------------------------------------- */
 
+.right_inv{
+    width: 80%;
+    height: 80%;
+    margin-top: 2%;
+    background-color: transparent;
+    margin-left: 140px;
+    display: flex;
+    flex-direction: column;
+}
+.right_inv input, select, textarea{
+    width: 80%;
+    height: 6vh;
+    margin-top: 1%;
+}.right_inv textarea{
+    height: 18vh;
+}#subBtn2{
+    border: none;
+    background-color: #10027b;
+    color: white;
+}#subBtn2:hover{
+    background-color: #2105d6;
+}
+
+.blocker-content{
+    width: 50%;
+    height: 60vh;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    margin-top: 7%;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.664);
+}
