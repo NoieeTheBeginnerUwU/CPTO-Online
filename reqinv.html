@@ -131,7 +131,10 @@
 
 <!--Main content start-->
 <div class="blocker" id="blocker">
-
+    <div class="blocker-content">
+        <i class="fa fa-warning" style="text-align: center; color:rgb(189, 255, 7); margin: 0 auto; font-size: 10rem; "></i>
+        <p>In order to use our services, <br> please <a href="login.html" style="color: rgb(13, 211, 13);">login</a>  or <a href="signup.html" style="color: rgb(47, 0, 255);">create</a> an account</p>
+    </div>
 </div>
 <p class="bread">Services > Request and Invitations</p>
 <div class="holder">
@@ -141,26 +144,45 @@
             <h3>REQUEST</h3>
 
             <div class="right_req">
-                <input type="text" id="name" placeholder="Please enter your Full Name">
-                <select name="affiliation" id="affiliation">
+                <input type="text" id="name" placeholder="Please enter your Full Name" required>
+                <select name="affiliation" id="affiliation" required>
                     <option selected disabled>Select your affiliation</option>
                     <option value="government">Government</option>
                     <option value="business">Tourism Related Enterprise</option>
                     <option value="others">others</option>
                 </select>
-                <select name="purpose" id="purpose"><br>
+                <select name="purpose" id="purpose" required><br>
                     <option selected disabled>Please select the purpose of your invitation accordingly</option>
                     <option value="awareness training">Tourism Awareness Training</option>
                     <option value="life support">Basic Life Support</option>
                     <option value="man power">Man Power</option>
                 </select>
-                <input type="date" name="date" id="date" placeholder="Please select the date this request is needed.">
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Send us a message (if applicable)"></textarea>
+                <input type="date" name="date" id="date" placeholder="Please select the date this request is needed." required>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Send us a message (if applicable)" required></textarea>
                 <input type="submit" id="subBtn" value="submit request">
             </div>
         </div>
         <div class="inv">
             <h3>INVITATION</h3>
+
+            <div class="right_inv">
+                <input type="text" id="name2" placeholder="Please enter your Full Name" required>
+                <select name="affiliation" id="affiliation2" required>
+                    <option selected disabled>Select your affiliation</option>
+                    <option value="government">Government</option>
+                    <option value="business">Tourism Related Enterprise</option>
+                    <option value="others">others</option>
+                </select>
+                <select name="purpose" id="purpose2"><br>
+                    <option selected disabled>Please select the purpose of your invitation accordingly</option>
+                    <option value="judge">Judge for a competition</option>
+                    <option value="tourism talks">Tourism Talks</option>
+                    <option value="guest speaker">Guest Speaker</option>
+                </select>
+                <input type="date" name="date" id="date2" placeholder="Please select the date this request is needed.">
+                <textarea name="message" id="message2" cols="30" rows="10" placeholder="Send us a message (if applicable)"></textarea>
+                <input type="submit" id="subBtn2" value="submit request">
+            </div>
         </div>
     </div>
 
@@ -253,6 +275,27 @@ const firebaseConfig = {
                     date: date,
                     message: message
                 }).then(alert("Request Sent Successfully."))
+    });
+
+    var subBtn2 = document.getElementById('subBtn2');
+    subBtn2.addEventListener('click', (e) => {
+        var email = localStorage.getItem('user');
+        var name = document.getElementById('name2').value;
+        var affiliation = document.getElementById('affiliation2').value;
+        var purpose = document.getElementById('purpose2')
+        var date = document.getElementById('date2').value;
+        var message = document.getElementById('message2').value;
+
+        set(ref(database, 'Services/Invitation'), {
+                    email: email,
+                    name: name,
+                    purpose: purpose,
+                    affiliation: affiliation,
+                    date: date,
+                    message: message
+                }).then(alert("Invitation Sent Successfully."))
+
+
     })
 
 </script>
