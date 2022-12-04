@@ -28,6 +28,7 @@ body {
     width: 100%;
     height: 100vh;
     background-color: rgb(255, 255, 255);
+    
 }
 
 .holder3 {
@@ -1365,9 +1366,6 @@ section {
     font-size: .7rem;
 }
 
-.main:hover{
-
-}
 footer{
     position: relative;
     bottom: 0;
