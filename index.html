@@ -284,17 +284,17 @@
     <div class="holder3" style="backdrop-filter: blur(5px);">
         <a href="reqinv.html">
             <div class="card1">
-                <h3>Tourism Related Requests and Invitations</h3>
+                <h3 style="text-align: center; font-family: 'Lato', sans-serif;">Tourism Related Requests and Invitations</h3>
             </div>
         </a>
         <a href="accreditation.html">
             <div class="card2">
-                <h3>TRE Accreditations</h3>
+                <h3 style="text-align: center; font-family: 'Lato', sans-serif;">TRE Accreditations</h3>
             </div>
         </a>
         <a href="acceptance.html">
             <div class="card3">
-                <h3>Acceptance of Inbound Guests to Calaguas</h3>
+                <h3 style="text-align: center; font-family: 'Lato', sans-serif;">Acceptance of Inbound Guests to Calaguas</h3>
             </div>  
         </a>
     </div>
@@ -579,8 +579,12 @@ function AddItemsToTable(author, title, description){
     div2.style.color = "white";
     div2.style.width = "70%";
     div2.style.height = "40vh"
+    div2.style.margin = "auto"
+    div2.style.borderRadius = "15px"
     div.style.backgroundColor= 'rgba(0,0,0,.4)';
-    div.style.color = "white";
+    div.style.borderRadius = "15px"
+    div.style.margin = "auto"
+    div.style.color = "green";
     div.style.width = "90%";
     div.style.height = "40vh"
     div.style.margin = "1%";
@@ -591,7 +595,8 @@ function AddItemsToTable(author, title, description){
     var img = document.createElement("div");
     img.style.width = "30%";
     img.style.height = "100%";
-    img.style.background = "grey";
+    img.style.background = "green";
+    img.style.borderRadius = "15px"
     img.style.margin = "0 auto";
     img.style.backgroundImage = "url('https://images.pexels.com/photos/256523/pexels-photo-256523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')"
     img.style.backgroundSize = "contain";
