@@ -818,7 +818,13 @@ body{
 .card{
     width: 100%;
 }
-
+.holder p{
+    font-size: 20px;
+    margin: 1.6em;
+}
+.card p{
+    font-size: .7em;
+}
 .card-img{
     display: block;
     width: 100%;
@@ -828,6 +834,12 @@ body{
 
 .card-content{
     padding: 0.5rem;
+    
+}
+.card-content h1{
+    font-size: x-large;
+    font-weight: 500;
+    color: #0d0d0d;
 }
 
 .card-header{
