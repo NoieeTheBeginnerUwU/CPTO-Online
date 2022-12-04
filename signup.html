@@ -29,29 +29,37 @@ href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body{
-    padding: o;
-    margin: 0;
-    background-color: antiquewhite;
+          background-image: url('images/pexels-te-lensfix-1371360\ \(1\).jpg');
+          background-size: cover;
+          background-position: center;
+          padding: o;
+          margin: 0;
+          background-color: rgb(255, 255, 255);
   }
   
-
+  h2{
+    color: rgb(255, 255, 255);
+    margin-top: 5%;
+    text-align: center;
+  }
   .account-holder{
-
   margin: auto;
-  margin-top: 150px;
+  margin-top: 2%  ;
   width: 50%;
   height: 50vh;
   background-color: #fff;
   border: 3px solid #73AD21;
-  padding: 10px;
   border-radius: 25px;
-  align-items: center;
-  justify-content: center;
- 
+
 
   }
+  .account-holder-inside{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  }
   .account-holder1 img{
-    margin-top: 10px;
     width: 130px;
     height: 40;
     border: 2px solid #73AD21;
@@ -127,11 +135,12 @@ href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
     height: 20;
   }
   .account-holder{
+    display: flex;
     width: 90%;
     height: 30vh;
   }
   .account-holder1{
-    width: 50%;
+    width: 30%;
     box-sizing: border-box;
     display: flex;
    align-items: center;
@@ -144,7 +153,13 @@ href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
     color: black;
   }
 }
-
+.reg-holder{
+  margin-top: 2%;
+  margin: 0 auto;
+  width: 100%;
+  height: 80%;
+  background-color: rgba(103, 103, 103, 0.271);
+}
     </style>
 </head>
 <!--------------------------------------------------------------------------------------->
@@ -188,25 +203,44 @@ href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
       </div>
     </header>
 
-
+    <div class="reg-holder">
+      <h2>Account Registration</h2>
     <div class="account-holder">
-        <h3>Choose Account Type</h3>
-        <div class="account-holder1" style="float: right;">
+      <h3>Choose Account Type</h3>
+
+      <div class="account-holder-inside">
+
+
+        <div class="account-holder1" style="float: left;">
+          <a href="touristreg.html" target="_blank">
+          <img src="/images/AccomodationEstablishment-icon.png"  class="rounded-circle">
+          <h4>Tourist/Client</h4>
+          </a>      
+        </div>
+
+        <div class="account-holder1" style="float: center;">
           <a href="Reg-Business.html" target="_blank">
-              <img src="/images/my-business.png"  class="rounded-circle">
-  <h4>Business</h4>
-      </a>
-  
+          <img src="/images/my-business.png"  class="rounded-circle">
+          <h4>Business</h4>
+        </a>
+        </div>
+    
+        <div class="account-holder1" style="float: righ;">
+          <a href="Reg-Tourguide.html" target="_blank">
+          <img src="/images/tourguide icon.png"  class="rounded-circle">
+          <h4>Tour-guide</h4>
+          </a>      
+        </div>
+
       </div>
-      <div class="account-holder1" style="float: left;">
-        <a href="Reg-Tourguide.html" target="_blank">
-  
-        <img src="/images/tourguide icon.png"  class="rounded-circle">
-        <h4>Tour-guide</h4>
-    </a>      
+
+    </div>
+    
+      
+
+
       </div>
-      </div>
-  
+
 
 </body>
 </html>

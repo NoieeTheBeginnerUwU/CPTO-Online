@@ -156,15 +156,15 @@
 <div class="container">
 
     <form>
-        <h1>CNPTO Login</h1>
-        <p>Please fill in this form to login to your account.</p>
+        <h1>CNPTO Tourist Account Registration</h1>
+        <p>Please fill in this form to register your account.</p>
 
         <input type="text" placeholder="Enter Email" name="email_" id="email_" required>
 
         <input type="password" placeholder="Password" name="psw_" id="psw_" required>
 
-        <button type="button" id="submitData" name="submitData" class="registerbtn">Sign in</button>
-        <p>Don't have an account yet? <a href="signup.html">Sign up</a>.</p>
+        <button type="button" id="submitData" name="submitData" class="registerbtn">Register</button>
+        <p>Already have an account?<a href="login.html">Sign In</a>.</p>
     </form>
 
 </div>
@@ -208,14 +208,13 @@ const firebaseConfig = {
     const app = initializeApp(firebaseConfig);
     const auth = getAuth();
     const database = getDatabase(app);
-
+    var submitData = document.getElementById('submitData')
     submitData.addEventListener('click', (e) => {
-
         var email = document.getElementById('email_').value;
         var password = document.getElementById('psw_').value;
 
         // log in user
-        signInWithEmailAndPassword(auth, email, password)
+        createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in
                 const user = userCredential.user;
@@ -223,17 +222,16 @@ const firebaseConfig = {
 
                 // save log in details into real time database
                 var lgDate = new Date();
-                update(ref(database, 'Login/Users' + user.uid), {
+                set(ref(database, 'Signup' + user.uid), {
                     uid: user.uid,
                     email: email,
                     password: password,
-                    last_login: lgDate,
                 })
                     .then(() => {
                         // Data saved successfully!
-                        alert('user logged in successfully');
-                        
-                        localStorage.setItem('user', email)
+                        alert('client account created successfully');
+                        localStorage.setItem('user', email);
+                        localStorage.setItem('uid', user.uid);
 
                         window.location.replace('index.html');
                     })
