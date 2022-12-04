@@ -1421,4 +1421,70 @@ abbr:hover::after {
     z-index: 1;
   }
 
+#blocker{
+    top: 0;
+    width: 100%;
+    height: 200vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.491);
+}
+
+.loader_bg{
+    position: fixed;
+    z-index: 99999;
+    background: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    background: #ccc;
+    border: 5px solid #fff;
+    box-shadow: 0 0 0 5px #001554;
+    border-radius: 50%;
+}.loader_in{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgb(4, 8, 126);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+}.loader_in::before,
+.loader_in::after{
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-75%);
+    background: black;   
+}.loader_in::before{
+    border-radius: 45%;
+    background: rgb(255, 255, 255);
+    animation: animate 5s linear infinite;
+}.loader_in::after{
+    border-radius: 40%;
+    background: rgba(255, 255, 255, 0.5);
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-50%,-75%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-75%) rotate(360deg);
+
+    }
+
+}
 

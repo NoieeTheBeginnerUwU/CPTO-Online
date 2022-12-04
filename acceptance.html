@@ -124,13 +124,30 @@
 
 <!--header end-->
 
+<!--------------------------------------------------------------------------------------->
+<script src="https://cdjns.cloudflare.com/ajax/libs/jquery/3.4.1./jquery.mins.css"></script>
+<script>
+    setTimeout(function(){
+        $('.loader_bg').fadeToggle();
+    },1000);
+</script>
 
+    <div class="loader_bg">
+        <div class="loader">
+            <div class="loader_in">
+
+            </div>
+        </div>
+    </div>
+<!-------------------------------------------------------------------------------------->
 
 
 
 
 <!--Main content start-->
-
+<div class="blocker" id="blocker">
+s
+</div>
 <div class="holder">
     <div class="logo">
         <img class="logo-img" src="images/logo.png" alt="logo" style="background-color: rgba(255,255,255,.1);">
@@ -142,7 +159,6 @@
 
 
 
-
 <hr>
 <!--footer start-->
 
@@ -150,3 +166,9 @@
     
 </body>
 </html>
+<script>
+    if(localStorage==0){
+        var blocker = document.getElementById('blocker');
+        blocker.style.display = "none";
+    }
+</script>
