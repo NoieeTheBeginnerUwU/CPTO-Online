@@ -189,9 +189,16 @@ href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
             <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="main">
-            <a class="active" href="http://" target="_blank" rel="noopener noreferrer" style="text-align: center;"><i class="fa fa-user"> account</i></a>
-            <div class="bx bx-menu" id="menu-icon" style="color: white;"></div>
-        </div>
+          <i class="fa fa-user" style="font-size: 2rem;"><span id="user_name">account</span></i>
+          <i id="down" class="fa fa-caret-down" style="font-size:2rem;">
+              <div class="account">
+                  <a href="login.html"> <i class="fa fa-user"></i> Login</a><br>
+                  <a href="signup.html"> <i class="fa fa-user-plus"></i> Register</a><br>
+                  <button id="logout"> <i class="fa fa-door-open"></i>Logout</button>
+              </div>
+          </i>
+          <div class="bx bx-menu" id="menu-icon"></div>
+      </div>
     </header>
 
 
@@ -218,6 +225,15 @@ href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
 </html>
 
 <script type="module">
+    var changeName = localStorage.getItem('user');
+    var change = document.getElementById('user_name');
+    change.innerHTML = changeName;
+
+    var logout = document.getElementById('logout');
+    logout.addEventListener('click', (e)=>{
+        localStorage.clear();
+        window.location = "index.html";
+    })
     // Import the functions you need from the SDKs you need
     import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
     import {

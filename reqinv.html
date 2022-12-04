@@ -24,7 +24,21 @@
     </head>
 <body>
 <!--header start-->
+<script src="https://cdjns.cloudflare.com/ajax/libs/jquery/3.4.1./jquery.mins.css"></script>
+<script>
+    setTimeout(function(){
+        $('.loader_bg').fadeToggle();
+    },1000);
+</script>
 
+    <div class="loader_bg">
+        <div class="loader">
+            <div class="loader_in">
+
+            </div>
+        </div>
+    </div>
+<!-------------------------------------------------------------------------------------->
 <header>
     <h1 style="color: white; font-size: 1.1rem; font-weight:900;"><i class="fa fa-compass">CNPTO <span style="color: rgb(69, 255, 1);">Online</span></i></h1>
     <ul class="navbar">
@@ -50,26 +64,18 @@
         <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="main">
-        <a href="accounts.html" target="_blank" rel="noopener noreferrer" style="text-align: center;"><i class="fa fa-user"> account</i></a>
-        <div class="bx bx-menu" id="menu-icon" style="color: white;"></div>
+        <i class="fa fa-user" style="font-size: 2rem;"><span id="user_name">account</span></i>
+        <i id="down" class="fa fa-caret-down" style="font-size:2rem;">
+            <div class="account">
+                <a href="login.html"> <i class="fa fa-user"></i> Login</a><br>
+                <a href="signup.html"> <i class="fa fa-user-plus"></i> Register</a><br>
+                <button id="logout"> <i class="fa fa-door-open"></i>Logout</button>
+            </div>
+        </i>
+        <div class="bx bx-menu" id="menu-icon"></div>
     </div>
 </header>
-<!--------------------------------------------------------------------------------------->
-<script src="https://cdjns.cloudflare.com/ajax/libs/jquery/3.4.1./jquery.mins.css"></script>
-<script>
-    setTimeout(function(){
-        $('.loader_bg').fadeToggle();
-    },1000);
-</script>
 
-    <div class="loader_bg">
-        <div class="loader">
-            <div class="loader_in">
-
-            </div>
-        </div>
-    </div>
-<!-------------------------------------------------------------------------------------->
 <!-- CHAT BAR BLOCK -->
 <div class="chat-bar-collapsible">
     <button id="chat-button" type="button" class="collapsible">Click here for inquiries
@@ -123,18 +129,43 @@
 <!--header end-->
 
 
-
-
-
-
 <!--Main content start-->
 <div class="blocker" id="blocker">
 
 </div>
+<p class="bread">Services > Request and Invitations</p>
 <div class="holder">
-    <div class="logo">
-        <img class="logo-img" src="images/logo.png" alt="logo" style="background-color: rgba(255,255,255,.1);">
+
+    <div class="req_inv" style="background-image: url('images/logo.png'); background-repeat: no-repeat;background-size: auto; background-position: center;">
+        <div class="req">
+            <h3>REQUEST</h3>
+
+            <div class="right_req">
+                <input type="text" id="name" placeholder="Please enter your Full Name">
+                <select name="affiliation" id="affiliation">
+                    <option selected disabled>Select your affiliation</option>
+                    <option value="government">Government</option>
+                    <option value="business">Tourism Related Enterprise</option>
+                    <option value="others">others</option>
+                </select>
+                <select name="purpose" id="purpose"><br>
+                    <option selected disabled>Please select the purpose of your invitation accordingly</option>
+                    <option value="awareness training">Tourism Awareness Training</option>
+                    <option value="life support">Basic Life Support</option>
+                    <option value="man power">Man Power</option>
+                </select>
+                <input type="date" name="date" id="date" placeholder="Please select the date this request is needed.">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Send us a message (if applicable)"></textarea>
+                <input type="submit" id="subBtn" value="submit request">
+            </div>
+        </div>
+        <div class="inv">
+            <h3>INVITATION</h3>
+        </div>
     </div>
+
+
+
 </div>
 <!--Main content end-->
 
@@ -152,8 +183,76 @@
 <script src="script/test/switchery.min.js"></script>
 
 <script>
-    if(localStorage!==0){
-        var blocker = document.getElementById('blocker');
-        blocker.style.display = "none";
-    }
+    var changeName = localStorage.getItem('user');
+    var change = document.getElementById('user_name');
+    change.innerHTML = changeName;
+
+    var logout = document.getElementById('logout');
+    logout.addEventListener('click', (e)=>{
+        localStorage.clear();
+        window.location = "index.html";
+    })
+  if(localStorage.length >=2){
+      var blocker = document.getElementById('blocker');
+      blocker.style.display = "none";
+  }
+</script>
+
+<script type="module">
+    var changeName = localStorage.getItem('user');
+    var change = document.getElementById('user_name');
+    change.innerHTML = changeName;
+
+    var logout = document.getElementById('logout');
+    logout.addEventListener('click', (e)=>{
+        localStorage.clear();
+        window.location = "index.html";
+    })
+    // Import the functions you need from the SDKs you need
+    import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+    import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        signOut
+    } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+    import {getDatabase, set, ref, update} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDA1XjvPrrZiMLhYRRV1Ar23p4SF2lJq9I",
+  authDomain: "cpto-d7b0b.firebaseapp.com",
+  projectId: "cpto-d7b0b",
+  storageBucket: "cpto-d7b0b.appspot.com",
+  messagingSenderId: "633926478402",
+  appId: "1:633926478402:web:3e659a8d5f50793d299bdb",
+  measurementId: "G-WNZKRQGELD"
+};
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const database = getDatabase(app);
+    var subBtn = document.getElementById("subBtn");
+
+    subBtn.addEventListener('click', (e)=>{
+        var email = localStorage.getItem('user');
+        var name = document.getElementById('name').value;
+        var purpose = document.getElementById('purpose').value;
+        var affiliation = document.getElementById('affiliation').value;
+        var message = document.getElementById('message').value;
+        var date = document.getElementById('date').value;
+        
+        set(ref(database, 'Services/Requests'), {
+                    email: email,
+                    name: name,
+                    purpose: purpose,
+                    affiliation: affiliation,
+                    date: date,
+                    message: message
+                }).then(alert("Request Sent Successfully."))
+    })
+
 </script>
