@@ -181,7 +181,7 @@ header {
 }
 
 .navbar a:hover {
-    transition: ease-in-out .3s;
+    transition: ease-in-out .6s;
     border: solid groove 1px rgba(172, 255, 47, 0.704);
     color: rgb(0, 247, 49);
 }
@@ -309,6 +309,9 @@ header {
 }
 
 @media (max-width: 1090px) {
+    .holder{
+        height: 120vh;
+    }
     #menu-icon {
         display: block;
     }
@@ -318,7 +321,7 @@ header {
         top: 100%;
         right: -100%;
         width: 50%;
-        height: 50vh;
+        height: 70vh;
         background: rgba(0, 0, 0, 0.673);
         border: #ffffff;
         display: flex;
@@ -897,6 +900,11 @@ a .card-places-holder {
     .card-places {
         width: 40%;
         font-size: .7em;
+    }
+    .navbar li a{
+        margin: 0;
+        padding: 0;
+        
     }
 }
 
