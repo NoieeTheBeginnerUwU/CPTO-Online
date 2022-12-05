@@ -191,8 +191,8 @@
   .card {
     margin: 40px;
     position: relative;
-    max-width: 250px;
-    max-height: 350px;
+    width: 350px;
+    height: 60vh;
     box-shadow: 0 40px 60px -6px black;
   }
   
@@ -232,7 +232,7 @@
   
   .card:hover .card-desc {
     opacity: 1;
-    height: 52vh;
+    height: 65vh;
     margin: 2.3px;
   }
   
