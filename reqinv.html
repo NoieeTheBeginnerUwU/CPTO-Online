@@ -173,7 +173,7 @@
                     <option value="business">Tourism Related Enterprise</option>
                     <option value="others">others</option>
                 </select>
-                <select name="purpose" id="purpose2"><br>
+                <select name="purposes" id="purposes" required><br>
                     <option selected disabled>Please select the purpose of your invitation accordingly</option>
                     <option value="judge">Judge for a competition</option>
                     <option value="tourism talks">Tourism Talks</option>
@@ -266,8 +266,10 @@ const firebaseConfig = {
         var affiliation = document.getElementById('affiliation').value;
         var message = document.getElementById('message').value;
         var date = document.getElementById('date').value;
-        
-        set(ref(database, 'Services/Requests'), {
+        var dateNow = new Date();
+
+        set(ref(database, 'Requests/' + dateNow), {
+                    id: dateNow,
                     email: email,
                     name: name,
                     purpose: purpose,
@@ -282,11 +284,12 @@ const firebaseConfig = {
         var email = localStorage.getItem('user');
         var name = document.getElementById('name2').value;
         var affiliation = document.getElementById('affiliation2').value;
-        var purpose = document.getElementById('purpose2')
+        var purpose = document.getElementById('purposes')
         var date = document.getElementById('date2').value;
         var message = document.getElementById('message2').value;
-
-        set(ref(database, 'Services/Invitation'), {
+        var dateNow = new Date();
+        set(ref(database, 'Invitations/' + dateNow), {
+                    id: dateNow,
                     email: email,
                     name: name,
                     purpose: purpose,

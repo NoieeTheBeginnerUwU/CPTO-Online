@@ -429,7 +429,7 @@ form .fields .input-field-capitalization-annexA{
                         <div class="input-field">
                             <label>Type of Organization</label>
                         
-                                <select required>
+                                <select id="orgType" required>
                                     <option disabled selected>Select Type of Organization</option>
                                     <option id="single21" name="single21">Single Proprietorship</option>
                                     <option id="partnership20" name="partnership21">Partnership</option>
@@ -439,7 +439,7 @@ form .fields .input-field-capitalization-annexA{
                         </div>
                         <div class="input-field">
                             <label>Permit</label>
-                            <select required>
+                            <select id="perm" required>
                                 <option disabled selected>Select Permit</option>
                                 <option id="mayor21" name="mayor21">Mayor's/Business Permit</option>
                                 <option id="dti21" name="dti21">DTI Permit</option>
@@ -725,3 +725,87 @@ Cooperation and Its By-Laws (for Cooperatives)
                     </div>                
                 </div>               
             </div>
+
+
+<script type="module">
+
+import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        signOut
+} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+import {getDatabase, set, ref, update} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDA1XjvPrrZiMLhYRRV1Ar23p4SF2lJq9I",
+  authDomain: "cpto-d7b0b.firebaseapp.com",
+  projectId: "cpto-d7b0b",
+  storageBucket: "cpto-d7b0b.appspot.com",
+  messagingSenderId: "633926478402",
+  appId: "1:633926478402:web:3e659a8d5f50793d299bdb",
+  measurementId: "G-WNZKRQGELD"
+};
+   
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const database = getDatabase(app);
+    var submitData = document.getElementById('submitData')
+    submitData.addEventListener('click', (e) => {
+        var email = document.getElementById('email_').value;
+        var password = document.getElementById('psw_').value;
+   
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                set(ref(database, 'Signup' + user.uid), {
+                    uid: user.uid,
+                    email: email,
+                    password: password,
+                })
+                    .then(() => {
+                        // Data saved successfully!
+                        alert('client account created successfully');
+                        localStorage.setItem('user', email);
+                        localStorage.setItem('uid', user.uid);
+
+                        window.location.replace('index.html');
+                    })
+                    .catch((error) => {
+                        // The write failed...
+                        alert(error);
+                    });
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage);
+            });
+
+
+        signOut(auth).then(() => {
+               // Sign-out successful.
+        }).catch((error) => {
+            // An error happened.
+        });
+    });
+
+    var email = document.getElementById("email21").value;
+    var tin = document.getElementById("tin21").value;
+    var name = document.getElementById("name21").value;
+    var address = document.getElementById("address21").value;
+    var estab = document.getElementById("estab21").value;
+    var website = document.getElementById("number21").value;
+    var a = document.getElementById("emailad21").value;
+    var a = document.getElementById().value;
+    var a = document.getElementById().value;
+    var a = document.getElementById().value;
+    var a = document.getElementById().value;
+    var a = document.getElementById().value;
+    var a = document.getElementById().value;
+    var a = document.getElementById().value;
+    var a = document.getElementById().value;
+    var a = document.getElementById().value;
+    
+</script>

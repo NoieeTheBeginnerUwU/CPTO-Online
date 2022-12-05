@@ -118,7 +118,7 @@
                 <div class="chat-container">
                     <!-- Messages -->
                     <div id="chatbox">
-                        <h5 id="chat-timestamp"></h5>
+                        <h6 style="text-align: center;" id="chat-timestamp"></h6    >
                         <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
                     </div>
 
@@ -559,9 +559,10 @@ const firebaseConfig = {
         var val = data.val();
                 var author = data.val().author;
                 var title = data.val().title;
+                var date = data.val().date;
                 var description = data.val().description;
                 console.log(val)
-                AddItemsToTable(author, title, description);
+                AddItemsToTable(author, title, date, description);
     })
     });
 
@@ -570,7 +571,7 @@ const firebaseConfig = {
 
 var loginID= 0;
 window.onload = SelectAllData;
-function AddItemsToTable(author, title, description){
+function AddItemsToTable(author, title, date, description){
     var tbody = document.getElementById("news");
     var div = document.createElement("div");
     var div2 = document.createElement("div");
@@ -591,6 +592,7 @@ function AddItemsToTable(author, title, description){
     var td1 = document.createElement("p");
     var td2 = document.createElement("h2");
     var td3 = document.createElement("p");
+    var td4 = document.createElement("p");
     var img = document.createElement("div");
     img.style.width = "30%";
     img.style.height = "100%";
@@ -603,9 +605,11 @@ function AddItemsToTable(author, title, description){
     td1.innerHTML = author;
     td2.innerHTML = title;
     td3.innerHTML = description;
+    td4.innerHTML = date;
 
     div2.appendChild(td2);
     div2.appendChild(td1);
+    div2.appendChild(td4);
     div2.appendChild(td3);
     div.appendChild(img);
     div.appendChild(div2)

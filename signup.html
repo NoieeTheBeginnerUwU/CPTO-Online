@@ -298,7 +298,8 @@ const firebaseConfig = {
                 // Signed in
                 const user = userCredential.user;
                 // ... user.uid
-                set(ref(database, 'accounts/' + user.uid), {
+                set(ref(database, 'Registration/ ', user.uid), {
+                    uid: user.uid,
                     email: email,
                     fname: fname,
                     lname: lname,
@@ -309,19 +310,12 @@ const firebaseConfig = {
                     .then(() => {
                         // Data saved successfully!
                         alert('user created successfully');
-        
                     })
                     .catch((error) => {
                         // The write failed...
                         alert(error);
                     });
             })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                // ..
-                alert(errorMessage);
-            });
 
     });
 

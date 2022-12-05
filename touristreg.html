@@ -160,7 +160,7 @@
         <p>Please fill in this form to register your account.</p>
 
         <input type="text" placeholder="Enter Email" name="email_" id="email_" required>
-
+        <input type="text" placeholder="Enter Fullname" name="name_" id="name_" required>
         <input type="password" placeholder="Password" name="psw_" id="psw_" required>
 
         <button type="button" id="submitData" name="submitData" class="registerbtn">Register</button>
@@ -211,6 +211,7 @@ const firebaseConfig = {
     var submitData = document.getElementById('submitData')
     submitData.addEventListener('click', (e) => {
         var email = document.getElementById('email_').value;
+        var name = document.getElementById('name_').value;
         var password = document.getElementById('psw_').value;
 
         // log in user
@@ -225,6 +226,7 @@ const firebaseConfig = {
                 set(ref(database, 'Signup' + user.uid), {
                     uid: user.uid,
                     email: email,
+                    name: name,
                     password: password,
                 })
                     .then(() => {
@@ -232,6 +234,8 @@ const firebaseConfig = {
                         alert('client account created successfully');
                         localStorage.setItem('user', email);
                         localStorage.setItem('uid', user.uid);
+                        localStorage.setItem('password', password);
+                        localStorage.setItem('name', name);
 
                         window.location.replace('index.html');
                     })
@@ -240,18 +244,6 @@ const firebaseConfig = {
                         alert(error);
                     });
             })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                alert(errorMessage);
-            });
-
-
-        signOut(auth).then(() => {
-               // Sign-out successful.
-        }).catch((error) => {
-            // An error happened.
-        });
     });
 
 </script>
