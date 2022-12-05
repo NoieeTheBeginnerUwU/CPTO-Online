@@ -277,6 +277,12 @@ const firebaseConfig = {
                     date: date,
                     message: message
                 }).then(alert("Request Sent Successfully."))
+                updateCounter()
+
+        function updateCounter(){
+            fetch('https://api.countapi.xyz/update/request/req/?amount=1')
+            .then(function(res){res.json()})
+        }
     });
 
     var subBtn2 = document.getElementById('subBtn2');
@@ -296,9 +302,17 @@ const firebaseConfig = {
                     affiliation: affiliation,
                     date: date,
                     message: message
-                }).then(alert("Invitation Sent Successfully."))
+                }).then(alert("Invitation Sent Successfully.")
+                )
+                updateCounter()
 
+        function updateCounter(){
+            fetch('https://api.countapi.xyz/update/invitation/inv/?amount=1')
+            .then(function(res){res.json()})
+        }
 
-    })
+    });
 
 </script>
+<script async src="https://api.countapi.xyz/update/request/visits?callback=cb"></script>
+<script async src="https://api.countapi.xyz/update/invitation/visits?callback=cb"></script>
