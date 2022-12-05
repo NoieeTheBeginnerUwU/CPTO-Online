@@ -19,8 +19,6 @@ function getBotResponse(input) {
         return "i'm taken, sorry."
     }else if(input == "thank you"){
         return "Glad we could help."
-    }else if(input == "nigga"){
-        return "bro racism is not cool."
     }else if(input == "google"){
         return window.location.replace("https://www.google.com/")
     }else if(input == "where can i buy angko?"){
