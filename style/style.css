@@ -28,7 +28,6 @@ body {
     width: 100%;
     height: 100vh;
     background-color: rgb(255, 255, 255);
-    
 }
 
 .holder3 {
@@ -791,7 +790,7 @@ li:hover .dropbtn {
     width: 100%;
     height: 500vh;
     margin: 0 auto;
-    background-color: rgb(252, 252, 252);
+    
 }
 
 a .card-places-holder {
@@ -814,13 +813,6 @@ a .card-places-holder {
     height: 90vh;
 }
 
-.card {
-    box-shadow: 5px 5px rgb(228, 228, 228);
-    width: 29%;
-    height: 80vh;
-    background-color: rgb(239, 239, 239);
-    margin: 2%;
-}
 
 .card-places {
     color: rgb(79, 79, 79);
@@ -913,12 +905,7 @@ a .card-places-holder {
     background-image: url('images/1.webp');
 }
 
-.card-img {
-    margin: 0 auto;
-    width: 90%;
-    min-height: 40vh;
-    background-color: rgb(0, 0, 0);
-}
+
 
 .name,
 .location,
@@ -1580,6 +1567,7 @@ abbr:hover::after {
     font-size: 2rem;
     background-color: rgba(0, 0, 0, 0.664);
 }
+
 
 /*  --------------------------------------------------- */
 
