@@ -249,7 +249,16 @@
                             <label>Officail Email Address</label>
                             <input type="email" id= "email" name= "email"placeholder="Enter your email" required>
                         </div>
+
+                        <div class="input-field">
+                            <label>Account Password</label>
+                            <input type="password" id= "pass" name= "pass"placeholder="password" required>
+                        </div>
+
                     </div>
+                    
+
+
 
                                    
                 </div>
@@ -421,6 +430,7 @@
 
     function send(){
         let email = document.getElementById('email').value;
+        let pass = document.getElementById('pass').value;
         let estab_name = document.getElementById('estab').value;
         let bus_address = document.getElementById('address').value;
         let bus_website = document.getElementById('website').value;
@@ -441,37 +451,45 @@
         var manager_email = document.getElementById('emaill').value;
         var manager_nationality = document.getElementById('nationalityy').value;
 
-        let busID = 0;
-        alert("working");
-        set(ref(database, 'Registration/Business' + ++busID), {
-            business_ID: busID,
-            estab_name: estab_name,
-            bus_address: bus_address,
-            bus_website: bus_website,
-            contact_num: contact_num,
-            email_ad: email_ad,
-            date_estab: date_estab,
-            corp_name: corp_name,
-            corp_address: corp_address,
-            corp_nationality: corp_nationality,
-            company_name: company_name,
-            company_address: company_address,
-            org_type: org_type,
-            org_permit: org_permit,
-            org_permitno: org_permitno,
-            org_validtill: org_validtill,
-            manager: manager,
-            manager_contact: manager_contact,
-            manager_email: manager_email,
-            manager_nationality: manager_nationality    
-        }).then(
-            alert("Business Registration Request Sent.")
+        createUserWithEmailAndPassword(auth, email, pass)
+            .then((userCredential) => {
+                // Signed in
+                const user = userCredential.user;
+                // ... user.uid
+                set(ref(database, 'Registration/Business ' + user.uid), {
+                    UID: user.uid,
+                    estab_name: estab_name,
+                    bus_address: bus_address,
+                    bus_website: bus_website,
+                    contact_num: contact_num,
+                    email_ad: email_ad,
+                    date_estab: date_estab,
+                    corp_name: corp_name,
+                    corp_address: corp_address,
+                    corp_nationality: corp_nationality,
+                    company_name: company_name,
+                    company_address: company_address,
+                    org_type: org_type,
+                    org_permit: org_permit,
+                    org_permitno: org_permitno,
+                    org_validtill: org_validtill,
+                    manager: manager,
+                    manager_contact: manager_contact,
+                    manager_email: manager_email,
+                    manager_nationality: manager_nationality   
+                })
+                    .then(() => {
+                        // Data saved successfully!
+                        alert('user created successfully');
+                    })
+                    .catch((error) => {
+                        // The write failed...
+                        alert(error);
+                    });
+            })
 
-            
-
-
-            );
     }   
+
     function printTable(){
         const element = document.getElementById('form');
         html2pdf()
