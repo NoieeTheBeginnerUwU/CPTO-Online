@@ -1412,6 +1412,7 @@ abbr:hover::after {
     position: absolute;    
     width: 280px;
     z-index: 1;
+    color: black;
   }
 
 #blocker{
