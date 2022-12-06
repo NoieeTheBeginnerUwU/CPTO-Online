@@ -86,6 +86,7 @@ function buttonSendText(sampleText) {
 
 function sendButton() {
     getResponse();
+    updateCounter()
 }
 
 function faqs() {
@@ -105,4 +106,9 @@ let navbar = document.querySelector('.navbar');
 menu.onclick = () => {
 	menu.classList.toggle('bx-x');
 	navbar.classList.toggle('open');
+}
+
+function updateCounter(){
+    fetch('https://api.countapi.xyz/update/inquire/inq/?amount=1')
+    .then(function(res){res.json()})
 }
