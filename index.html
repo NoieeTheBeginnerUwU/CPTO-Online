@@ -93,7 +93,7 @@
         <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="main">
-        <i class="fa fa-user" style="font-size: 2rem;"><span id="user_name">account</span></i>
+        <i id="down" class="fa fa-user" style="font-size: 2rem;"><span id="user_name">account</span></i>
         <i id="down" class="fa fa-caret-down" style="font-size:2rem;">
             <div class="account">
                 <a href="login.html"> <i class="fa fa-user"></i> Login</a><br>
@@ -184,13 +184,12 @@
     <video autoplay loop muted plays-inline  class="vid" src="images/Calaguas_1080p.mp4">
 
     </video>
-<div class="holder">
+<div class="holder" style="margin-top: -.5em;">
     <p class="bnv"> <i class="fa fa-home"></i> Homepage > Featured</p>
-    <h1 style="background-image: url('images/7.webp');background-clip:text;    --webkit-background-clip: text;">CAMARINES NORTE</h1>
-    <section>
-        <span class="details-popular">
+    <h1 style="margin: 0; font-size: 130px; background-image: url('images/7.webp');background-clip:text; --webkit-background-clip: text; border: 5px solid rgb(0, 0, 0); margin-left: 1.5em; margin-right: 1.5em; border-radius: 10px;">CAMARINES NORTE</h1>
+    <section style="color:rgba(255, 255, 255, 0.79);background-color: rgba(0, 0, 0, 0.3); border-radius: 10px; height: 30vh;">
+        <span class="details-popular" style="color: rgb(0, 0, 0); font-family: 'Lato', sans-serif; padding-left: .3em;">
         Camarines Norte is the northernmost Province in Bicol Region, It is the gateway to Bicolandia. Home of the First Rizal Monument, century old churches, cascading waterfalls and paradise like islands/beaches.
-    
     Come and explore CamNorte. Visit <abbr title="Calaguas, also known as Calaguas Islands, is a group of islands located in the Philippine province of Camarines Norte. It includes the major islands of Tinaga Island and Guintinua Island, the minor Maculabo Island, as well as several other minor. ">Calaguas</abbr> Island in Vinzons which showcase the powdery white sand and crystal clear water, truly a world class destination. Another must see is the Parola island in Jose Panganiban that showcase its unique pink sand or go island hopping at the 7 islands of Mercedes. <br><br> We also offer different kinds of falls like 16 cascading falls of Mananap, 70 ft. Colasi falls and 53 ft. Nacali falls. If you are into culture and history, we offer First Rizal Monument or also known as First Bantayog Monument. Another interesting place to visit is the town of Vinzons that showcases a heritage church and multiple century old houses. If you are into arts and crafts, visit the town of Jose Panganiban and Paracale that showcase gold handicraft.
         </span class="details-popular">
     </section>
@@ -218,17 +217,18 @@
 
 <div class="holder" style="display: grid;">
     <h2><i class="fa-solid fa-location-dot" style="color: red;"></i> Popular Places</h2>
-    <div class="holder-images1" style="        margin: 4px, 4px;
+    <div class="holder-images1" style="margin: 4px, 4px;
     display: flex;
     flex-direction: row;
     padding: 4px;
-    background-color: #e2e2e2;
     width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    backdrop-filter: blur(5px);
+    
     border-radius: 15px;
+    ;
+
     "
 
     >
