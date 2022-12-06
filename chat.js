@@ -87,6 +87,10 @@ function buttonSendText(sampleText) {
 function sendButton() {
     getResponse();
     updateCounter()
+    function updateCounter(){
+        fetch('https://api.countapi.xyz/update/inquire/inq/?amount=1')
+        .then(function(res){res.json()})
+    }
 }
 
 function faqs() {
@@ -108,7 +112,3 @@ menu.onclick = () => {
 	navbar.classList.toggle('open');
 }
 
-function updateCounter(){
-    fetch('https://api.countapi.xyz/update/inquire/inq/?amount=1')
-    .then(function(res){res.json()})
-}
