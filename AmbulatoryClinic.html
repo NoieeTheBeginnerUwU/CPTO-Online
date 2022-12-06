@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
- 
-    <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
@@ -312,19 +309,6 @@ form .fields .input-field-capitalization-annexA{
 <body>
 <!--------------------------------------------------------------------------------------->
 <script src="https://cdjns.cloudflare.com/ajax/libs/jquery/3.4.1./jquery.mins.css"></script>
-<script>
-    setTimeout(function(){
-        $('.loader_bg').fadeToggle();
-    },1000);
-</script>
-
-    <div class="loader_bg">
-        <div class="loader">
-            <div class="loader_in">
-
-            </div>
-        </div>
-    </div>
 <!-------------------------------------------------------------------------------------->  
     <div class="form-container">
         <header>Accreditation Form For Ambulatory Clinic</header>
@@ -468,7 +452,7 @@ form .fields .input-field-capitalization-annexA{
                                 </div>
                                 <div class="input-field">
                                     <label>Email Address</label>
-                                    <input type="email"  id= "emaill21" name="emaill21" placeholder="Enter Email Address" required>
+                                    <input type="email"  id= "emaill211" name="emaill211" placeholder="Enter Email Address" required>
                                 </div>
                                 <div class="input-field">
                                     <label>Nationality</label>
@@ -666,7 +650,7 @@ form .fields .input-field-capitalization-annexA{
                         </div>
                         <div class="input-field">
                             <label>EMAIL ADDRESS</label>
-                            <input type="text"  id= "emailadd21" name="emailadd21" placeholder="Enter Email Address" required>
+                            <input type="text"  id= "emailadd211" name="emailadd211" placeholder="Enter Email Address" required>
                             
                             
                         </div>
@@ -711,7 +695,7 @@ Cooperation and Its By-Laws (for Cooperatives)
                 </div>
 
                 
-               <input type="submit" id="submitData" placeholder="submit" value="submitData">
+               <input type="submit" id="send" placeholder="submit">
             
 
 
@@ -749,93 +733,93 @@ const firebaseConfig = {
     const app = initializeApp(firebaseConfig);
     const auth = getAuth();
     const database = getDatabase(app);
-    var submitData = document.getElementById('submitData')
+    var submitData = document.getElementById('send');
 
-    submitData.addEventListener('click', (e) => {
+    send.addEventListener('click', (e) => {
 
-    var email = document.getElementById("email21").value;
-    var tin = document.getElementById("tin21").value;
-    var name = document.getElementById("name21").value;
-    var address = document.getElementById("address211").value;
-    var estab = document.getElementById("estab21").value;
-    var website = document.getElementById("number21").value;
-    var email2 = document.getElementById("emailad21").value;
-    var date = document.getElementById("date21").value;
-    var owner = document.getElementById('owner21').value;
-    var add = document.getElementById("add21").value;
-    var nationality1 = document.getElementById("nationality21").value;
-    var compname = document.getElementById("compname21").value;
-    var compadd = document.getElementById("address212").value;
-    var orgtype = document.getElementById("orgtype").value;
-    var permittype = document.getElementById("permittype").value;
-    var date2 = document.getElementById("datee21").value;
-    var manager = document.getElementById("manager21").value;
-    var mancotact = document.getElementById("contact21").value;
-    var manemail = document.getElementById("email213").value;
-    var manemail2 = document.getElementById("email21").value;
-    var mannat = document.getElementById("nationality21").value;
-    var stockholder1 = document.getElementById("Stockholder21").value;
-    var stockholder2 = document.getElementById("Stockholer21.1").value;
-    var stockholder3 = document.getElementById("Stockholer21.2").value;
-    var stockholder4 = document.getElementById("Stockholer21.3").value;
-    var stockholder5 = document.getElementById("Stockholer21.4").value;
-    var stockholder6 = document.getElementById("Stockholer21.5").value;
-    var stockholder7 = document.getElementById("Stockholer21.6").value;
-    var stockholder8 = document.getElementById("Stockholer21.7").value;
-    var stockholder9 = document.getElementById("Stockholer21.8").value;
-    var stockholder10 = document.getElementById("Stockholer21.9").value;
-    var pos1 = document.getElementById("position21").value;
-    var pos2 = document.getElementById("position21.1").value;
-    var pos3 = document.getElementById("position21.2").value;
-    var pos4 = document.getElementById("position21.3").value;
-    var pos5 = document.getElementById("position21.4").value;
-    var pos6 = document.getElementById("position21.5").value;
-    var pos7 = document.getElementById("position21.6").value;
-    var pos8 = document.getElementById("position21.7").value;
-    var pos9 = document.getElementById("position21.8").value;
-    var pos10 = document.getElementById("position21.9").value;
-    var nationality1 = document.getElementById("nationality21.0").value;
-    var nationality2 = document.getElementById("nationality21.1").value;
-    var nationality3 = document.getElementById("nationality21.2").value;
-    var nationality4 = document.getElementById("nationality21.3").value;
-    var nationality5 = document.getElementById("nationality21.4").value;
-    var nationality6 = document.getElementById("nationality21.5").value;
-    var nationality7 = document.getElementById("nationality21.6").value;
-    var nationality8 = document.getElementById("nationality21.7").value;
-    var nationality9 = document.getElementById("nationality21.8").value;
-    var nationality10 = document.getElementById("nationality21.9").value;
-    var amount1 = document.getElementById("amount21").value;
-    var amount2 = document.getElementById("amount21.1").value;
-    var amount3 = document.getElementById("amount21.2").value;
-    var amount4 = document.getElementById("amount21.3").value;
-    var amount5 = document.getElementById("amount21.4").value;
-    var amount6 = document.getElementById("amount21.5").value;
-    var amount7 = document.getElementById("amount21.6").value;
-    var amount8 = document.getElementById("amount21.7").value;
-    var amount9 = document.getElementById("amount21.8").value;
-    var amount10 = document.getElementById("amount21.9").value;
-    var paid1 = document.getElementById("amountpaid21").value;
-    var paid2 = document.getElementById("amountpaid21.1").value;
-    var paid3 = document.getElementById("amountpaid21.2").value;
-    var paid4 = document.getElementById("amountpaid21.3").value;
-    var paid5 = document.getElementById("amountpaid21.4").value;
-    var paid6 = document.getElementById("amountpaid21.5").value;
-    var paid7 = document.getElementById("amountpaid21.6").value;
-    var paid8 = document.getElementById("amountpaid21.7").value;
-    var paid9 = document.getElementById("amountpaid21.8").value;
-    var paid10 = document.getElementById("amountpaid21.9").value;
-    var pat1 = document.getElementById("foreign21").value;
-    var pat2 = document.getElementById("local21").value;
-    var services1 = document.getElementById("services21").value;
-    var services2 = document.getElementById("services22").value;
-    var services3 = document.getElementById("services23").value;
-    var services4 = document.getElementById("services24").value;
-    var services5 = document.getElementById("services25").value;
-    var services6 = document.getElementById("services26").value;
-    var rep = document.getElementById("repname21").value;
-    var designation = document.getElementById("designation21").value;
-    var repcon = document.getElementById("contactnum21").value;
-    var repemail = document.getElementById("emailadd21").value;
+    var email = document.getElementById("email21");
+    var tin = document.getElementById("tin21");
+    var name = document.getElementById("name21");
+    var address = document.getElementById("address21");
+    var estab = document.getElementById("estab21");
+    var website = document.getElementById("number21");
+    var email2 = document.getElementById("emailad21");
+    var date = document.getElementById("date21");
+    var owner = document.getElementById('owner21');
+    var add = document.getElementById("add21");
+    var nationality1 = document.getElementById("nationality21");
+    var compname = document.getElementById("compname21");
+    var compadd = document.getElementById("address212");
+    var orgtype = document.getElementById("orgtype");
+    var permittype = document.getElementById("permittype");
+    var date2 = document.getElementById("datee21");
+    var manager = document.getElementById("manager21");
+    var mancotact = document.getElementById("contact21");
+    var manemail = document.getElementById("email213");
+    var manemail2 = document.getElementById("email211");
+    var mannat = document.getElementById("nationality21");
+    var stockholder1 = document.getElementById("Stockholder21");
+    var stockholder2 = document.getElementById("Stockholder21.1");
+    var stockholder3 = document.getElementById("Stockholder21.2");
+    var stockholder4 = document.getElementById("Stockholder21.3");
+    var stockholder5 = document.getElementById("Stockholder21.4");
+    var stockholder6 = document.getElementById("Stockholder21.5");
+    var stockholder7 = document.getElementById("Stockholder21.6");
+    var stockholder8 = document.getElementById("Stockholder21.7");
+    var stockholder9 = document.getElementById("Stockholder21.8");
+    var stockholder10 = document.getElementById("Stockholder21.9");
+    var pos1 = document.getElementById("position21");
+    var pos2 = document.getElementById("position21.1");
+    var pos3 = document.getElementById("position21.2");
+    var pos4 = document.getElementById("position21.3");
+    var pos5 = document.getElementById("position21.4");
+    var pos6 = document.getElementById("position21.5");
+    var pos7 = document.getElementById("position21.6");
+    var pos8 = document.getElementById("position21.7");
+    var pos9 = document.getElementById("position21.8");
+    var pos10 = document.getElementById("position21.9");
+    var nationality1 = document.getElementById("nationality21.0");
+    var nationality2 = document.getElementById("nationality21.1");
+    var nationality3 = document.getElementById("nationality21.2");
+    var nationality4 = document.getElementById("nationality21.3");
+    var nationality5 = document.getElementById("nationality21.4");
+    var nationality6 = document.getElementById("nationality21.5");
+    var nationality7 = document.getElementById("nationality21.6");
+    var nationality8 = document.getElementById("nationality21.7");
+    var nationality9 = document.getElementById("nationality21.8");
+    var nationality10 = document.getElementById("nationality21.9");
+    var amount1 = document.getElementById("amount21");
+    var amount2 = document.getElementById("amount21.1");
+    var amount3 = document.getElementById("amount21.2");
+    var amount4 = document.getElementById("amount21.3");
+    var amount5 = document.getElementById("amount21.4");
+    var amount6 = document.getElementById("amount21.5");
+    var amount7 = document.getElementById("amount21.6");
+    var amount8 = document.getElementById("amount21.7");
+    var amount9 = document.getElementById("amount21.8");
+    var amount10 = document.getElementById("amount21.9");
+    var paid1 = document.getElementById("amountpaid21");
+    var paid2 = document.getElementById("amountpaid21.1");
+    var paid3 = document.getElementById("amountpaid21.2");
+    var paid4 = document.getElementById("amountpaid21.3");
+    var paid5 = document.getElementById("amountpaid21.4");
+    var paid6 = document.getElementById("amountpaid21.5");
+    var paid7 = document.getElementById("amountpaid21.6");
+    var paid8 = document.getElementById("amountpaid21.7");
+    var paid9 = document.getElementById("amountpaid21.8");
+    var paid10 = document.getElementById("amountpaid21.9");
+    var pat1 = document.getElementById("foreign21");
+    var pat2 = document.getElementById("local21");
+    var services1 = document.getElementById("services21");
+    var services2 = document.getElementById("services22");
+    var services3 = document.getElementById("services23");
+    var services4 = document.getElementById("services24");
+    var services5 = document.getElementById("services25");
+    var services6 = document.getElementById("services26");
+    var rep = document.getElementById("repname21");
+    var designation = document.getElementById("designation21");
+    var repcon = document.getElementById("contactnum21");
+    var repemail = document.getElementById("emailadd211");
 
     set(ref(database, 'AmbulatoryClinic/ '), {
         email: email,
