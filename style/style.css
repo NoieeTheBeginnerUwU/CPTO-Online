@@ -22,6 +22,7 @@ html {
 body {
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .holder {
@@ -58,14 +59,7 @@ body {
     background-color: #a9a9a9;
     margin: 2%;
     margin-top: 4%;
-    border-radius: 15px;
-}
 
-.card1 h3,
-.card2 h3,
-.card3 h3 {
-    margin-top: 4%;
-    border-radius: 5px;
 }
 
 .image1 img {
@@ -86,11 +80,14 @@ body {
 
 .services-h2 {
     text-align: center;
-    margin-top: 4%;
     width: 100%;
-    height: 10vh;
-    background-color: #000361;
+    height: 12vh;
+    margin-top: 2%;
+    background: linear-gradient(66deg,rgb(2, 2, 149),rgb(8, 0, 50));
     color: white;
+}.services-h2 h2 {
+    float: left;
+    font-size:.7rem;
 }
 
 .holder2 .services-h2 h2 {
@@ -151,7 +148,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, .33);
+    background: rgba(0, 0, 0, 0.373);
     padding: 28px 12%;
     border-bottom: black 1px;
     transition: all .50s ease;
@@ -206,28 +203,20 @@ header {
     font-weight: 500;
     transition: all .50s ease;
 }
-
 .main a:hover {
     color: var(--main-color);
 }.main span:hover{
     color: #29fd53;
 }.account{
-    transition: ease-in-out 1s;
+    margin-top: 4%;
     position: relative;
     display: none;
     background-color: rgba(0, 0, 0, 0.607);
-<<<<<<< HEAD
-    margin-top: 20%;
     width: 240px;
-=======
-    margin-left: 10px;
-    width: 200px;
-    margin-left: -2em;
->>>>>>> 4a88ebe06821f2d2cb48fc73d3194eeffc903524
     height: 130px;
     box-shadow: 0px 18px 16px 0px rgba(130, 130, 130, 0.335);
     z-index: 1;
-    font-size: .5rem;
+    font-size: .45rem;
 }.account a, a i{
     font-size: 1.1rem;
     color: #f8f8f8;
@@ -1276,6 +1265,18 @@ section {
         form .fields .input-field {
             width: calc(100% / 2 - 15px);
         }
+        .holder.reveal{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 120vh;
+        }
+    }
+    @media(max-width: 800px){
+
+   .card1,.card2,.card3{
+            width:100%;
+        }
     }
 
     @media (max-width: 550px) {
@@ -1737,3 +1738,48 @@ abbr:hover::after {
        }
      }
    
+.reveal section{
+    position: relative;
+    transform: translateY(20%);
+}
+
+.reveal.active section{
+    transition: ease-in-out 1.5s;
+    transform: translateY(0%);
+    background-color: #ffffff1a;
+}
+
+
+
+.card1 h5{
+    transition: ease-in-out 1s;
+    font-size: 1.4rem;
+    text-decoration: none;
+    background-color: rgba(2, 15, 84, 0.5);
+
+}
+.card2 h5{
+    font-size: 1.4rem;
+    text-decoration: none;
+    background-color: rgba(2, 15, 84, 0.5);
+
+}
+.card3 h5{
+    font-size: 1.4rem;
+    text-decoration: none;
+    background-color: rgba(2, 15, 84, 0.5);
+    border-radius: 10%;
+
+}
+
+
+@media(max-width:900px){
+    .holder3{
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+    }.card1, .card2,.card3{
+        width: 400px;
+    }
+
+}
