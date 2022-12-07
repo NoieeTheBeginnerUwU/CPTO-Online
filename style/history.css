@@ -12,7 +12,8 @@
     box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
     cursor: pointer;
     transition: 0.4s;
-    background-color: #cddde480;
+    background-color: #000000b4;
+    color: white;
 }
 
 .card-blog:hover {
@@ -26,7 +27,7 @@
     margin-top: 5px;
     margin-left: 14px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .card-blog img {
@@ -40,7 +41,7 @@
 .card-blog section {
     display: flex;
     text-align: justify;
-    font-size: 14px;
+    font-size: 13px;
     
 }
 
@@ -91,7 +92,8 @@
         box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
         cursor: pointer;
         transition: 0.4s;
-        background-color: #d1dee480;
+        background-color: #000000b4;
+        color: white;
     }
 
     .card-blog img {
