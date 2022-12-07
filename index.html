@@ -403,6 +403,177 @@
     </div>
 </div>
 
+
+
+<style>
+
+.container-contact {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5px;
+    margin: .5em 20px 1em 20px;
+    /* min-height: auto; */
+    width: 100%; 
+
+}
+
+.container-contact > div{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-contact > div > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.contact:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4px 8px 0 rgba(3, 26, 19, 0.9), 0 6px 20px 0 rgba(25, 25, 26, 0.3);
+}
+.contact-intro {
+    width: 100%;
+    height: 5vh;
+    box-sizing: border-box;
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.contact {
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 25px;
+    
+}
+.contact1{
+
+    grid-column: 1/2;
+    grid-row: 1/3;
+
+
+}
+.contact12{
+    grid-column: 2/4;
+
+}
+.contact8{
+    grid-column: 1/3;
+    grid-row: 4/6;
+
+}
+.contact9{
+
+    grid-row: 6/7;
+}
+.contact11{
+
+    grid-column: 3;
+
+}
+.contact6{
+
+grid-column: 3;
+grid-row: 3/5;
+
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container-contact{
+       display: block;
+    }
+    .contact-intro {
+        font-size: 65px;
+        margin-top: 0;
+        margin-bottom: 35px;
+        display: block;
+    }
+}
+</style>
+
+
+<div class="contact-intro">
+      
+    <h2>Camarines Norte in Pictures</h2>
+</div>
+<div class="container-contact">
+
+    <div class="contact contact1">
+        <img src="/images/1.webp">
+    </div>
+
+    <div class="contact contact2">
+        <img src="/images/10.webp">
+    </div>
+
+    <div class="contact contact3">
+        <img src="/images/2.webp">
+    </div>
+    <div class="contact contact4">
+        <img src="/images/4.webp">
+    </div>
+
+    <div class="contact contact5">
+        <img src="/images/basud.jpg">
+         </div>
+    <div class="contact contact6">
+        <img src="/images/zipline.webp">
+            </div>
+
+    <div class="contact contact7">
+        <img src="/images/calaguas-bg.jpg">
+          </div>
+
+    <div class="contact contact8">
+        <img src="/images/Mercedes-Card.jpg">
+        </div>
+
+    <div class="contact contact9">
+        <img src="/images/Bagasbas beach.jpg">
+         </div>
+
+    <div class="contact contact10">
+        <img src="/images/Museo Bulawan.jpg">
+  </div>
+
+    <div class="contact contact11">
+        <img src="/images/historicalchurches.jpg">
+      </div>
+
+
+    <div class="contact contact12">
+        <img src="/images/camping.jpg">
+      </div>
+
+</div>
+
+
+
+
+
+
+
+<!-- ----------Footer ------------------------>
+
     <footer class="bg-dark text-white pt-3 pb-2 " style="position: relative; z-index:101;">
 
         <div class="container text-center text-md-left">
@@ -520,6 +691,7 @@
 
 
 
+<!--footer end-->
 
 <!--Main content end-->
 
@@ -527,9 +699,6 @@
 
 
 
-<!--footer start-->
-
-<!--footer end-->
 
 </body>
 </html>
